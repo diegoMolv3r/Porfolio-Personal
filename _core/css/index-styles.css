@@ -22,9 +22,10 @@ html{
 }
 
 body{
-    background: #c31432;  
+    /* background: #c31432;  
     background: -webkit-linear-gradient(to right, #240b36, #c31432); 
-    background: linear-gradient(to right, #240b36, #c31432); 
+    background: linear-gradient(to right, #240b36, #c31432);  */
+    background: var(--blue);
     background-repeat: no-repeat;
     width: 100%;
     display: flex;
@@ -45,22 +46,20 @@ section{
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;    
-    border-radius: 25px;
+    align-items: center;  
 }
 
 header{
-    height: 10vh;
-    border-bottom: var(--pink) 1px solid;
+    height: 4em;
     position: sticky;
     top: 0;
     z-index: 100;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #90787e1f;
-    backdrop-filter: blur(10px);
-    width: 100%;
+    background-color: var(--cream);
+    width: 1200px;
+    border-radius: 0 0 1em 1em;
 }
 
 /* Estilos de la barra de navegacion izquierda */
@@ -72,25 +71,33 @@ header{
     height: 3em;
     width: 3em;
     border-radius: 100%;
-}              
+}      
+
+.nav-information:hover .information{
+    display: block;
+}
+
 .information{
     margin-left: .5em;
+    display: none;
 }
+
 .information h3{
-    color: var(--red);
+    color: var(--blue);
     font-weight: 900;
 }
 .information h4{
-    color: var(--cream);
+    color: var(--blue);
     font-weight: 700;
 }
 
 /* Estilos de la barra de navegacion derecha */
 #navegation-var{
-    width: 75em;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 2em;
 }
 .nav-list-item {
     display: inline-block;
@@ -100,13 +107,13 @@ header{
 }
 .nav-link{
     text-decoration: none;
-    color: var(--cream);
+    color: var(--blue);
     font-weight: 700;
     font-size: 1.2em;
     transition: .5s ease;
 }
 .nav-link:hover{
-    color: var(--blue);
+    color: var(--red);
     text-decoration: underline;
 }
 
@@ -175,7 +182,7 @@ header{
     align-items: center;
 }
 .heading-skills{
-    color: var(--cream);
+    color: white;
     width: 100%;
     font-size: 2em;
     font-weight: 800;
@@ -188,35 +195,30 @@ header{
     align-items: center;
     padding: 2em;
 }
-.skill{
-    margin: 0 1.5em ;
+.iconos-skills span{
+    background-color: var(--cream);
+    padding: 1em 1.5em;
+    color: var(--blue);
+    margin:  0 .1em;
+    font-weight: 700;
+    font-size: .9em;
 }
-.icon{
-    height: 3em;
-    margin-right: .5em;  
-    color: #f8dac2;
-}
+
 
 
 /* Estilos de la seccion de proyectos */
-/* From Uiverse.io by joe-watson-sbf */ 
 .card {
+    width: 310px;
     padding: 1.2em;
-    color: white;
-    background: linear-gradient(#212121, #212121) padding-box;
-    border: 2px solid transparent;
-    border-radius: .5em;
     display: flex;
     flex-direction: column;
-    transform-origin: right bottom;
-    transition: all 1s;
-  }
-  .card .main-content {
-    flex: 1;
+    color: white;
+    background: var(--blue);
+    border: solid 2px white;
+    border-radius: .5em;
   }
   .card .header span:first-child {
     font-weight: 600;
-    color: #717171;
     margin-right: 4px;
   }
   .card .heading {
@@ -226,10 +228,12 @@ header{
   } 
   .card .categories {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
   }
   .card .categories span {
-    background-color: #e81cff;
+    color: var(--blue);
+    background-color: var(--cream);
     padding: 4px 8px;
     font-weight: 600;
     text-transform: uppercase;
@@ -237,61 +241,68 @@ header{
     border-radius: 50em;
   }
   
-  .card:hover {
-    border: solid 2px white;
-  }
-
-
+  /* .card:hover {
+    
+  } */
 
 
   #projects-section{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 2em;
   }
-
+  #projects-section h2{
+    color: white;
+    margin: 1em 0;
+  }
   .projects-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
   }
+ @media (width <= 1080px){
+    .projects-container{
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1em;
+        grid-row-gap: 1em;
+    }
+ }
+
+ @media (width <= 720px){
+    .projects-container{
+        grid-template-columns: 1fr;
+        grid-column-gap: 0em;
+    }
+ }
 
   .enlaces{
     display: flex;
   }
-
-  
-
-  .github-button{
+  .enlaces a{
     display: flex;
     align-items: center;
     padding: 4px 8px;
-    border: solid 2px var(--cream);
+    border: solid 2px white;
     border-radius: 3em;
     text-decoration: none;
     margin-top: 1em;
     font-weight: 600;
     font-size: 12px;
+    margin-right: .5em;
+    color: white;
+    transition: .6s;
   }
 
-  .github-button p{
-    color: var(--cream);
-  }
 
+  .enlaces a:hover{
+    transform: scale(1.1);
+  }
   .github-button img{
-    height: 1.1em;
+    height: 1.5em;
+    margin-right: .5em;
   }
-
-  .ver-web{
-    display: flex;
-    align-items: center;
-    padding: 4px 8px;
-    border: solid 2px var(--cream);
-    border-radius: 3em;
-    text-decoration: none;
-    margin-top: 1em;
-    font-weight: 600;
-    font-size: 12px;
-    color: var(--cream);
-    margin-left: .5em;
-  }
+  /* #more-about{
+    height: 100vh;
+  } */
