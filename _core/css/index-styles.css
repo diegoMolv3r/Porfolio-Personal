@@ -33,12 +33,6 @@ body{
     flex-direction: column;
 }
 
-.icon{
-    height: 3em;
-    margin-right: .5em;  
-    color: #f8dac2;
-}
-
 main{
     display: flex;
     align-items: center;
@@ -69,6 +63,29 @@ header{
     width: 100%;
 }
 
+/* Estilos de la barra de navegacion izquierda */
+.nav-information{
+    display: flex;
+    align-items: center;
+}
+.nav-information img{
+    height: 3em;
+    width: 3em;
+    border-radius: 100%;
+}              
+.information{
+    margin-left: .5em;
+}
+.information h3{
+    color: var(--red);
+    font-weight: 900;
+}
+.information h4{
+    color: var(--cream);
+    font-weight: 700;
+}
+
+/* Estilos de la barra de navegacion derecha */
 #navegation-var{
     width: 75em;
     display: flex;
@@ -79,15 +96,21 @@ header{
     display: inline-block;
     margin: 0 1em;
     list-style: none;
+    transition: 1s ease;
 }
 .nav-link{
     text-decoration: none;
     color: var(--cream);
     font-weight: 700;
     font-size: 1.2em;
-    
+    transition: .5s ease;
+}
+.nav-link:hover{
+    color: var(--blue);
+    text-decoration: underline;
 }
 
+/* Estilos de la seccion home */
 #home-section {
     display: flex;
     justify-content: center;
@@ -145,42 +168,12 @@ header{
     color: var(--cream);
 }
 
-.nav-information{
-    display: flex;
-    align-items: center;
-}
-.nav-information img{
-    height: 3em;
-    width: 3em;
-    border-radius: 100%;
-}              
-.information{
-    margin-left: .5em;
-}
-.information h3{
-    color: var(--red);
-    font-weight: 900;
-}
-
-.information h4{
-    color: var(--cream);
-    font-weight: 700;
-}
-
-
-
-
-
-
+/* Estilos de la seccion skills/tecnologias */
 #skills-section{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.tecnologias{
-    padding: 2em;
-}
-
 .heading-skills{
     color: var(--cream);
     width: 100%;
@@ -193,9 +186,112 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2em;
 }
-
 .skill{
     margin: 0 1.5em ;
 }
-                 
+.icon{
+    height: 3em;
+    margin-right: .5em;  
+    color: #f8dac2;
+}
+
+
+/* Estilos de la seccion de proyectos */
+/* From Uiverse.io by joe-watson-sbf */ 
+.card {
+    padding: 1.2em;
+    color: white;
+    background: linear-gradient(#212121, #212121) padding-box;
+    border: 2px solid transparent;
+    border-radius: .5em;
+    display: flex;
+    flex-direction: column;
+    transform-origin: right bottom;
+    transition: all 1s;
+  }
+  .card .main-content {
+    flex: 1;
+  }
+  .card .header span:first-child {
+    font-weight: 600;
+    color: #717171;
+    margin-right: 4px;
+  }
+  .card .heading {
+    font-size: 24px;
+    margin: 24px 0 16px;
+    font-weight: 600;
+  } 
+  .card .categories {
+    display: flex;
+    gap: 8px;
+  }
+  .card .categories span {
+    background-color: #e81cff;
+    padding: 4px 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-radius: 50em;
+  }
+  
+  .card:hover {
+    border: solid 2px white;
+  }
+
+
+
+
+  #projects-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projects-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .enlaces{
+    display: flex;
+  }
+
+  
+
+  .github-button{
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    border: solid 2px var(--cream);
+    border-radius: 3em;
+    text-decoration: none;
+    margin-top: 1em;
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  .github-button p{
+    color: var(--cream);
+  }
+
+  .github-button img{
+    height: 1.1em;
+  }
+
+  .ver-web{
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    border: solid 2px var(--cream);
+    border-radius: 3em;
+    text-decoration: none;
+    margin-top: 1em;
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--cream);
+    margin-left: .5em;
+  }
