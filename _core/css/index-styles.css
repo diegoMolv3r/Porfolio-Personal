@@ -13,6 +13,7 @@
 
 /* Variables CSS / Paleta de colores */
 :root{
+    --white:#ffffff;
     --cream:#f8dac2; 
     --pink: #f2a297;
     --salmon: #f4436f;
@@ -56,7 +57,7 @@ hr{
 
 
 /* Fuentes tipográficas */
-h1, h2, h3, h4, h5, h6, p{
+h1, h2, h3, h4, h5, h6, p, span{
     font-family: "Oswald", sans-serif;
 }
 a{
@@ -197,21 +198,31 @@ a{
 
 /* Estilos de la seccion de proyectos */
 #projects-section{
-    display: flex;
+    display: flex; 
     flex-direction: column;
-    align-items: center;
+    /* align-items: flex-start; */
+    width: 1000px;
     margin-bottom: 2em;
 }
+
+#projects-section h2{
+    color: var(--pink);
+    font-size: 2em;
+    font-weight: 700;
+    margin: 1em 0;
+}
+
 .projects-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 2em;
     grid-row-gap: 2em;
 }
-.heading-2{
-    font-weight: 900;
-    font-size: 2em;
-    color: var(--salmon);
+
+.titulo-proyecto{
+    font-weight: 700;
+    font-size: 1.5em;
+    color: var(--blue);
     margin: 1em 0;
 }
 .card {
@@ -223,20 +234,15 @@ a{
     background: var(--cream);
     border-radius: .5em;
 }
-.card .header span:first-child {
+.fecha-proyecto span {
     margin-right: 4px;
 }
-.card .heading {
-    font-size: 24px;
-    margin: 24px 0 16px;
-    font-weight: 600;
-} 
-.card .categories {
+.tecnologias-proyecto {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
 }
-.card .categories span {
+.tecnologias-proyecto span {
     color: var(--cream);
     background-color: var(--blue);
     padding: 4px 8px;
@@ -271,6 +277,41 @@ a{
     height: 1.5em;
     margin-right: .5em;
 }
+
+#sobreMi-section{
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    width: 62.5em;
+}
+
+#sobreMi-section h2{
+    color: var(--pink);
+    font-size: 2em;
+    font-weight: 700;
+    margin: .5em 0;
+}
+
+#sobreMi-section p{
+    font-family: "Montserrat";
+    font-size: 1.2em;
+    color: var(--white);
+    font-weight: 400;
+    line-height: 1.5;
+    padding: .5em ;
+}
+
+#sobreMi-section p span{
+    font-family: "Montserrat";
+    font-weight: bold;
+
+}
+
+
+
+
+
+
 
 
 /* Estilos para la tira de tecnologias */
