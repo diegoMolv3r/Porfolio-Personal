@@ -1,100 +1,106 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Oswald", sans-serif;
-    font-style: normal;
 }
-a{
-    font-family: "montserrat", sans-serif;
+.icon{
+    height: 1em;
+    margin-right: .4em;
 }
+
+
+/* Variables CSS / Paleta de colores */
 :root{
     --cream:#f8dac2; 
     --pink: #f2a297;
     --salmon: #f4436f;
     --red: #ca1444;
     --blue: #142738;
-    
 }
 
+
+/* Configuracion del sitio y archivo html */
 ::-webkit-scrollbar {
     width: 0;
 }
-
 html{
     scroll-behavior: smooth;
 }
 
+/* Estilos de las etiquetas semánticas y generales */
 body{ 
     background: var(--blue);
     width: 100%;
     display: flex;
     flex-direction: column;
 }
-
 main{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
 section{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;  
 }
-
 hr{
-    height: 3px;
-    width: 100%;
-    background-color: black;
+    height: 2px;
+    width: 200vh;
+    background-color: var(--pink);
 }
 
-header{
+
+/* Fuentes tipográficas */
+h1, h2, h3, h4, h5, h6, p{
+    font-family: "Oswald", sans-serif;
+}
+a{
+    font-family: "montserrat", sans-serif;
+}
+
+
+/* Estilos de la barra de navegación y del header */
+#header-nav{
     height: 100vh;
     width: 25vh;
     z-index: 100;
+}
+.nav-desplegado{
     background-color: var(--cream);
-    position: fixed;
     display: flex;
     align-items: center;
     flex-direction: column;
+    position: fixed;
 }
-
-button{
-    background-color: transparent;
-    border: none;
+.nav-replegado{
+    display: none;
 }
-
-button:hover{
-    cursor: pointer;
+#imagen-oculta{
+    position: fixed;
 }
-
 .imagen-boton{
     height: 8em;
     width: 8em;
     object-fit: cover;
     border-radius: 100%;
     margin: 1em;
-    
 }
-
-#navegation-var{
+#navegation-var ul{
     display: flex;
+    align-items: flex-start;
     flex-direction: column;
-    justify-content: center;
+    margin: 1em 0;
 }
 .nav-list-item {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 1em 0;
+    margin: .5em 0;
     list-style: none;
     transition: 1s ease;
     
@@ -105,13 +111,16 @@ button:hover{
     font-weight: 700;
     font-size: 1.2em;
     transition: .5s ease;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .nav-link:hover{
     color: var(--red);
 }
 
-/* Estilos de la seccion home */
+
+/* Estilos de la seccion inicio */
 #home-section {
     display: flex;
     align-items: center;  
@@ -127,10 +136,9 @@ button:hover{
     flex-direction: column;
     align-items: center;
 }
-
 .personal-introduction h1{
     font-size: 5em;
-    color: var(--cream);
+    color: var(--pink);
     font-weight: 700;
     text-align: left;
     padding: 0;
@@ -141,27 +149,6 @@ button:hover{
     text-align: center;
     font-size: 2em;
 }
-
-.skills{ 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    flex-wrap: wrap;
-}
-.skills span{
-    background-color: var(--cream);
-    padding: .5em 1em;
-    color: var(--blue);
-    margin: .5em .1em;
-    font-weight: 700;
-    font-size: .9em;    
-}
-
-
-
-
-
 
 .contacto{
     display: flex;
@@ -208,18 +195,25 @@ button:hover{
 }
 
 
- .heading-skills{
-    color: var(--cream);
-    font-size: 2em;
-    font-weight: 600;
-    height: 20%;
-    text-align: center; 
-} 
-
-
-
-
 /* Estilos de la seccion de proyectos */
+#projects-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2em;
+}
+.projects-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+}
+.heading-2{
+    font-weight: 900;
+    font-size: 2em;
+    color: var(--salmon);
+    margin: 1em 0;
+}
 .card {
     width: 310px;
     padding: 1.2em;
@@ -230,7 +224,6 @@ button:hover{
     border-radius: .5em;
 }
 .card .header span:first-child {
-    font-weight: 600;
     margin-right: 4px;
 }
 .card .heading {
@@ -254,49 +247,6 @@ button:hover{
     font-family: "montserrat";
 }
   
-
-
-#projects-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 2em;
-}
-#projects-section h2{
-    color: white;
-    margin: 1em 0;
-} 
-.projects-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 2em;
-    grid-row-gap: 2em;
-}
-
-@media (width <= 1080px){
-    .projects-container{
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 1em;
-        grid-row-gap: 1em;
-    }
-}
-
-@media (width <= 720px){
-    main{
-        width: 100%;
-    }
-    
-    .projects-container{
-        grid-template-columns: 1fr;
-        margin: 1em;   
-    }
-
-    .heading-skills{
-        width: 300px;
-        color: red;
-    }
-}
-
 .enlaces{
     display: flex;
 }
@@ -314,11 +264,52 @@ button:hover{
     color: var(--blue);
     transition: .6s;
 }
-
 .enlaces a:hover{
     transform: scale(1.1);
 }
 .github-button img{
     height: 1.5em;
     margin-right: .5em;
+}
+
+
+/* Estilos para la tira de tecnologias */
+.skills{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.skills span{
+    background-color: var(--cream);
+    padding: .5em 1em;
+    color: var(--blue);
+    margin: .5em .1em;
+    font-weight: 700;
+    font-size: .9em;    
+}
+
+/* MEDIA QUERIES */
+@media (width <= 1080px){
+    .projects-container{
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1em;
+        grid-row-gap: 1em;
+    }
+}
+@media (width <= 720px){
+    main{
+        width: 100%;
+    }
+    
+    .projects-container{
+        grid-template-columns: 1fr;
+        margin: 1em;   
+    }
+
+    .heading-skills{
+        width: 300px;
+        color: red;
+    }
 }

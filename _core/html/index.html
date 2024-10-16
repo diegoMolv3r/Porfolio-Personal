@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index-styles.css">
     <title>Diego Molver - Portfolio Personal</title>
-    
 </head>
+
 <body> 
-    <button><img src="../../assets/img/diego-molver.png" alt="Diego Molver" class="imagen-boton" id="boton-principal" onclick="desplegarNav()"></button>
-    <header style="display: none;" id="header-nav">
-        <button><img src="../../assets/img/diego-molver.png" alt="Diego Molver" class="imagen-boton"></button>
-        <hr>
+    <img src="../../assets/img/diego-molver.png" alt="Diego Molver" class="imagen-boton" onclick="navState()" id="imagen-oculta">
+    <header id="header-nav" class="nav-desplegado">
+        <img src="../../assets/img/diego-molver.png" alt="Diego Molver" class="imagen-boton" onclick="navState()">
         <nav id="navegation-var">
             <ul>
-                <li class="nav-list-item"><a href="#" class="nav-link">INICIO</a></li>
-                <li class="nav-list-item"><a href="#projects-section" class="nav-link">PROYECTOS</a></li>
-                <li class="nav-list-item"><a href="#about-section" class="nav-link">SOBRE MI</a></li>
+                <li class="nav-list-item"><a href="#" class="nav-link"><img class="icon" src="../../assets/icons/home.svg" alt="">INICIO</a></li>
+                <li class="nav-list-item"><a href="#projects-section" class="nav-link"><img src="../../assets/icons/folder.svg" class="icon" alt="">PROYECTOS</a></li>
+                <li class="nav-list-item"><a href="#about-section" class="nav-link"><img src="../../assets/icons/user.svg"class="icon" alt="">SOBRE MI</a></li>
+                <li class="nav-list-item"><a href="#about-section" class="nav-link"><img src="../../assets/icons/graduation-cap.svg"class="icon" alt="">EDUCACIÓN</a></li>
+                <li class="nav-list-item"><a href="#about-section" class="nav-link"><img src="../../assets/icons/display-code.svg"class="icon" alt="">TECNOLOGÍAS</a></li>
             </ul>
         </nav>
     </header>
@@ -27,32 +28,24 @@
                 <h1>DIEGO MOLVER</h1>
                 <h2>ESTUDIANTE UNIVERSITARIO EN DESARROLLO WEB</h2>
             </div>
-                
+            
             <div class="contacto">                  
                 <a target="_blank" href="https://www.linkedin.com/in/diego-molver-72b3a727b/">LINKEDIN</a>
-                <a id="cv-button" href="../../assets/Molver Diego Cv.pdf">DESCARGA MI CV</a>
+                <a target="_blank" id="cv-button" href="../../assets/Molver Diego Cv.pdf">DESCARGA MI CV</a>
                 <a target="_blank" href="https://github.com/diegoMolv3r">GITHUB</a>
             </div>
 
-            <div class="skills" >
-                <span>JAVA</span>
-                <span>MYSQL</span>
-                <span>GIT</span>
-                <span>HTML</span>
-                <span>JAVASCRIPT</span>
-                <span>CSS</span>
-                <span>ANGULAR</span>
-                <span>TAILWIND</span>
-            </div>
+            
         </section>
-        
+        <hr>
+
         <section id="projects-section">
             <h2 class="heading-2">PROYECTOS BACK-END</h2>
             <div class="projects-container">
                 <div class="card">
                     <div class="main-content">
                         <div class="header">
-                            <span>Fecha</span>
+                            <span><img src="../../assets/icons/calendar.svg" alt="" class="icon"></span>
                             <span>9 Octubre 2024</span>
                         </div>
                         <p class="heading">Gestion Bancaria</p>
@@ -69,7 +62,7 @@
                 <div class="card">
                     <div class="main-content">
                         <div class="header">
-                            <span>Fecha</span>
+                            <span><img src="../../assets/icons/calendar.svg" alt="" class="icon"></span>
                             <span>28 Septiembre 2024</span>
                         </div>
                         <p class="heading">Fabrica De Sombreros</p>
@@ -86,7 +79,7 @@
                 <div class="card">
                     <div class="main-content">
                         <div class="header">
-                            <span>Fecha</span>
+                            <span><img src="../../assets/icons/calendar.svg" alt="" class="icon"></span>
                             <span>14 Agosto 2024</span>
                         </div>
                         <p class="heading">Gestion Inmobiliaria</p>
@@ -103,7 +96,7 @@
                 <div class="card">
                     <div class="main-content">
                         <div class="header">
-                            <span>Fecha</span>
+                            <span><img src="../../assets/icons/calendar.svg" alt="" class="icon"></span>
                             <span>22 Octubre 2024</span>
                         </div>
                         <p class="heading">BD "CeVe Bien"</p>
@@ -124,7 +117,7 @@
                 <div class="card">
                     <div class="main-content">
                         <div class="header">
-                            <span>Fecha</span>
+                            <span><img src="../../assets/icons/calendar.svg" alt="" class="icon"></span>
                             <span>15 Marzo 2023</span>
                         </div>
                         <p class="heading">Calculadora Interactiva</p>
@@ -143,7 +136,7 @@
                 <div class="card">
                     <div class="main-content">
                         <div class="header">
-                            <span>Fecha</span>
+                            <span><img src="../../assets/icons/calendar.svg" alt="" class="icon"></span>
                             <span>19 Diciembre 2023</span>
                         </div>
                         <p class="heading">Landing Page</p>
@@ -161,7 +154,7 @@
                 <div class="card">
                     <div class="main-content">
                         <div class="header">
-                            <span>Fecha</span>
+                            <span><img src="../../assets/icons/calendar.svg" alt="" class="icon"></span>
                             <span>22 Noviembre 2024</span>
                         </div>
                         <p class="heading">Biblioteca "Tinta"</p>
@@ -180,13 +173,28 @@
 
         </section>
 
-        <section id="more-about"></section>
+        <hr>
+        
+        <section>
+            <div class="skills" >
+                <span>JAVA</span>
+                <span>MYSQL</span>
+                <span>GIT</span>
+                <span>HTML</span>
+                <span>JAVASCRIPT</span>
+                <span>CSS</span>
+                <span>ANGULAR</span>
+                <span>TAILWIND</span>
+            </div>
+        </section>
 
+        <section id="more-about"></section>
+        <footer>
+            <img src="../../assets/icons/copyright.svg" alt="" class="icon">Casi Todos los Derechos Reservados
+        </footer>
 
     </main>
-    <footer>
-        
-    </footer>
+    
     <script  src="../js/script.js"></script>
 </body>
 </html>
