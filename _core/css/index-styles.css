@@ -1,18 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
 }
-
+a{
+    font-family: "montserrat", sans-serif;
+}
 :root{
-    /* --cream:#f8dac2; */
-    --cream: #ffffff;
+    --cream:#f8dac2; 
     --pink: #f2a297;
     --salmon: #f4436f;
     --red: #ca1444;
-    /* --blue: #142738; */
-    --blue: #663bb6;
+    --blue: #142738;
+    
 }
 
 ::-webkit-scrollbar {
@@ -27,17 +33,14 @@ body{
     background: var(--blue);
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
 
 main{
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    width: 1200px;
+    justify-content: center;
+    align-items: center;
 }
 
 section{
@@ -47,117 +50,122 @@ section{
     align-items: center;  
 }
 
+hr{
+    height: 3px;
+    width: 100%;
+    background-color: black;
+}
+
 header{
-    height: 4em;
+    height: 100vh;
+    width: 25vh;
     z-index: 100;
+    background-color: var(--cream);
+    position: fixed;
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 1200px;
+    flex-direction: column;
 }
 
-/* Estilos de la barra de navegacion izquierda */
-.nav-information{
-    display: flex;
-    align-items: center;
+button{
+    background-color: transparent;
+    border: none;
 }
-.nav-information img{
-    height: 3em;
-    width: 3em;
+
+button:hover{
+    cursor: pointer;
+}
+
+.imagen-boton{
+    height: 8em;
+    width: 8em;
+    object-fit: cover;
     border-radius: 100%;
-}      
-.nav-information:hover .information{
-    display: block;
+    margin: 1em;
+    
 }
 
-
-/* Estilos de la barra de navegacion derecha */
 #navegation-var{
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    padding: .5em 2em;
-    position: fixed;
-    backdrop-filter: blur(1em);
-    border-radius: 3em;  
 }
 .nav-list-item {
-    display: inline-block;
-    margin: 0 1em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 1em 0;
     list-style: none;
     transition: 1s ease;
+    
 }
 .nav-link{
     text-decoration: none;
-    color: var(--cream);
+    color: black;
     font-weight: 700;
     font-size: 1.2em;
     transition: .5s ease;
+    text-align: center;
 }
 .nav-link:hover{
     color: var(--red);
-    text-decoration: underline;
 }
 
 /* Estilos de la seccion home */
 #home-section {
     display: flex;
     align-items: center;  
-    justify-content: space-between;
+    flex-direction: column;
     width: 100%;
     margin: 2em 0em;
     margin-top: 1.5em;    
     padding: 1em;
-    border-radius: 20px;
-}
-
-#home-section img{
-    height: 35vh;
-    width: 450px;
-    object-fit: cover;
-    border-radius: 20px;
-    border: solid 2px white;
 }
 
 .personal-introduction{
-    border-radius: 20px;
-}
-
-.home-left{
     display: flex;
     flex-direction: column;
-    background-color: var(--blue);
-    border-radius: 20px;
-    width: 700px;
-    padding: 1em;
-    height: 35vh;
-    border-radius: 20px;
-    border: solid 2px white;
+    align-items: center;
 }
 
-#heading-1{
+.personal-introduction h1{
     font-size: 5em;
     color: var(--cream);
-    font-weight: 900;
+    font-weight: 700;
     text-align: left;
     padding: 0;
 }
-.heading-2 {
-    color: var(--salmon);
+.personal-introduction h2 {
+    color: var(--red);
     font-weight: 900;
-    text-align: left;
-    font-size: 1.5em;
+    text-align: center;
+    font-size: 2em;
 }
-.heading-3{
-    color: var(--pink);
+
+.skills{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.skills span{
+    background-color: var(--cream);
+    padding: .5em 1em;
+    color: var(--blue);
+    margin: .5em .1em;
     font-weight: 700;
-    text-align: left;
-    font-size: 1.5em;
+    font-size: .9em;    
 }
+
+
+
+
+
 
 .contacto{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     height: 4em;
     border-radius: 20px;
@@ -184,9 +192,9 @@ header{
 }
 
 #cv-button{
-    color:var(--cream);
+    color: var(--cream);
     padding: .5em 1.5em;
-    border: solid white 2px;
+    border: var(--cream) solid  2px;
     background-color: transparent;
     border-radius: 30px;
     font-weight: 700;
@@ -195,37 +203,19 @@ header{
     transition: .8s;
 }
 #cv-button:hover{
-    background-color: white;
+    background-color: var(--cream);
     color: var(--blue);
 }
 
-/* Estilos de la seccion skills/tecnologias */
-#skills-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.heading-skills{
-    color: white;
-    width: 100%;
+
+ .heading-skills{
+    color: var(--cream);
     font-size: 2em;
-    font-weight: 800;
+    font-weight: 600;
     height: 20%;
     text-align: center; 
-}
-.iconos-skills{ 
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-}
-.iconos-skills span{
-    background-color: var(--cream);
-    padding: .5em 1em;
-    color: var(--blue);
-    margin: .5em .1em;
-    font-weight: 700;
-    font-size: .9em;    
-}
+} 
+
 
 
 
@@ -237,24 +227,23 @@ header{
     flex-direction: column;
     color: var(--blue);
     background: var(--cream);
-    border: solid 2px white;
     border-radius: .5em;
-  }
-  .card .header span:first-child {
+}
+.card .header span:first-child {
     font-weight: 600;
     margin-right: 4px;
-  }
-  .card .heading {
+}
+.card .heading {
     font-size: 24px;
     margin: 24px 0 16px;
     font-weight: 600;
-  } 
-  .card .categories {
+} 
+.card .categories {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-  }
-  .card .categories span {
+}
+.card .categories span {
     color: var(--cream);
     background-color: var(--blue);
     padding: 4px 8px;
@@ -262,35 +251,37 @@ header{
     text-transform: uppercase;
     font-size: 12px;
     border-radius: 50em;
-  }
+    font-family: "montserrat";
+}
   
 
 
-  #projects-section{
+#projects-section{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 2em;
-  }
-  #projects-section h2{
+}
+#projects-section h2{
     color: white;
     margin: 1em 0;
-  }
-  .projects-container{
+} 
+.projects-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 2em;
     grid-row-gap: 2em;
-  }
- @media (width <= 1080px){
+}
+
+@media (width <= 1080px){
     .projects-container{
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 1em;
         grid-row-gap: 1em;
     }
- }
+}
 
- @media (width <= 720px){
+@media (width <= 720px){
     main{
         width: 100%;
     }
@@ -304,12 +295,12 @@ header{
         width: 300px;
         color: red;
     }
- }
+}
 
-  .enlaces{
+.enlaces{
     display: flex;
-  }
-  .enlaces a{
+}
+.enlaces a{
     display: flex;
     align-items: center;
     padding: 4px 8px;
@@ -322,14 +313,12 @@ header{
     margin-right: .5em;
     color: var(--blue);
     transition: .6s;
-  }
+}
 
-
-  .enlaces a:hover{
+.enlaces a:hover{
     transform: scale(1.1);
-  }
-  .github-button img{
+}
+.github-button img{
     height: 1.5em;
     margin-right: .5em;
-  }
- 
+}
