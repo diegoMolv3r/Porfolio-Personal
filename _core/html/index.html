@@ -3,26 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego Molver - Porfolio Personal</title>
+
     <link rel="stylesheet" href="../css/index-styles.css">
-    <title>Diego Molver - Portfolio Personal</title>
+    <script defer src="../js/script.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 
 <body> 
-    <img src="../../assets/img/diego-molver.png" alt="Diego Molver" class="imagen-boton" onclick="navState()" id="imagen-oculta">
-    <header id="header-nav" class="nav-desplegado">
-        <img src="../../assets/img/diego-molver.png" alt="Diego Molver" class="imagen-boton" onclick="navState()">
-        
+    <img src="../../assets/img/diego-molver.png" alt="Diego Molver" class="imagen-boton" onclick="navState()">
+    <header id="header-nav" class="animate__animated animate__slideInLeft" style="background-color: var(--cream);display: flex;align-items: center;flex-direction: column;position: fixed;">
         <nav id="navegation-var">
             <ul>
-                <li class="nav-list-item"><a href="#" class="nav-link"><img class="icon" src="../../assets/icons/home.svg" alt="">INICIO</a></li>
+                <li class="nav-list-item"><a href="#home-section" class="nav-link"><img class="icon" src="../../assets/icons/home.svg" alt="">INICIO</a></li>
                 <li class="nav-list-item"><a href="#projects-section" class="nav-link"><img src="../../assets/icons/folder.svg" class="icon" alt="">PROYECTOS</a></li>
-                <li class="nav-list-item"><a href="#sobreMi-section" class="nav-link"><img src="../../assets/icons/user.svg"class="icon" alt="">SOBRE MI</a></li>
-                <li class="nav-list-item"><a href="#about-section" class="nav-link"><img src="../../assets/icons/graduation-cap.svg"class="icon" alt="">EDUCACIÓN</a></li>
-                <li class="nav-list-item"><a href="#about-section" class="nav-link"><img src="../../assets/icons/display-code.svg"class="icon" alt="">TECNOLOGÍAS</a></li>
+                <li class="nav-list-item"><a href="#sobreMi-section" class="nav-link"><img src="../../assets/icons/user.svg" class="icon" alt="">SOBRE MI</a></li>
+                <li class="nav-list-item"><a href="#educacion-section" class="nav-link"><img src="../../assets/icons/graduation-cap.svg" class="icon" alt="">FORMACION</a></li>
             </ul>
         </nav>
     </header>
-    
     <main>
         <section id="home-section">  
             <div class="personal-introduction">
@@ -34,13 +42,21 @@
                 <a target="_blank" id="cv-button" href="../../assets/Molver Diego Cv.pdf">DESCARGA MI CV</a>
                 <a target="_blank" href="https://github.com/diegoMolv3r">GITHUB</a>
             </div>
+            <div class="skills">
+                <span style="border-radius: 50em 0 0 50em;">JAVA</span>
+                <span>MYSQL</span>
+                <span>GIT</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JAVASCRIPT</span>
+                <span>TAILWIND</span>
+                <span style="border-radius: 0 50em 50em 0;" >TYPESCRIPT</span>
+            </div>
         </section>
-        
         <hr>
-
         <section id="projects-section">
-            <h2>PROYECTOS BACK-END</h2>
-                <div class="projects-container">
+        <h2 class="heading-section">PROYECTOS BACK-END</h2>
+        <div class="projects-container">
                 <div class="card">
                         <div class="fecha-proyecto">
                             <span><img src="../../assets/icons/calendar.svg" alt="" class="icon"></span>
@@ -72,6 +88,21 @@
                 </div>
 
                 <div class="card">
+                    <div class="fecha-proyecto">
+                        <span><img src="../../assets/icons/calendar.svg" alt="" class="icon"></span>
+                        <span>9 Octubre 2024</span>
+                    </div>
+                    <p class="titulo-proyecto">PB2 JAVA</p>
+                    <div class="tecnologias-proyecto">
+                        <span>Java</span>
+                        <span>Junit</span>
+                    </div>
+                    <div class="enlaces">
+                        <a target="_blank" href="#" class="github-button"><img src="../../assets/icons/Github_light.svg" alt=""><p>Repositorio</p></a>
+                    </div>              
+                </div>
+
+                <div class="card">
                 <div class="fecha-proyecto">
                     <span><img src="../../assets/icons/calendar.svg" alt="" class="icon"></span>
                     <span>9 Octubre 2024</span>
@@ -85,24 +116,10 @@
                     <a target="_blank" href="#" class="github-button"><img src="../../assets/icons/Github_light.svg" alt=""><p>Repositorio</p></a>
                 </div>              
                 </div>
+        </div> 
 
-                <div class="card">
-            <div class="fecha-proyecto">
-                <span><img src="../../assets/icons/calendar.svg" alt="" class="icon"></span>
-                <span>9 Octubre 2024</span>
-            </div>
-            <p class="titulo-proyecto">PB2 JAVA</p>
-            <div class="tecnologias-proyecto">
-                <span>Java</span>
-                <span>Junit</span>
-            </div>
-            <div class="enlaces">
-                <a target="_blank" href="#" class="github-button"><img src="../../assets/icons/Github_light.svg" alt=""><p>Repositorio</p></a>
-            </div>              
-                </div>
-                </div> 
-            <h2>PROYECTOS FRONT-END</h2>
-                <div class="projects-container">
+        <h2 class="heading-section" style="margin-top: 1em;">PROYECTOS FRONT-END</h2>
+        <div class="projects-container">
             <div class="card">
                     <div class="fecha-proyecto">
                         <span><img src="../../assets/icons/calendar.svg" alt="" class="icon"></span>
@@ -136,56 +153,132 @@
             </div>
 
             <div class="card">
-            <div class="fecha-proyecto">
-                <span><img src="../../assets/icons/calendar.svg" alt="" class="icon"></span>
-                <span>9 Octubre 2024</span>
-            </div>
-            <p class="titulo-proyecto">PB2 JAVA</p>
-            <div class="tecnologias-proyecto">
-                <span>Java</span>
-                <span>Junit</span>
-            </div>
-            <div class="enlaces">
-                <a target="_blank" href="#" class="github-button"><img src="../../assets/icons/Github_light.svg" alt=""><p>Repositorio</p></a>
-            </div>              
-            </div>
-
-            
+                <div class="fecha-proyecto">
+                    <span><img src="../../assets/icons/calendar.svg" alt="" class="icon"></span>
+                    <span>9 Octubre 2024</span>
                 </div>
-        </section>
-
-        <hr>
-        
-        <section id="sobreMi-section"> 
-            <h2 class="heading-2">SOBRE MI</h2>
-            <p>Soy estudiante <span>universitario</span> de <span>desarrollo web</span> en la Universidad Nacional de La Matanza (UNLaM), donde he adquirido sólidos conocimientos en <span>HTML</span>, <span>CSS</span> y <span>JavaScript</span> para desarrollo <span>Front-end</span>. Además, tengo formación en <span>diseño gráfico</span>, lo que me permite crear interfaces web atractivas y funcionales.</p>
-            
-            <p>Para el <span>Back-end</span> tengo una sólida base en <span>Java</span>, con enfoque en programación orientada a objetos, abarcando conceptos clave como polimorfismo, clases abstractas, interfaces, herencia y pruebas unitarias con <span>JUNIT4</span> aplicando la metodología<span> TDD</span>. <br>
-            Teniendo en cuenta estos conocimientos, me estoy introduciendo en <span>TypeScript</span> para luego complementar con un framework como <span>Angular</span>.
-            <p>También tengo conocimientos en <span>MySQL</span>, tanto en el uso de <span>Workbench</span> como en <span>Command Line Client</span>, lo que me permite realizar consultas complejas. También cuento con conocimientos sobre bases de datos relacionales y en la elaboración de <span>Diagramas Entidad-Relación</span>, buscando las mejores opciones para eliminar la redundancia y obtener un mejor rendimiento.</p>
-            
-            <p>Mi objetivo es seguir creciendo en el mundo del desarrollo web, aprendiendo y aplicando nuevas tecnologías para ofrecer soluciones innovadoras y eficientes.</p>
-        </section>
-
-        <!-- <section>
-            <div class="skills" >
-                <span>JAVA</span>
-                <span>MYSQL</span>
-                <span>GIT</span>
-                <span>HTML</span>
-                <span>JAVASCRIPT</span>
-                <span>CSS</span>
-                <span>ANGULAR</span>
-                <span>TAILWIND</span>
+                <p class="titulo-proyecto">PB2 JAVA</p>
+                <div class="tecnologias-proyecto">
+                    <span>Java</span>
+                    <span>Junit</span>
+                </div>
+                <div class="enlaces">
+                    <a target="_blank" href="#" class="github-button"><img src="../../assets/icons/Github_light.svg" alt=""><p>Repositorio</p></a>
+                    <a target="_blank" href="#" class="ver-web">Ver sitio</a>
+                </div>              
             </div>
+
+            
+        </div>
         </section>
+        <hr>
+        <section id="sobreMi-section"> 
+            <h2 class="heading-section">SOBRE MI</h2>
 
-        <footer>
-            <img src="../../assets/icons/copyright.svg" alt="" class="icon">Casi Todos los Derechos Reservados
-        </footer> -->
-
-    </main>
+            <p>Soy estudiante <span>universitario</span> de <span>desarrollo web</span> en la Universidad Nacional de La Matanza (UNLaM), donde he adquirido sólidos conocimientos en <span>HTML</span>, <span>CSS</span> y <span>JavaScript</span> para desarrollo <span>Front-end</span>. Además, tengo formación en <span>diseño gráfico</span>, lo que me permite crear interfaces web atractivas y funcionales.</p>
+            <br>
+            <p><img src="../../assets/img/Pollo.jpeg" alt="" style="float: right; width: 300px; height: auto; object-fit: cover;">
+            Para el <span>Back-end</span> tengo una sólida base en <span>Java</span>, con enfoque en programación orientada a objetos, abarcando conceptos clave como polimorfismo, clases abstractas, interfaces, herencia y pruebas unitarias con <span>JUNIT4</span> aplicando la metodología <span>TDD</span>. Teniendo en cuenta estos conocimientos, me estoy introduciendo en <span>TypeScript</span> para luego complementar con un framework como <span>Angular</span>.</p>
+            <br>
+            <p>
+            Por otro lado, tengo conocimientos en <span>MySQL</span>, tanto en el uso de <span>Workbench</span> como en <span>Command Line Client</span>, lo que me permite realizar consultas complejas. También cuento con conocimientos sobre bases de datos relacionales y en la elaboración de <span>Diagramas Entidad-Relación</span>, buscando las mejores opciones para eliminar la redundancia y obtener un mejor rendimiento.</p>
+            <br>
+            <p>Mi objetivo es seguir creciendo en el mundo del desarrollo web, aprendiendo y aplicando nuevas tecnologías para ofrecer soluciones innovadoras y eficientes.</p> 
+        </section>
+        <hr>
+        <section id="educacion-section">
+            <h2 class="heading-section">FORMACION ACADEMICA</h2>
+            
+            <div class="contenedor-educacion">
+                <article class="card-educacion">
+                    <header>
+                        <h3>Tec Universitaria Desarrollo Web</h3>
+                    </header>
+                    <ul>
+                        <li><span>Universidad Nacional de La Matanza</span></li>
+                        <li>Julio 2023 - Actualidad</li>
+                    </ul>
+                </article>
     
-    <script  src="../js/script.js"></script>
+                <article class="card-educacion">
+                    <header>
+                        <h3>Professional Front-End Developer</h3>   
+                    </header>
+                    <ul>
+                        <li><span>Universidad Tecnológica Nacional</span></li>
+                        <li>Marzo 2023 - Diciembre 2023</li>
+                    </ul>
+                </article>
+
+                <article class="card-educacion">
+                    <header>
+                        <h3>Desarrollo Web con Bootstrap 5</h3>   
+                    </header>
+                    <ul>
+                        <li><span>Universidad Tecnológica Nacional</span></li>
+                        <li>Diciembre 2023</li>
+                    </ul>
+                </article>
+    
+                <article class="card-educacion">
+                    <header>
+                        <h3>HTML5, CSS3 y JS EM6+</h3>                        
+                    </header>
+                    <ul>
+                        <li><span>Universidad Tecnológica Nacional</span></li>
+                        <li>Septiembre 2023 - Noviembre 2023</li>
+                    </ul>
+                </article>
+
+                <article class="card-educacion">
+                    <header>
+                        <h3>Desarrollo Web con Javascript</h3>
+                    </header>
+                    <ul>
+                        <li><span>Universidad Tecnológica Nacional</span></li>
+                        <li>Julio 2023 - Septiembre 2023</li>
+                    </ul>
+                </article>
+
+                <article class="card-educacion">
+                    <header>
+                        <h3>Desarrollo Web con HTML5 y CSS3</h3>
+                        
+                    </header>
+                    <ul>
+                        <li><span>Universidad Tecnológica Nacional</span></li>
+                        <li>Marzo 2023 - Mayo 2023</span></li>
+                    </ul>
+                </article>
+            </div>
+
+            <h2 class="heading-section" style="margin-top: 1em;">IDIOMAS</h2>
+
+            <div class="contenedor-educacion">
+                <article class="card-educacion" style="width: 62.5em;">
+                    <header>
+                        <h3>Ingles - Intermedio</h3>
+                        
+                    </header>
+                    <ul>
+                        <li><span>Buenos Aire English House</span></li>
+                        <li>Marzo 2021 - Junio 2024</li>
+                    </ul>
+                </article>
+            </div>
+
+        </section>
+        <hr>
+        <footer>
+            <div class="copyright">
+                <p>Contactame en molverdiego@gmail.com</p>
+                
+            </div>
+            <div class="menciones">
+                <p>Animaciones hechas con <a href="https://animate.style/">Animate.css</a></p>
+                <p>Los iconos pertenecen a <a href="https://www.flaticon.com/">Flaticon</a></p>
+            </div>
+        </footer>
+    </main>
 </body>
 </html>

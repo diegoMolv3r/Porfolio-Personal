@@ -1,17 +1,11 @@
 var header = document.getElementById('header-nav');
-var imagenOculta = document.getElementById('imagen-oculta');
-
+var nav = document.getElementById('navegation-var');
 function navState(){
-    if(header.classList.contains('nav-desplegado')){
-        header.classList.remove('nav-desplegado');
-        header.classList.add('nav-replegado');
-        imagenOculta.style.display="block";
-
-    }else if(header.classList.contains('nav-replegado')){
-        header.classList.remove('nav-replegado');
-        header.classList.add('nav-desplegado');
-        imagenOculta.style.display="none";
+    if(header.classList.contains('animate__slideInLeft')){
+        header.classList.remove('animate__slideInLeft');
+        header.classList.add('animate__slideOutLeft');
+    }else if(header.classList.contains('animate__slideOutLeft')){
+        header.classList.remove('animate__slideOutLeft');
+        header.classList.add('animate__slideInLeft');
     }
 }
-
-
