@@ -17,7 +17,7 @@ function navState() {
 const proyectos = [
     {
         titulo: 'Quiz Code',
-        tecnologias: ['PHP', 'Mustache', 'Javascript', 'AJAXX', 'MySQL'],
+        tecnologias: ['PHP', 'Javascript', 'MySQL', 'Mustache', 'AJAXX' ],
         enlace: 'https://github.com/Urielito1031/preguntados-app-mvc'
     },
     {
@@ -32,7 +32,7 @@ const proyectos = [
     },
     {
         titulo: 'Pokedex',
-        tecnologias: ['PHP'],
+        tecnologias: ['PHP', 'MySQL'],
         enlace: 'https://github.com/diegoMolv3r/PHPokedex'
     },
     {
@@ -43,12 +43,12 @@ const proyectos = [
     {
         titulo: 'El mato a un policia motorizado',
         tecnologias: ['Bootstrap'],
-        enlace: 'https://github.com/diegoMolv3r/Proyecto-Banco-PB2'
+        enlace: 'https://el-mato-un-gorra-en-moto.netlify.app/'
     },
     {
         titulo: 'Calculadora Web',
         tecnologias: ['Javascript', 'Tailwind'],
-        enlace: 'https://github.com/diegoMolv3r/Proyecto-Banco-PB2'
+        enlace: 'https://molvercalc.netlify.app/'
     },
 
 
