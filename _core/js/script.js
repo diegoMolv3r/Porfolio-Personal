@@ -1,22 +1,21 @@
 const menuToggle = document.getElementById('menu-toggle');
 const mobileNav = document.getElementById('mobile-nav');
 const navLinks = mobileNav.querySelectorAll('a');
-const contenedorProyectos = document.getElementById('contenedor-proyectos');
 
 menuToggle.addEventListener('click', () => {
-  mobileNav.classList.toggle('hidden');
+    mobileNav.classList.toggle('hidden');
 });
 
 navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    mobileNav.classList.add('hidden');
-  });
+    link.addEventListener('click', () => {
+        mobileNav.classList.add('hidden');
+    });
 });
 
 window.addEventListener('resize', () => {
-  if (window.innerWidth >= 768) {
-    mobileNav.classList.add('hidden');
-  }
+    if (window.innerWidth >= 768) {
+        mobileNav.classList.add('hidden');
+    }
 });
 
 
@@ -59,15 +58,57 @@ function renderizarProyectos(proyecto) {
     return article
 }
 
+function renderizarFormacion(formacion) {
+    let article = document.createElement('article');
+    article.className = 'bg-gray-800 rounded-xl p-6 shadow-md w-full';
+
+    let titulo = document.createElement('h3');
+    titulo.className = 'text-xl font-semibold mb-2';
+    titulo.textContent = formacion.titulo;
+
+    let ul = document.createElement('ul');
+    ul.className = 'text-sm text-gray-300 space-y-1';
+
+    let liInstitucion = document.createElement('li');
+    liInstitucion.innerHTML = `<span class="font-medium text-blue-400">${formacion.institucion}</span>`;
+
+    let liPeriodo = document.createElement('li');
+    liPeriodo.textContent = formacion.periodo;
+
+    ul.appendChild(liInstitucion);
+    ul.appendChild(liPeriodo);
+
+    article.appendChild(titulo);
+    article.appendChild(ul);
+
+    return article;
+}
+
+
+const contenedorFormaciones = document.getElementById('contenedor-formaciones');
+const contenedorProyectos = document.getElementById('contenedor-proyectos');
+
+
 window.addEventListener('load', () => {
-  fetch('./data/proyectos.json') // ajustá la ruta según tu estructura
-    .then(res => res.json())
-    .then(proyectos => {
-      proyectos.forEach(proyecto => {
-        contenedorProyectos.appendChild(renderizarProyectos(proyecto));
-      });
-    })
-    .catch(error => {
-      console.error('Error al cargar los proyectos:', error);
-    });
+    fetch('../data/proyectos.json') 
+        .then(res => res.json())
+        .then(proyectos => {
+            proyectos.forEach(proyecto => {
+                contenedorProyectos.appendChild(renderizarProyectos(proyecto));
+            });
+        })
+        .catch(error => {
+            console.error('Error al cargar los proyectos:', error);
+        });
+
+    fetch('../data/formacion.json')
+        .then(res => res.json())
+        .then(formaciones => {
+            formaciones.forEach(formacion => {
+                contenedorFormaciones.appendChild(renderizarFormacion(formacion));
+            });
+        })
+        .catch(error => {
+            console.error('Error al cargar las formaciones:', error);
+        });
 });
