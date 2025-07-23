@@ -1,59 +1,23 @@
-var header = document.getElementById('header-nav');
-var nav = document.getElementById('navegation-var');
+const menuToggle = document.getElementById('menu-toggle');
+const mobileNav = document.getElementById('mobile-nav');
+const navLinks = mobileNav.querySelectorAll('a');
+const contenedorProyectos = document.getElementById('contenedor-proyectos');
 
-function navState() {
-    if (header.classList.contains('animate__slideInLeft')) {
-        header.classList.remove('animate__slideInLeft');
-        header.classList.add('animate__slideOutLeft');
+menuToggle.addEventListener('click', () => {
+  mobileNav.classList.toggle('hidden');
+});
 
-    } else if (header.classList.contains('animate__slideOutLeft')) {
-        header.classList.remove('animate__slideOutLeft');
-        header.classList.add('animate__slideInLeft');
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileNav.classList.add('hidden');
+  });
+});
 
-    }
-}
-
-
-const proyectos = [
-    {
-        titulo: 'Quiz Code',
-        tecnologias: ['PHP', 'Javascript', 'MySQL', 'Mustache', 'AJAXX' ],
-        enlace: 'https://github.com/Urielito1031/preguntados-app-mvc'
-    },
-    {
-        titulo: 'FutCode',
-        tecnologias: ['Java', 'Spring MVC', 'Hamcrest', 'Javascript', 'JQuery', 'HSQL'],
-        enlace: 'https://github.com/Urielito1031/Taller-webi-FutCode'
-    },
-    {
-        titulo: 'SickDogs Ind',
-        tecnologias: ['HTML', 'CSS', 'Javascript'],
-        enlace: ''
-    },
-    {
-        titulo: 'Pokedex',
-        tecnologias: ['PHP', 'MySQL'],
-        enlace: 'https://github.com/diegoMolv3r/PHPokedex'
-    },
-    {
-        titulo: 'Gestion Bancaria',
-        tecnologias: ['Java', 'Junit'],
-        enlace: 'https://github.com/diegoMolv3r/Proyecto-Banco-PB2'
-    },
-    {
-        titulo: 'El mato a un policia motorizado',
-        tecnologias: ['Bootstrap'],
-        enlace: 'https://el-mato-un-gorra-en-moto.netlify.app/'
-    },
-    {
-        titulo: 'Calculadora Web',
-        tecnologias: ['Javascript', 'Tailwind'],
-        enlace: 'https://molvercalc.netlify.app/'
-    },
-
-
-
-]
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 768) {
+    mobileNav.classList.add('hidden');
+  }
+});
 
 
 function renderizarProyectos(proyecto) {
@@ -95,11 +59,15 @@ function renderizarProyectos(proyecto) {
     return article
 }
 
-
-const contenedorProyectos = document.getElementById('contenedor-proyectos')
-
 window.addEventListener('load', () => {
-    proyectos.forEach(proyecto => {
-        contenedorProyectos.appendChild(renderizarProyectos(proyecto))
+  fetch('./data/proyectos.json') // ajustá la ruta según tu estructura
+    .then(res => res.json())
+    .then(proyectos => {
+      proyectos.forEach(proyecto => {
+        contenedorProyectos.appendChild(renderizarProyectos(proyecto));
+      });
+    })
+    .catch(error => {
+      console.error('Error al cargar los proyectos:', error);
     });
-})
+});

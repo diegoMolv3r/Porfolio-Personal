@@ -45,21 +45,14 @@
             <li><a href="#educacion-section" class="block py-2 hover:text-green-400 transition"><i class="bi bi-mortarboard"></i> FORMACIÓN</a></li>
         </ul>
     </header>
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileNav = document.getElementById('mobile-nav');
-        menuToggle.addEventListener('click', () => {
-            mobileNav.classList.toggle('hidden');
-        });
-    </script>
-    
+
     <main class="pt-20">
         <section id="home-section"
-            class="min-h-screen  text-white flex flex-col items-center justify-center px-6 py-12 text-center space-y-10 max-w-7xl mx-auto w-full px-4">
+            class="min-h-screen text-white flex flex-col items-center justify-center text-center space-y-10 max-w-7xl mx-auto w-full px-4 py-12">
             <div class="space-y-3 animate-fade-in-up">
-                <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">DIEGO LUCIANO MOLVER</h1>
-                <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300">Estudiante Universitario en Desarrollo Web</h2>
-                <p class="text-sm sm:text-md md:text-lg lg:text-xl text-gray-400">Buenos Aires, Argentina</p>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">DIEGO LUCIANO MOLVER</h1>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-300">Estudiante Universitario en Desarrollo Web</h2>
+                <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-400">Buenos Aires, Argentina</p>
             </div>
 
             <div class="flex flex-wrap justify-center gap-6 animate-fade-in-up delay-100">
@@ -92,7 +85,7 @@
 
         <section id="projects-section" class="max-w-7xl mx-auto w-full px-4">
             <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-10 text-white">PROYECTOS</h2>
-            <div id="contenedor-proyectos" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto px-4"></div>
+            <div id="contenedor-proyectos" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto px-4 w-full"></div>
         </section>
                   
         <section id="sobreMi-section" class="py-16 mx-auto w-full text-white">
@@ -146,9 +139,9 @@
         <section id="educacion-section" class="py-16 max-w-7xl mx-auto w-full px-4 text-white">
             <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-10">FORMACIÓN ACADÉMICA</h2>
           
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto w-full">
               <!-- Tarjeta 1 -->
-              <article class="bg-gray-800 rounded-xl p-6 shadow-md">
+              <article class="bg-gray-800 rounded-xl p-6 shadow-md w-full">
                 <h3 class="text-xl font-semibold mb-2">Tec. Universitaria en Desarrollo Web</h3>
                 <ul class="text-sm text-gray-300 space-y-1">
                   <li><span class="font-medium text-blue-400">Universidad Nacional de La Matanza</span></li>
@@ -157,7 +150,7 @@
               </article>
           
               <!-- Tarjeta 2 -->
-              <article class="bg-gray-800 rounded-xl p-6 shadow-md">
+              <article class="bg-gray-800 rounded-xl p-6 shadow-md w-full">
                 <h3 class="text-xl font-semibold mb-2">Professional Front-End Developer</h3>
                 <ul class="text-sm text-gray-300 space-y-1">
                   <li><span class="font-medium text-blue-400">Universidad Tecnológica Nacional</span></li>
@@ -166,7 +159,7 @@
               </article>
           
               <!-- Tarjeta 3 -->
-              <article class="bg-gray-800 rounded-xl p-6 shadow-md">
+              <article class="bg-gray-800 rounded-xl p-6 shadow-md w-full">
                 <h3 class="text-xl font-semibold mb-2">Desarrollo Web con Bootstrap 5</h3>
                 <ul class="text-sm text-gray-300 space-y-1">
                   <li><span class="font-medium text-blue-400">Universidad Tecnológica Nacional</span></li>
@@ -175,7 +168,7 @@
               </article>
           
               <!-- Tarjeta 4 -->
-              <article class="bg-gray-800 rounded-xl p-6 shadow-md">
+              <article class="bg-gray-800 rounded-xl p-6 shadow-md w-full">
                 <h3 class="text-xl font-semibold mb-2">HTML5, CSS3 y JS ES6+</h3>
                 <ul class="text-sm text-gray-300 space-y-1">
                   <li><span class="font-medium text-blue-400">Universidad Tecnológica Nacional</span></li>
@@ -184,7 +177,7 @@
               </article>
           
               <!-- Tarjeta 5 -->
-              <article class="bg-gray-800 rounded-xl p-6 shadow-md">
+              <article class="bg-gray-800 rounded-xl p-6 shadow-md w-full">
                 <h3 class="text-xl font-semibold mb-2">Desarrollo Web con JavaScript</h3>
                 <ul class="text-sm text-gray-300 space-y-1">
                   <li><span class="font-medium text-blue-400">Universidad Tecnológica Nacional</span></li>
@@ -193,7 +186,7 @@
               </article>
           
               <!-- Tarjeta 6 -->
-              <article class="bg-gray-800 rounded-xl p-6 shadow-md">
+              <article class="bg-gray-800 rounded-xl p-6 shadow-md w-full">
                 <h3 class="text-xl font-semibold mb-2">Desarrollo Web con HTML5 y CSS3</h3>
                 <ul class="text-sm text-gray-300 space-y-1">
                   <li><span class="font-medium text-blue-400">Universidad Tecnológica Nacional</span></li>
@@ -205,7 +198,7 @@
             <!-- IDIOMAS -->
             <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mt-20 mb-10">IDIOMAS</h2>
           
-            <div class="max-w-3xl mx-auto">
+            <div class="max-w-3xl mx-auto w-full">
               <article class="bg-gray-800 rounded-xl p-6 shadow-md">
                 <h3 class="text-xl font-semibold mb-2">Inglés - Intermedio</h3>
                 <ul class="text-sm text-gray-300 space-y-1">
