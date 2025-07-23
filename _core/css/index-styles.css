@@ -8,14 +8,23 @@
     margin-right: .4em;
 }
 /* Variables CSS / Paleta de colores */
-:root{
+/* :root{
     --white:#e8eeff;
     --cream:#e8eeff;
     --pink: #24c151;
     --salmon: #f4436f;
     --red: #ca1444;
     --blue: #142738;
+} */
+
+:root{
+    --cream:#ffffff;
+    --pink: #ffffff;
+    --salmon: #f4436f;
+    --red: #ca1444;
+    --blue: #ff6060;
 }
+
 /* Configuracion del sitio y archivo html */
 ::-webkit-scrollbar {
     width: 0;
@@ -90,7 +99,6 @@ a{
     margin: .5em 0;
     list-style: none;
     transition: 1s ease;
-    
 }
 .nav-link{
     text-decoration: none;
