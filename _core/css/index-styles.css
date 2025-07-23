@@ -3,36 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
-.icon{
-    height: 1em;
-    margin-right: .4em;
-}
-/* Variables CSS / Paleta de colores */
-/* :root{
-    --white:#e8eeff;
-    --cream:#e8eeff;
-    --pink: #24c151;
-    --salmon: #f4436f;
-    --red: #ca1444;
-    --blue: #142738;
-} */
 
-:root{
-    --cream:#ffffff;
-    --pink: #ffffff;
-    --salmon: #f4436f;
-    --red: #ca1444;
-    --blue: #ff6060;
-}
 
-/* Configuracion del sitio y archivo html */
 ::-webkit-scrollbar {
     width: 0;
 }
 html{
     scroll-behavior: smooth;
 }
-/* Estilos de las etiquetas semánticas y generales */
+
 body{ 
     background: var(--blue);
     display: flex;
@@ -221,9 +200,7 @@ a{
     background: var(--cream);
     border-radius: .5em;
 }
-.fecha-proyecto span {
-    margin-right: 4px;
-}
+
 .tecnologias-proyecto {
     display: flex;
     flex-wrap: wrap;
