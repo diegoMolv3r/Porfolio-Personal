@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego Molver - Porfolio Personal</title>
+    <link rel="stylesheet" href="./_core/css/index-styles.css">
+    <script defer src="./_core/js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-600">
+    <header class="w-full bg-gray-900 text-white shadow-md fixed top-0 left-0 z-50">
+        <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+            <div class="flex items-center gap-2">
+                <span class="font-bold text-lg tracking-wide">Diego Molver</span>
+            </div>
+            <button class="md:hidden text-2xl" id="menu-toggle">
+                <i class="bi bi-list"></i>
+            </button>
+            <ul id="nav-links" class="hidden md:flex gap-6 items-center font-semibold text-sm">
+                <li><a href="#home-section" class="hover:text-green-400 transition flex items-center gap-1"><i class="bi bi-house"></i> INICIO</a></li>
+                <li><a href="#projects-section" class="hover:text-green-400 transition flex items-center gap-1"><i class="bi bi-folder"></i> PROYECTOS</a></li>
+                <li><a href="#sobreMi-section" class="hover:text-green-400 transition flex items-center gap-1"><i class="bi bi-person"></i> SOBRE MÍ</a></li>
+                <li><a href="#educacion-section" class="hover:text-green-400 transition flex items-center gap-1"><i class="bi bi-mortarboard"></i> FORMACIÓN</a></li>
+            </ul>
+        </nav>
+        <ul id="mobile-nav" class="md:hidden flex-col gap-4 px-4 pb-4 hidden bg-gray-900 w-full">
+            <li><a href="#home-section" class="block py-2 hover:text-green-400 transition"><i class="bi bi-house"></i> INICIO</a></li>
+            <li><a href="#projects-section" class="block py-2 hover:text-green-400 transition"><i class="bi bi-folder"></i> PROYECTOS</a></li>
+            <li><a href="#sobreMi-section" class="block py-2 hover:text-green-400 transition"><i class="bi bi-person"></i> SOBRE MÍ</a></li>
+            <li><a href="#educacion-section" class="block py-2 hover:text-green-400 transition"><i class="bi bi-mortarboard"></i> FORMACIÓN</a></li>
+        </ul>
+    </header>
+
+    <main class="pt-20">
+        <section id="home-section"
+            class="min-h-screen text-white flex flex-col items-center justify-center text-center space-y-10 max-w-7xl mx-auto w-full px-4 py-12">
+            <div class="space-y-3 animate-fade-in-up">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">DIEGO LUCIANO MOLVER</h1>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-300">Estudiante Universitario en Desarrollo Web</h2>
+                <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-400">Buenos Aires, Argentina</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-6 animate-fade-in-up delay-100">
+                <a href="https://www.linkedin.com/in/diego-molver-72b3a727b/" target="_blank"
+                    class="flex items-center gap-2 text-gray-200 hover:text-green-400 transition">
+                    <i class="bi bi-linkedin text-xl"></i> LinkedIn
+                </a>
+                <a href="../../assets/Molver Diego Cv.pdf" target="_blank"
+                    class="flex items-center gap-2 text-gray-200 hover:text-green-400 transition">
+                    <i class="bi bi-file-earmark-person text-xl"></i> Descargar CV
+                </a>
+                <a href="https://github.com/diegoMolv3r" target="_blank"
+                    class="flex items-center gap-2 text-gray-200 hover:text-green-400 transition">
+                    <i class="bi bi-github text-xl"></i> GitHub
+                </a>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-3 max-w-4xl animate-fade-in-up delay-200">
+                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm">Java</span>
+                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm">Spring MVC</span>
+                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm">MySQL</span>
+                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm">TypeScript</span>
+                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm">Angular</span>
+                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm">HTML</span>
+                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm">CSS</span>
+                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm">JavaScript</span>
+                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm">PHP</span>
+            </div>
+        </section>
+
+        <section id="projects-section" class="max-w-7xl mx-auto w-full px-4">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-10 text-white">PROYECTOS</h2>
+            <div id="contenedor-proyectos" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto px-4 w-full"></div>
+        </section>
+                  
+        <section id="sobreMi-section" class="py-16 mx-auto w-full text-white">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-10 text-white">SOBRE MÍ</h2>
+          
+            <div class="max-w-5xl mx-auto space-y-6 relative">
+                <p class="text-lg leading-relaxed">
+                  Soy estudiante <span class="font-semibold text-blue-400">universitario</span> de 
+                  <span class="font-semibold text-blue-400">Desarrollo Web</span> en la Universidad Nacional de La Matanza (UNLaM),
+                  donde actualmente tengo <span class="font-semibold text-blue-400">13 de las 20 materias</span> de la carrera aprobadas.
+                  Una vez finalizada esta tecnicatura, planeo continuar mis estudios en la misma institución cursando la 
+                  <span class="font-semibold text-blue-400">Licenciatura en Gestión de Tecnologías de la Información</span>,
+                  con el objetivo de seguir ampliando mi formación y fortalecer mi perfil profesional.
+                </p>
+              
+                <p class="text-lg leading-relaxed">
+                  En el desarrollo <span class="font-semibold text-blue-400">Front-end</span>, tengo sólidos conocimientos en 
+                  <span class="font-semibold text-blue-400">HTML</span>, 
+                  <span class="font-semibold text-blue-400">CSS</span> y 
+                  <span class="font-semibold text-blue-400">JavaScript</span>, que me permiten construir interfaces modernas y accesibles.  
+                  Utilizo frameworks como <span class="font-semibold text-blue-400">Bootstrap 5</span> y 
+                  <span class="font-semibold text-blue-400">Tailwind CSS</span> para lograr diseños eficientes y responsivos. 
+                  Además, tengo experiencia con <span class="font-semibold text-blue-400">jQuery</span> y 
+                  <span class="font-semibold text-blue-400">AJAX</span> para la manipulación dinámica del DOM y la integración de funcionalidades asincrónicas en aplicaciones web.
+                </p>
+              
+                <div class="flex flex-col-reverse md:flex-row gap-6 items-center">
+                  <p class="text-lg leading-relaxed flex-1">
+                    En el ámbito del <span class="font-semibold text-blue-400">Back-end</span>, desarrollo aplicaciones utilizando 
+                    <span class="font-semibold text-blue-400">Java</span> y 
+                    <span class="font-semibold text-blue-400">PHP</span>, aplicando el patrón 
+                    <span class="font-semibold text-blue-400">Modelo-Vista-Controlador (MVC)</span> para construir sistemas escalables y organizados. 
+                    Trabajo con <span class="font-semibold text-blue-400">Spring MVC</span> en Java, siguiendo buenas prácticas de arquitectura. 
+                    Manejo <span class="font-semibold text-blue-400">bases de datos relacionales</span> con 
+                    <span class="font-semibold text-blue-400">MySQL</span>, integrándolas mediante 
+                    <span class="font-semibold text-blue-400">Hibernate</span> y 
+                    <span class="font-semibold text-blue-400">JPA</span> en Java para facilitar el mapeo objeto-relacional, y aplicándolas también en proyectos PHP. 
+                    Además, elaboro <span class="font-semibold text-blue-400">Diagramas Entidad-Relación</span> para diseñar estructuras normalizadas, eliminar redundancia y mejorar el rendimiento.
+                  </p>
+                  <img src="../../assets/img/Avatar-Diego-Molver.png" alt="Diego Molver"
+                    class="w-40 h-40 rounded-full border-4 border-white object-cover shadow-md">
+                </div>
+              
+                <p class="text-lg leading-relaxed">
+                  Para asegurar la calidad del software, aplico la metodología 
+                  <span class="font-semibold text-blue-400">Test Driven Development (TDD)</span>, desarrollando primero las pruebas automatizadas. 
+                  En el entorno JavaScript utilizo <span class="font-semibold text-blue-400">Jasmine</span>, y en Java, trabajo con 
+                  <span class="font-semibold text-blue-400">JUnit 5</span>, junto con 
+                  <span class="font-semibold text-blue-400">Hamcrest</span> para aserciones y 
+                  <span class="font-semibold text-blue-400">Mockito</span> para simulación de dependencias. 
+                  Estas herramientas me permiten garantizar código confiable y mantenible.
+                </p>
+              
+                <p class="text-lg leading-relaxed">
+                  Manejo herramientas clave para el desarrollo moderno como 
+                  <span class="font-semibold text-blue-400">Postman</span> para pruebas de APIs, 
+                  <span class="font-semibold text-blue-400">Git</span> para control de versiones, 
+                  <span class="font-semibold text-blue-400">Docker</span> para entornos aislados, y 
+                  <span class="font-semibold text-blue-400">Maven</span> para automatizar la gestión de proyectos Java.
+                </p>
+              
+                <p class="text-lg leading-relaxed">
+                  Mi objetivo es seguir creciendo en el mundo del desarrollo web, aprendiendo y aplicando nuevas tecnologías para ofrecer 
+                  <span class="font-semibold text-blue-400">soluciones innovadoras, eficientes y centradas en la experiencia del usuario</span>.
+                </p>
+              </div>
+        </section>
+          
+        <section id="educacion-section" class="py-16 max-w-7xl mx-auto w-full px-4 text-white">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-10">FORMACIÓN ACADÉMICA</h2>
+          
+            <div id="contenedor-formaciones" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto w-full"></div>
+          
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mt-20 mb-10">IDIOMAS</h2>
+          
+            <div class="max-w-3xl mx-auto w-full">
+              <article class="bg-gray-800 rounded-xl p-6 shadow-md">
+                <h3 class="text-xl font-semibold mb-2">Inglés - Intermedio</h3>
+                <ul class="text-sm text-gray-300 space-y-1">
+                  <li><span class="font-medium text-blue-400">Buenos Aire English House</span></li>
+                  <li>Marzo 2021 - Junio 2024</li>
+                </ul>
+              </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-950 text-white py-8 px-4 md:px-8 lg:px-16 text-sm">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-6">
+            <p class="font-semibold text-gray-300">Contacto: 
+                <a class="text-blue-400 hover:underline" href="mailto:molverdiego@gmail.com">molverdiego@gmail.com</a>
+            </p>
+        </div>
+        <p class="border-t border-gray-700 mt-6 py-4 text-center text-gray-500 text-xs">
+            &copy; 2025 Diego Molver. Todos los derechos reservados.
+        </p>
+    </footer>
+</body>
+
+</html>
