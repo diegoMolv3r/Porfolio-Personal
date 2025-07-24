@@ -1,0 +1,75 @@
+---
+const TRAINING = [
+  {
+    titulo: "Tec. Universitaria en Desarrollo Web",
+    institucion: "Universidad Nacional de La Matanza",
+    periodo: "Julio 2023 - Actualidad",
+  },
+  {
+    titulo: "Professional Front-End Developer",
+    institucion: "Universidad Tecnológica Nacional",
+    periodo: "Marzo 2023 - Diciembre 2023",
+  },
+  {
+    titulo: "Desarrollo Web con Bootstrap 5",
+    institucion: "Universidad Tecnológica Nacional",
+    periodo: "Diciembre 2023",
+  },
+  {
+    titulo: "HTML5, CSS3 y JS ES6+",
+    institucion: "Universidad Tecnológica Nacional",
+    periodo: "Septiembre 2023 - Noviembre 2023",
+  },
+  {
+    titulo: "Desarrollo Web con JavaScript",
+    institucion: "Universidad Tecnológica Nacional",
+    periodo: "Julio 2023 - Septiembre 2023",
+  },
+  {
+    titulo: "Desarrollo Web con HTML5 y CSS3",
+    institucion: "Universidad Tecnológica Nacional",
+    periodo: "Marzo 2023 - Mayo 2023",
+  },
+];
+---
+
+<section id="educacion-section" class="py-16 max-w-7xl mx-auto w-full px-4 text-white">
+  <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-10">
+    FORMACIÓN ACADÉMICA
+  </h2>
+
+  <div
+    id="contenedor-formaciones"
+    class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto w-full"
+  >
+    {TRAINING.map((train) => (
+      <article class="bg-gray-800 rounded-xl p-6 shadow-md w-full">
+        <h3 class="text-xl font-semibold mb-2">{train.titulo}</h3>
+        <ul class="text-sm text-gray-300 space-y-1">
+          <li>
+            <span class="font-medium text-blue-400">{train.institucion}</span>
+          </li>
+          <li>{train.periodo}</li>
+        </ul>
+      </article>
+    ))}
+  </div>
+
+  <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mt-20 mb-10">
+    IDIOMAS
+  </h2>
+
+  <div class="max-w-3xl mx-auto w-full">
+    <article class="bg-gray-800 rounded-xl p-6 shadow-md">
+      <h3 class="text-xl font-semibold mb-2">Inglés - Intermedio</h3>
+      <ul class="text-sm text-gray-300 space-y-1">
+        <li>
+          <span class="font-medium text-blue-400">
+            Buenos Aire English House
+          </span>
+        </li>
+        <li>Marzo 2021 - Junio 2024</li>
+      </ul>
+    </article>
+  </div>
+</section>

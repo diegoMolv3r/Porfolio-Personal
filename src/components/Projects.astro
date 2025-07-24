@@ -1,0 +1,65 @@
+---
+const PROJECTS = [
+    {
+        titulo: "Quiz Code",
+        tecnologias: ["PHP", "Javascript", "MySQL", "Mustache", "AJAXX"],
+        enlace: "https://github.com/Urielito1031/preguntados-app-mvc",
+    },
+    {
+        titulo: "FutCode",
+        tecnologias: ["Java","Spring MVC","Hamcrest","Javascript","JQuery","HSQL","Mockito"],
+        enlace: "https://github.com/Urielito1031/Taller-webi-FutCode",
+    },
+    {
+        titulo: "SickDogs Ind",
+        tecnologias: ["HTML", "CSS", "Javascript"],
+        enlace: "#",
+    },
+    {
+        titulo: "Pokedex",
+        tecnologias: ["PHP", "MySQL"],
+        enlace: "https://github.com/diegoMolv3r/PHPokedex",
+    },
+    {
+        titulo: "Gestion Bancaria",
+        tecnologias: ["Java", "Junit"],
+        enlace: "https://github.com/diegoMolv3r/Proyecto-Banco-PB2",
+    },
+    {
+        titulo: "El mato a un policia motorizado",
+        tecnologias: ["Bootstrap"],
+        enlace: "https://el-mato-un-gorra-en-moto.netlify.app/",
+    },
+    {
+        titulo: "Calculadora Web",
+        tecnologias: ["Javascript", "Tailwind"],
+        enlace: "https://molvercalc.netlify.app/",
+    },
+];
+---
+<section id="projects-section" class="max-w-7xl mx-auto w-full px-4">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-10 text-white">PROYECTOS</h2>
+    <div id="contenedor-proyectos" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto px-4 w-full">
+        {
+        PROJECTS.map((project) => (
+            <article class="bg-white rounded-2xl shadow-md p-6 flex flex-col gap-4 hover:shadow-xl transition-shadow duration-300">
+                <h3 class="text-xl font-bold text-gray-800">
+                    {project.titulo}
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                    {project.tecnologias.map((tecnologia) => (
+                        <span class="bg-gray-200 text-gray-700 text-sm px-3 py-1 rounded-full">
+                            {tecnologia}
+                        </span>
+                    ))}
+                </div>
+                <div class="mt-auto">
+                    <a href="{project.enlace}" class="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:underline hover:text-blue-800transition-colors" target="_blank">
+                        <i class="bi bi-github text-lg"/>Repositorio
+                    </a>
+                </div>
+            </article>
+        ))
+        }
+    </div>
+</section>
