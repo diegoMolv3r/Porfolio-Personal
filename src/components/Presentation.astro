@@ -1,35 +1,44 @@
 <section id="home-section"
-            class="min-h-screen text-white flex flex-col items-center justify-center text-center space-y-10 max-w-7xl mx-auto w-full px-4 py-12">
-            <div class="space-y-3 animate-fade-in-up">
-                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">DIEGO LUCIANO MOLVER</h1>
-                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-300">Estudiante Universitario en Desarrollo Web</h2>
-                <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-400">Buenos Aires, Argentina</p>
+            class="min-h-screen text-white flex flex-col items-center justify-center text-center space-y-10 max-w-7xl mx-auto w-full px-4 py-12 relative overflow-hidden">
+            
+            <!-- Efecto de partículas de fondo -->
+            <div class="absolute inset-0 opacity-10 pointer-events-none">
+                <div class="absolute top-20 left-20 w-2 h-2 bg-green-400 rounded-full animate-float"></div>
+                <div class="absolute top-40 right-32 w-1 h-1 bg-green-400 rounded-full animate-float" style="animation-delay: 1s;"></div>
+                <div class="absolute bottom-40 left-32 w-1.5 h-1.5 bg-green-400 rounded-full animate-float" style="animation-delay: 2s;"></div>
+                <div class="absolute bottom-20 right-20 w-1 h-1 bg-green-400 rounded-full animate-float" style="animation-delay: 0.5s;"></div>
             </div>
 
-            <div class="flex flex-wrap justify-center gap-6 animate-fade-in-up delay-100">
-                <a href="https://www.linkedin.com/in/diego-molver-72b3a727b/" target="_blank"
-                    class="flex items-center gap-2 text-gray-200 hover:text-green-400 transition">
+            <div class="space-y-3 animate-fade-in-up relative z-10">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">DIEGO LUCIANO MOLVER</h1>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-200 animate-slide-in-left delay-100">Estudiante Universitario en Desarrollo Web</h2>
+                <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 animate-slide-in-right delay-200">Buenos Aires, Argentina</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-6 animate-scale-in delay-300 relative z-10">
+                <a href="https://www.linkedin.com/in/diego-molver-72b3a727b/" target="_blank" rel="noopener noreferrer"
+                    class="btn-hover flex items-center gap-2 text-white hover:text-[#ca1444] bg-gray-800 px-6 py-3 rounded-lg hover:bg-gray-700 border border-gray-600 hover:border-[#ca1444]">
                     <i class="bi bi-linkedin text-xl"></i> LinkedIn
                 </a>
-                <a href="../../assets/Molver Diego Cv.pdf" target="_blank"
-                    class="flex items-center gap-2 text-gray-200 hover:text-green-400 transition">
+                <a href="/assets/Molver Diego Cv.pdf" target="_blank" rel="noopener noreferrer"
+                    class="btn-hover flex items-center gap-2 text-white hover:text-[#ca1444] bg-gray-800 px-6 py-3 rounded-lg hover:bg-gray-700 border border-gray-600 hover:border-[#ca1444]">
                     <i class="bi bi-file-earmark-person text-xl"></i> Descargar CV
                 </a>
-                <a href="https://github.com/diegoMolv3r" target="_blank"
-                    class="flex items-center gap-2 text-gray-200 hover:text-green-400 transition">
+                <a href="https://github.com/diegoMolv3r" target="_blank" rel="noopener noreferrer"
+                    class="btn-hover flex items-center gap-2 text-white hover:text-[#ca1444] bg-gray-800 px-6 py-3 rounded-lg hover:bg-gray-700 border border-gray-600 hover:border-[#ca1444]">
                     <i class="bi bi-github text-xl"></i> GitHub
                 </a>
             </div>
 
-            <div class="flex flex-wrap justify-center gap-3 max-w-4xl animate-fade-in-up delay-200">
-                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm">Java</span>
-                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm">Spring MVC</span>
-                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm">MySQL</span>
-                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm">TypeScript</span>
-                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm">Angular</span>
-                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm">HTML</span>
-                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm">CSS</span>
-                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm">JavaScript</span>
-                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm">PHP</span>
+            <div class="flex flex-wrap justify-center gap-3 max-w-4xl animate-fade-in-up delay-400 relative z-10">
+                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm text-white hover:bg-[#ca1444] transition-all duration-300 hover-lift animate-glow">Java</span>
+                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm text-white hover:bg-[#ca1444] transition-all duration-300 hover-lift animate-glow" style="animation-delay: 0.2s;">Spring MVC</span>
+                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm text-white hover:bg-[#ca1444] transition-all duration-300 hover-lift animate-glow" style="animation-delay: 0.4s;">MySQL</span>
+                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm text-white hover:bg-[#ca1444] transition-all duration-300 hover-lift animate-glow" style="animation-delay: 0.6s;">TypeScript</span>
+                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm text-white hover:bg-[#ca1444] transition-all duration-300 hover-lift animate-glow" style="animation-delay: 0.8s;">Angular</span>
+                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm text-white hover:bg-[#ca1444] transition-all duration-300 hover-lift animate-glow" style="animation-delay: 1s;">HTML</span>
+                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm text-white hover:bg-[#ca1444] transition-all duration-300 hover-lift animate-glow" style="animation-delay: 1.2s;">CSS</span>
+                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm text-white hover:bg-[#ca1444] transition-all duration-300 hover-lift animate-glow" style="animation-delay: 1.4s;">JavaScript</span>
+                <span class="bg-gray-800 px-4 py-2 rounded-full text-sm text-white hover:bg-[#ca1444] transition-all duration-300 hover-lift animate-glow" style="animation-delay: 1.6s;">PHP</span>
             </div>
         </section>

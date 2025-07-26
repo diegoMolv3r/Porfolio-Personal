@@ -1,19 +1,21 @@
 ---
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 ---
-<header class="flex w-full bg-gray-900 text-white shadow-md fixed top-0 left-0 z-50 justify-center h-20 md:h-24">
-  <Astronav closeOnClick>
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 w-full">
-      <span class="font-bold text-xl md:text-2xl tracking-wide">Diego Molver</span>
-      <div class="block md:hidden">
+<header class="flex w-full bg-gray-900 text-white shadow-md fixed top-0 left-0 z-50 justify-center h-20">
+      <Astronav closeOnClick>
+      <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 w-full">
+        <a href="#home-section" class="flex items-center gap-3">
+          <img src="/public/assets/img/diego-molver.png" alt="Diego Molver" class="h-14 w-14 rounded-full object-cover">
+          <span class="font-bold text-xl md:text-2xl tracking-wide">Diego Molver</span>
+        </a>
+        <div class="block md:hidden">
         <MenuIcon class="text-3xl md:text-4xl text-white" />
       </div>
       <MenuItems class="hidden md:flex gap-8 items-center font-semibold text-base md:text-lg ml-auto">
         <ul class="flex flex-col md:flex-row gap-4 md:gap-8">
-          <li><a href="#home-section" class="hover:text-green-400 transition flex items-center gap-2"><i class="bi bi-house text-xl md:text-2xl"></i> INICIO</a></li>
-          <li><a href="#projects-section" class="hover:text-green-400 transition flex items-center gap-2"><i class="bi bi-folder text-xl md:text-2xl"></i> PROYECTOS</a></li>
-          <li><a href="#sobreMi-section" class="hover:text-green-400 transition flex items-center gap-2"><i class="bi bi-person text-xl md:text-2xl"></i> SOBRE MÍ</a></li>
-          <li><a href="#educacion-section" class="hover:text-green-400 transition flex items-center gap-2"><i class="bi bi-mortarboard text-xl md:text-2xl"></i> FORMACIÓN</a></li>
+          <li><a href="#projects-section" class="hover:text-[#ca1444] transition flex items-center gap-2"><i class="bi bi-folder text-xl md:text-2xl"></i> PROYECTOS</a></li>
+          <li><a href="#sobreMi-section" class="hover:text-[#ca1444] transition flex items-center gap-2"><i class="bi bi-person text-xl md:text-2xl"></i> SOBRE MÍ</a></li>
+          <li><a href="#educacion-section" class="hover:text-[#ca1444] transition flex items-center gap-2"><i class="bi bi-mortarboard text-xl md:text-2xl"></i> FORMACIÓN</a></li>
         </ul>
       </MenuItems>
     </div>

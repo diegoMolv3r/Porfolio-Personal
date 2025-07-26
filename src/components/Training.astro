@@ -33,43 +33,66 @@ const TRAINING = [
 ];
 ---
 
-<section id="educacion-section" class="py-16 max-w-7xl mx-auto w-full px-4 text-white">
-  <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-10">
-    FORMACIÓN ACADÉMICA
-  </h2>
+<section id="educacion-section" class="py-16 max-w-7xl mx-auto w-full px-4 text-white relative">
+  <!-- Efecto de fondo -->
+  <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 opacity-40"></div>
+  
+  <div class="relative z-10">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16 animate-fade-in-up">
+      FORMACIÓN ACADÉMICA
+    </h2>
 
-  <div
-    id="contenedor-formaciones"
-    class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto w-full"
-  >
-    {TRAINING.map((train) => (
-      <article class="bg-gray-800 rounded-xl p-6 shadow-md w-full">
-        <h3 class="text-xl font-semibold mb-2">{train.titulo}</h3>
-        <ul class="text-sm text-gray-300 space-y-1">
-          <li>
-            <span class="font-medium text-blue-400">{train.institucion}</span>
+    <div
+      id="contenedor-formaciones"
+      class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto w-full"
+    >
+      {TRAINING.map((train, index) => (
+        <article class="bg-gray-800/70 backdrop-blur-sm rounded-xl p-8 border border-gray-700 shadow-lg w-full hover-lift animate-slide-in-left" style={`animation-delay: ${index * 0.1}s`}>
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 bg-[#ca1444] rounded-lg flex items-center justify-center">
+              <i class="bi bi-mortarboard text-white text-xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-white">{train.titulo}</h3>
+          </div>
+          <ul class="text-sm text-gray-300 space-y-2">
+            <li class="flex items-center gap-2">
+              <i class="bi bi-building text-[#ca1444]"></i>
+              <span class="font-medium text-[#ca1444]">{train.institucion}</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="bi bi-calendar-event text-[#ca1444]"></i>
+              <span>{train.periodo}</span>
+            </li>
+          </ul>
+        </article>
+      ))}
+    </div>
+
+    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mt-20 mb-16 animate-fade-in-up delay-300">
+      IDIOMAS
+    </h2>
+
+    <div class="max-w-3xl mx-auto w-full">
+      <article class="bg-gradient-to-r from-[#ca1444]/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-[#ca1444]/30 shadow-lg hover-lift animate-scale-in delay-400">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-12 h-12 bg-[#ca1444] rounded-lg flex items-center justify-center">
+            <i class="bi bi-translate text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white">Inglés - Intermedio</h3>
+        </div>
+        <ul class="text-sm text-gray-300 space-y-2">
+          <li class="flex items-center gap-2">
+            <i class="bi bi-building text-[#ca1444]"></i>
+            <span class="font-medium text-[#ca1444]">
+              Buenos Aire English House
+            </span>
           </li>
-          <li>{train.periodo}</li>
+          <li class="flex items-center gap-2">
+            <i class="bi bi-calendar-event text-[#ca1444]"></i>
+            <span>Marzo 2021 - Junio 2024</span>
+          </li>
         </ul>
       </article>
-    ))}
-  </div>
-
-  <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mt-20 mb-10">
-    IDIOMAS
-  </h2>
-
-  <div class="max-w-3xl mx-auto w-full">
-    <article class="bg-gray-800 rounded-xl p-6 shadow-md">
-      <h3 class="text-xl font-semibold mb-2">Inglés - Intermedio</h3>
-      <ul class="text-sm text-gray-300 space-y-1">
-        <li>
-          <span class="font-medium text-blue-400">
-            Buenos Aire English House
-          </span>
-        </li>
-        <li>Marzo 2021 - Junio 2024</li>
-      </ul>
-    </article>
+    </div>
   </div>
 </section>
