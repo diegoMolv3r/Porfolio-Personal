@@ -1,23 +1,47 @@
 ---
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 ---
-<header class="flex w-full bg-gray-900 text-white shadow-md fixed top-0 left-0 z-50 justify-center h-20">
+<header class="fixed top-0 left-0 w-full bg-gray-900 text-white shadow-md z-50">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-20">
+    <!-- Logo + Nombre -->
+    <a href="#home-section" class="flex items-center gap-3">
+      <img src="/assets/img/diego-molver.png" alt="Diego Molver" class="h-12 w-12 sm:h-14 sm:w-14 rounded-full object-cover" />
+      <span class="font-bold text-lg sm:text-xl md:text-2xl tracking-wide">Diego Molver</span>
+    </a>
+
+    <!-- Menú de escritorio -->
+    <nav class="hidden md:flex gap-6 lg:gap-8 items-center font-semibold text-sm sm:text-base md:text-lg">
+      <a href="#projects-section" class="hover:text-[#ca1444] transition flex items-center gap-2">
+        <i class="bi bi-folder text-xl md:text-2xl"></i> Proyectos
+      </a>
+      <a href="#sobreMi-section" class="hover:text-[#ca1444] transition flex items-center gap-2">
+        <i class="bi bi-person text-xl md:text-2xl"></i> Sobre mí
+      </a>
+      <a href="#educacion-section" class="hover:text-[#ca1444] transition flex items-center gap-2">
+        <i class="bi bi-mortarboard text-xl md:text-2xl"></i> Formación
+      </a>
+    </nav>
+
+    <!-- Menú hamburguesa móvil -->
+    <div class="md:hidden">
       <Astronav closeOnClick>
-      <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 w-full">
-        <a href="#home-section" class="flex items-center gap-3">
-          <img src="/assets/img/diego-molver.png" alt="Diego Molver" class="h-14 w-14 rounded-full object-cover">
-          <span class="font-bold text-xl md:text-2xl tracking-wide">Diego Molver</span>
-        </a>
-        <div class="block md:hidden">
-        <MenuIcon class="text-3xl md:text-4xl text-white" />
-      </div>
-      <MenuItems class="hidden md:flex gap-8 items-center font-semibold text-base md:text-lg ml-auto">
-        <ul class="flex flex-col md:flex-row gap-4 md:gap-8">
-          <li><a href="#projects-section" class="hover:text-[#ca1444] transition flex items-center gap-2"><i class="bi bi-folder text-xl md:text-2xl"></i> Proyectos</a></li>
-          <li><a href="#sobreMi-section" class="hover:text-[#ca1444] transition flex items-center gap-2"><i class="bi bi-person text-xl md:text-2xl"></i> Sobre mi</a></li>
-          <li><a href="#educacion-section" class="hover:text-[#ca1444] transition flex items-center gap-2"><i class="bi bi-mortarboard text-xl md:text-2xl"></i> Formacion</a></li>
-        </ul>
-      </MenuItems>
+        <MenuIcon>
+          <i class=" text-3xl text-white cursor-pointerbi bi-list"></i>
+        </MenuIcon>
+        <MenuItems class="absolute top-full left-0 w-full bg-gray-900 shadow-lg border-t border-gray-700 z-50">
+          <nav class="flex flex-col">
+            <a href="#projects-section" class="hover:text-[#ca1444] transition flex items-center gap-3 text-lg font-semibold py-4 px-6 border-b border-gray-700 w-full">
+              <i class="bi bi-folder text-2xl"></i> Proyectos
+            </a>
+            <a href="#sobreMi-section" class="hover:text-[#ca1444] transition flex items-center gap-3 text-lg font-semibold py-4 px-6 border-b border-gray-700 w-full">
+              <i class="bi bi-person text-2xl"></i> Sobre mí
+            </a>
+            <a href="#educacion-section" class="hover:text-[#ca1444] transition flex items-center gap-3 text-lg font-semibold py-4 px-6 w-full">
+              <i class="bi bi-mortarboard text-2xl"></i> Formación
+            </a>
+          </nav>
+        </MenuItems>
+      </Astronav>
     </div>
-  </Astronav>
+  </div>
 </header>
