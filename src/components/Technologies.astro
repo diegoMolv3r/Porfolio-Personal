@@ -1,0 +1,142 @@
+---
+const TECHNOLOGIES = [
+  {
+    name: "HTML",
+    level: "Avanzado",
+    icon: "bi bi-filetype-html",
+    description: "Fundamentos web"
+  },
+  {
+    name: "CSS",
+    level: "Avanzado", 
+    icon: "bi bi-filetype-css",
+    description: "Estilos y diseño"
+  },
+  {
+    name: "JavaScript",
+    level: "Intermedio",
+    icon: "bi bi-filetype-js",
+    description: "Interactividad"
+  },
+  {
+    name: "PHP",
+    level: "Intermedio", 
+    icon: "bi bi-filetype-php",
+    description: "Backend dinámico"
+  },
+  {
+    name: "MySQL",
+    level: "Intermedio",
+    icon: "bi bi-database",
+    description: "Bases de datos"
+  },
+  {
+    name: "Java",
+    level: "Intermedio",
+    icon: "bi bi-cup-hot",
+    description: "POO avanzado"
+  },
+  {
+    name: "Spring MVC",
+    level: "Intermedio",
+    icon: "bi bi-gear",
+    description: "Framework Java"
+  },
+  {
+    name: "Bootstrap 5",
+    level: "Avanzado",
+    icon: "bi bi-bootstrap",
+    description: "UI Framework"
+  },
+  {
+    name: "Tailwind CSS",
+    level: "Intermedio",
+    icon: "bi bi-palette",
+    description: "CSS utilitario"
+  },
+  {
+    name: "jQuery",
+    level: "Básico",
+    icon: "bi bi-lightning",
+    description: "DOM manipulation"
+  },
+  {
+    name: "Git",
+    level: "Intermedio",
+    icon: "bi bi-git",
+    description: "Version control"
+  },
+  {
+    name: "JUnit 5",
+    level: "Intermedio",
+    icon: "bi bi-check-circle",
+    description: "Testing"
+  }
+];
+
+const getLevelColor = (level: string) => {
+  switch(level) {
+    case "Avanzado": return "text-green-400";
+    case "Intermedio": return "text-yellow-400";
+    case "Básico": return "text-blue-400";
+    default: return "text-gray-400";
+  }
+};
+---
+
+<section id="technologies-section" class="py-16 max-w-7xl mx-auto w-full px-4 text-white">
+  <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16">TECNOLOGÍAS</h2>
+  
+  <div class="relative overflow-hidden">
+    <div class="flex animate-scroll space-x-8">
+      {TECHNOLOGIES.map((tech) => (
+        <div class="flex-shrink-0 w-64 bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-[#ca1444] transition-all duration-300 hover:scale-105">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-[#ca1444] rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class={`${tech.icon} text-white text-2xl`}></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">{tech.name}</h3>
+            <span class={`text-sm font-semibold ${getLevelColor(tech.level)}`}>
+              {tech.level}
+            </span>
+            <p class="text-gray-300 text-sm mt-2">{tech.description}</p>
+          </div>
+        </div>
+      ))}
+      {/* Duplicar elementos para el loop infinito */}
+      {TECHNOLOGIES.map((tech) => (
+        <div class="flex-shrink-0 w-64 bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-[#ca1444] transition-all duration-300 hover:scale-105">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-[#ca1444] rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class={`${tech.icon} text-white text-2xl`}></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">{tech.name}</h3>
+            <span class={`text-sm font-semibold ${getLevelColor(tech.level)}`}>
+              {tech.level}
+            </span>
+            <p class="text-gray-300 text-sm mt-2">{tech.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+  }
+  
+  .animate-scroll:hover {
+    animation-play-state: paused;
+  }
+</style>
