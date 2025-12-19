@@ -1,11 +1,9 @@
-﻿<!-- agrega mas espacio en el eje y de la seccion -->
-<section
+﻿<section
     id="home-section"
-    class="text-white flex items-center justify-between text-center space-y-8 max-w-7xl mx-auto w-full px-4 py-12 relative overflow-hidden mt-20 md:mt-24 py-24"
+    class="text-white flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-8 max-w-7xl mx-auto w-full px-4 py-12 md:py-24 relative overflow-hidden mt-20 md:mt-24"
 >
     <div
-        class="space-y-3 animate-fade-in-up relative z-10"
-        style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center;"
+        class="space-y-3 animate-fade-in-up relative z-10 flex flex-col items-center md:items-start justify-center"
     >
         <h1
             class="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight"
@@ -18,15 +16,14 @@
             Desarrollador Web Full Stack
         </h2>
         <p
-            class="text-lg sm:text-xl md:text-xl lg:text-xl text-gray-300 font-light animate-slide-in-right delay-200"
-            style="text-align: left; "
+            class="text-lg sm:text-xl md:text-xl lg:text-xl text-gray-300 font-light animate-slide-in-right delay-200 text-center md:text-left"
         >
             Estudiante universitario en constante aprendizaje, interesado en
             <br /> la Ciberseguridad y las buenas prácticas de programación.
         </p>
 
         <div
-            class="flex flex-wrap justify-center gap-4 my-4 md:gap-6 animate-scale-in delay-300 relative z-10"
+            class="flex flex-wrap justify-center md:justify-start gap-4 my-4 md:gap-6 animate-scale-in delay-300 relative z-10"
         >
             <a
                 href="https://www.linkedin.com/in/diego-molver-72b3a727b/"
@@ -66,10 +63,9 @@
         </a>
     </div>
 
-    <!-- border-4 border-sky-500/50 shadow-2xl shadow-sky-500/20 agregale esa sombra al video -->
     <video
         src="/assets/video/AnimadoEscribiendo.mp4"
-        class="h-48 w-48 md:h-80 md:w-80 object-cover rounded-full border-[#0ea5e9]border-4 border-sky-500/50 shadow-2xl shadow-sky-500/20"
+        class="h-48 w-48 md:h-80 md:w-80 object-cover rounded-full border-[#0ea5e9] border-4 border-sky-500/50 shadow-2xl shadow-sky-500/20"
         autoplay
         loop
         muted></video>
