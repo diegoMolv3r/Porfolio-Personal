@@ -1,15 +1,5 @@
 ﻿---
 const PROJECTS = [
-    // {
-    //     titulo: "The Simpson API",
-    //     descripcion:
-    //         "Proyecto de practica con Angular consumiendo una API e implementando un backend con Node.js",
-    //     imagen: "/assets/img/projects/theSimpsonApi.jpg",
-    //     tecnologias: ["Angular", "Node.js"],
-    //     mainTecnologia: "Angular",
-    //     enlace: "https://github.com/diegoMolv3r/The-Simpsons-Api-Angular-",
-    //     sitio: null,
-    // },
     {
         titulo: "OWASP TOP 10 con .NET Core",
         descripcion:
@@ -71,75 +61,6 @@ const PROJECTS = [
         sitio: "https://el-mato-un-gorra-en-moto.netlify.app/",
     },
 ];
-
-const TECH_CONFIG = {
-    PHP: {
-        icon: "bi bi-filetype-php",
-        color: "text-purple-400",
-        bgColor: "bg-purple-600",
-        borderColor: "border-purple-500",
-    },
-    Java: {
-        icon: "bi bi-cup-hot",
-        color: "text-orange-400",
-        bgColor: "bg-orange-600",
-        borderColor: "border-orange-500",
-    },
-    Javascript: {
-        icon: "bi bi-filetype-js",
-        color: "text-yellow-400",
-        bgColor: "bg-yellow-600",
-        borderColor: "border-yellow-500",
-    },
-    Angular: {
-        icon: "bi bi-filetype-angular",
-        color: "text-red-400",
-        bgColor: "bg-red-600",
-        borderColor: "border-red-500",
-    },
-    Bootstrap: {
-        icon: "bi bi-bootstrap",
-        color: "text-purple-400",
-        bgColor: "bg-purple-600",
-        borderColor: "border-purple-500",
-    },
-    Tailwind: {
-        icon: "bi bi-wind",
-        color: "text-cyan-400",
-        bgColor: "bg-cyan-600",
-        borderColor: "border-cyan-500",
-    },
-    CSS: {
-        color: "text-blue-400",
-        bgColor: "bg-blue-600",
-        borderColor: "border-blue-500",
-    },
-    MySQL: {
-        color: "text-blue-400",
-        bgColor: "bg-blue-600",
-        borderColor: "border-blue-500",
-    },
-    "Spring MVC": {
-        color: "text-green-400",
-        bgColor: "bg-green-600",
-        borderColor: "border-green-500",
-    },
-    JUnit: {
-        color: "text-green-400",
-        bgColor: "bg-green-600",
-        borderColor: "border-green-500",
-    },
-    Mockito: {
-        color: "text-purple-400",
-        bgColor: "bg-purple-600",
-        borderColor: "border-purple-500",
-    },
-    Hamcrest: {
-        color: "text-green-400",
-        bgColor: "bg-green-600",
-        borderColor: "border-green-500",
-    },
-};
 ---
 
 <section
@@ -160,10 +81,6 @@ const TECH_CONFIG = {
         >
             {
                 PROJECTS.map((project, index) => {
-                    const mainTech =
-                        TECH_CONFIG[
-                            project.mainTecnologia as keyof typeof TECH_CONFIG
-                        ] || TECH_CONFIG["Javascript"];
                     return (
                         <article
                             class="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 hover-lift animate-scale-in flex flex-col h-full overflow-hidden group"
@@ -177,11 +94,6 @@ const TECH_CONFIG = {
                                     onerror="this.src='/assets/img/projects/default-project.jpg'"
                                 />
                                 <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
-                                <div
-                                    class={`absolute top-4 left-4 ${mainTech.bgColor} text-white px-3 py-1 rounded-full text-sm font-medium`}
-                                >
-                                    {project.mainTecnologia}
-                                </div>
                             </div>
 
                             <div class="p-6 flex flex-col flex-grow">
@@ -237,4 +149,3 @@ const TECH_CONFIG = {
         </div>
     </div>
 </section>
-
