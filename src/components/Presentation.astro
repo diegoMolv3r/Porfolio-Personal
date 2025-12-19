@@ -1,24 +1,77 @@
-<section id="home-section" class="min-h-screen text-white flex flex-col items-center justify-center text-center space-y-8 max-w-7xl mx-auto w-full px-4 py-12 relative overflow-hidden mt-20 md:mt-24">
-            
-    <div class="space-y-3 animate-fade-in-up relative z-10" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">DIEGO LUCIANO MOLVER</h1>
-        <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-3xl text-gray-200 animate-slide-in-left delay-100">Estudiante Universitario en Desarrollo Web</h2>
-        <p class="text-lg sm:text-xl md:text-xl lg:text-xl text-gray-300 animate-slide-in-right delay-200">Buenos Aires, Argentina</p>
-        <div class="flex flex-wrap justify-center gap-4 md:gap-6 animate-scale-in delay-300 relative z-10">
-            <a href="https://www.linkedin.com/in/diego-molver-72b3a727b/" target="_blank" rel="noopener noreferrer"
-                class="btn-hover flex items-center gap-2 text-white hover:text-[#ca1444] bg-gray-800 px-4 md:px-6 py-2 md:py-3 rounded-lg hover:bg-gray-700 border border-gray-600 hover:border-[#ca1444] text-sm md:text-base">
-                <i class="bi bi-linkedin text-lg md:text-xl"></i> LinkedIn
+﻿<!-- agrega mas espacio en el eje y de la seccion -->
+<section
+    id="home-section"
+    class="text-white flex items-center justify-between text-center space-y-8 max-w-7xl mx-auto w-full px-4 py-12 relative overflow-hidden mt-20 md:mt-24 py-24"
+>
+    <div
+        class="space-y-3 animate-fade-in-up relative z-10"
+        style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center;"
+    >
+        <h1
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight"
+        >
+            Diego Luciano Molver
+        </h1>
+        <h2
+            class="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold text-[#0ea5e9] animate-slide-in-left delay-100"
+        >
+            Desarrollador Web Full Stack
+        </h2>
+        <p
+            class="text-lg sm:text-xl md:text-xl lg:text-xl text-gray-300 font-light animate-slide-in-right delay-200"
+            style="text-align: left; "
+        >
+            Estudiante universitario en constante aprendizaje, aplicando
+            conocimientos <br /> para crear soluciones digitales eficientes.
+        </p>
+
+        <div
+            class="flex flex-wrap justify-center gap-4 my-4 md:gap-6 animate-scale-in delay-300 relative z-10"
+        >
+            <a
+                href="https://www.linkedin.com/in/diego-molver-72b3a727b/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-white hover:scale-125 transition-all duration-300"
+            >
+                <i class="bi bi-linkedin text-lg md:text-3xl"></i>
             </a>
-            <a href="/assets/Molver Diego Cv.pdf" target="_blank" rel="noopener noreferrer"
-                class="btn-hover flex items-center gap-2 text-white hover:text-[#ca1444] bg-gray-800 px-4 md:px-6 py-2 md:py-3 rounded-lg hover:bg-gray-700 border border-gray-600 hover:border-[#ca1444] text-sm md:text-base">
-                <i class="bi bi-file-earmark-person text-lg md:text-xl"></i> Descargar CV
+
+            <a
+                href="https://github.com/diegoMolv3r"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-white hover:scale-125 transition-all duration-300"
+            >
+                <i class="bi bi-github text-lg md:text-3xl"></i>
             </a>
-            <a href="https://github.com/diegoMolv3r" target="_blank" rel="noopener noreferrer"
-                class="btn-hover flex items-center gap-2 text-white hover:text-[#ca1444] bg-gray-800 px-4 md:px-6 py-2 md:py-3 rounded-lg hover:bg-gray-700 border border-gray-600 hover:border-[#ca1444] text-sm md:text-base">
-                <i class="bi bi-github text-lg md:text-xl"></i> GitHub
+
+            <a
+                href="mailto:molverdiego@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-white hover:scale-125 transition-all duration-300"
+            >
+                <i class="bi bi-envelope text-2xl md:text-3xl"></i>
             </a>
         </div>
+
+        <a
+            href="/assets/Molver Diego Cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-hover flex items-center gap-2 text-white hover:text-[#0ea5e9] bg-[#0ea5e9] px-4 md:px-6 py-2 md:py-3 rounded-lg hover:bg-[#0ea5e9] border border-gray-600 hover:border-[#0ea5e9] text-sm md:text-base mt-2 hover:text-white hover:border-white hover:bg-transparent hover:scale-105 transition-all duration-300"
+        >
+            Descargar CV <i class="bi bi-download text-lg md:text-2xl"></i>
+        </a>
     </div>
-                    
-    <video src="/assets/video/AnimadoEscribiendo.mp4" class="h-48 w-48 md:h-80 md:w-80 object-cover rounded-full animate-fade-in-up delay-200" autoplay loop muted></video>
+
+    <!-- border-4 border-sky-500/50 shadow-2xl shadow-sky-500/20 agregale esa sombra al video -->
+    <video
+        src="/assets/video/AnimadoEscribiendo.mp4"
+        class="h-48 w-48 md:h-80 md:w-80 object-cover rounded-full border-[#0ea5e9]border-4 border-sky-500/50 shadow-2xl shadow-sky-500/20"
+        autoplay
+        loop
+        muted></video>
 </section>
+

@@ -1,244 +1,240 @@
----
+﻿---
 const PROJECTS = [
+    // {
+    //     titulo: "The Simpson API",
+    //     descripcion:
+    //         "Proyecto de practica con Angular consumiendo una API e implementando un backend con Node.js",
+    //     imagen: "/assets/img/projects/theSimpsonApi.jpg",
+    //     tecnologias: ["Angular", "Node.js"],
+    //     mainTecnologia: "Angular",
+    //     enlace: "https://github.com/diegoMolv3r/The-Simpsons-Api-Angular-",
+    //     sitio: null,
+    // },
+    {
+        titulo: "OWASP TOP 10 con .NET Core",
+        descripcion:
+            "Aplicacion de Tickets en la cual se aplican la prácticas mencionadas en el OWASP TOP 10.",
+        imagen: "/assets/img/projects/NetCRUD.png",
+        tecnologias: ["C#", "Entity Framework", "SQL Server"],
+        mainTecnologia: ".NET",
+        enlace: "https://github.com/diegoMolv3r/CRUD-en-.NET-con-SQL-SERVER",
+        sitio: null,
+    },
     {
         titulo: "Quiz Code",
-        descripcion: "Aplicación web de preguntas y respuestas desarrollada con PHP y MySQL. Implementa el patrón MVC con Mustache como motor de plantillas y AJAX para interacciones dinámicas.",
+        descripcion:
+            "Juego de preguntas y respuestas con lógica de dificultad adaptativa y puntuacion.",
         imagen: "/assets/img/projects/quiz-code.jpg",
-        tecnologias: ["PHP", "MySQL", "Mustache", "AJAX"],
+        tecnologias: ["PHP", "MySQL", "Bootstrap", "Mustache"],
         mainTecnologia: "PHP",
         enlace: "https://github.com/Urielito1031/preguntados-app-mvc",
-        sitio: null
+        sitio: null,
     },
     {
         titulo: "FutCode",
-        descripcion: "Sistema de gestión de fútbol desarrollado con Java Spring MVC. Incluye funcionalidades completas de CRUD con base de datos HSQL y testing con JUnit y Mockito.",
+        descripcion:
+            "Juego de fútbol online en el cual podes formar tu propio equipo y jugar contra otros usuarios.",
         imagen: "/assets/img/projects/futcode.jpg",
-        tecnologias: ["Java","Spring MVC","Hamcrest","JS","HSQL","Mockito"],
+        tecnologias: ["Java", "Hibernate", "Thymeleaf", "Mockito"],
         mainTecnologia: "Java",
         enlace: "https://github.com/Urielito1031/Taller-webi-FutCode",
-        sitio: null
+        sitio: null,
     },
     {
         titulo: "SickDogs Ind",
-        descripcion: "Catágolo web para mostrar remeras de un vendedor independiente. ACTUALMENTE TRABAJANDO EN ÉL para introducirme en  Angular y TypeScript.",
+        descripcion:
+            "Catálogo web para la marca de ropa SickDogs. Con funcionalidades de filtrado y busqueda.",
         imagen: "/assets/img/projects/sickdogs.jpg",
-        tecnologias: ["Angular", "TypeScript","CSS"],
+        tecnologias: ["Angular"],
         mainTecnologia: "Angular",
         enlace: "https://github.com/diegoMolv3r/SickDogsInd",
-        sitio: "https://sickdogs.netlify.app/"
+        sitio: "https://sickdogs.netlify.app/",
     },
     {
         titulo: "Pokedex",
-        descripcion: "Aplicación web que simula una Pokédex utilizando PHP y MySQL. Permite buscar y visualizar información de Pokémon con interfaz intuitiva.",
+        descripcion:
+            "Aplicación web que simula una Pokédex en la cual se puede buscar y visualizar información de Pokémon con interfaz intuitiva.",
         imagen: "/assets/img/projects/pokedex.jpg",
         tecnologias: ["PHP", "MySQL"],
         mainTecnologia: "PHP",
         enlace: "https://github.com/diegoMolv3r/PHPokedex",
-        sitio: null
+        sitio: null,
     },
     {
         titulo: "El Mato a un Policía Motorizado",
-        descripcion: "Sitio web tributo a la banda argentina desarrollado con Bootstrap. Diseño moderno y responsivo con información sobre la banda y su música.",
+        descripcion:
+            "Sitio web tributo a la banda argentina desarrollado con Bootstrap. Diseño moderno y responsivo con información sobre la banda y su música.",
         imagen: "/assets/img/projects/mato-policia.jpg",
-        tecnologias: ["Bootstrap", "HTML", "CSS"],
+        tecnologias: ["Bootstrap"],
         mainTecnologia: "Bootstrap",
         enlace: "https://github.com/diegoMolv3r/el-mato-un-gorra-en-moto",
-        sitio: "https://el-mato-un-gorra-en-moto.netlify.app/"
+        sitio: "https://el-mato-un-gorra-en-moto.netlify.app/",
     },
-    {
-        titulo: "Calculadora Web",
-        descripcion: "Calculadora web moderna desarrollada con JavaScript y Tailwind CSS. Interfaz elegante con funcionalidades matemáticas completas y diseño responsivo.",
-        imagen: "/assets/img/projects/calculadora.jpg",
-        tecnologias: ["JS", "Tailwind"],
-        mainTecnologia: "Javascript",
-        enlace: "https://github.com/diegoMolv3r/calculadora-web",
-        sitio: "https://molvercalc.netlify.app/"
-    }
-    // ,
-    // {
-    //     titulo: "Gestión Bancaria",
-    //     descripcion: "Sistema de gestión bancaria desarrollado en Java con JUnit para testing. Implementa operaciones básicas de banca con validaciones robustas.",
-    //     imagen: "/assets/img/projects/banco.jpg",
-    //     tecnologias: ["Java", "JUnit"],
-    //     mainTecnologia: "Java",
-    //     enlace: "https://github.com/diegoMolv3r/Proyecto-Banco-PB2",
-    //     sitio: null
-    // }
 ];
 
 const TECH_CONFIG = {
-    "PHP": {
+    PHP: {
         icon: "bi bi-filetype-php",
         color: "text-purple-400",
         bgColor: "bg-purple-600",
-        borderColor: "border-purple-500"
+        borderColor: "border-purple-500",
     },
-    "Java": {
+    Java: {
         icon: "bi bi-cup-hot",
         color: "text-orange-400",
         bgColor: "bg-orange-600",
-        borderColor: "border-orange-500"
+        borderColor: "border-orange-500",
     },
-    "Javascript": {
+    Javascript: {
         icon: "bi bi-filetype-js",
         color: "text-yellow-400",
         bgColor: "bg-yellow-600",
-        borderColor: "border-yellow-500"
+        borderColor: "border-yellow-500",
     },
-    "Angular": {
+    Angular: {
         icon: "bi bi-filetype-angular",
         color: "text-red-400",
         bgColor: "bg-red-600",
-        borderColor: "border-red-500"
+        borderColor: "border-red-500",
     },
-    "Bootstrap": {
+    Bootstrap: {
         icon: "bi bi-bootstrap",
         color: "text-purple-400",
         bgColor: "bg-purple-600",
-        borderColor: "border-purple-500"
+        borderColor: "border-purple-500",
     },
-    "Tailwind": {
+    Tailwind: {
         icon: "bi bi-wind",
         color: "text-cyan-400",
         bgColor: "bg-cyan-600",
-        borderColor: "border-cyan-500"
+        borderColor: "border-cyan-500",
     },
-    "HTML": {
-        icon: "bi bi-filetype-html",
-        color: "text-orange-400",
-        bgColor: "bg-orange-600",
-        borderColor: "border-orange-500"
-    },
-    "CSS": {
-        icon: "bi bi-filetype-css",
+    CSS: {
         color: "text-blue-400",
         bgColor: "bg-blue-600",
-        borderColor: "border-blue-500"
+        borderColor: "border-blue-500",
     },
-    "MySQL": {
-        icon: "bi bi-database",
+    MySQL: {
         color: "text-blue-400",
         bgColor: "bg-blue-600",
-        borderColor: "border-blue-500"
+        borderColor: "border-blue-500",
     },
     "Spring MVC": {
-        icon: "bi bi-spring",
         color: "text-green-400",
         bgColor: "bg-green-600",
-        borderColor: "border-green-500"
+        borderColor: "border-green-500",
     },
-    "JUnit": {
-        icon: "bi bi-check-circle",
+    JUnit: {
         color: "text-green-400",
         bgColor: "bg-green-600",
-        borderColor: "border-green-500"
+        borderColor: "border-green-500",
     },
-    "Mockito": {
-        icon: "bi bi-patch-question",
+    Mockito: {
         color: "text-purple-400",
         bgColor: "bg-purple-600",
-        borderColor: "border-purple-500"
+        borderColor: "border-purple-500",
     },
-    "jQuery": {
-        icon: "bi bi-lightning",
-        color: "text-blue-400",
-        bgColor: "bg-blue-600",
-        borderColor: "border-blue-500"
-    },
-    "AJAX": {
-        icon: "bi bi-arrow-repeat",
+    Hamcrest: {
         color: "text-green-400",
         bgColor: "bg-green-600",
-        borderColor: "border-green-500"
+        borderColor: "border-green-500",
     },
-    "Mustache": {
-        icon: "bi bi-file-earmark-text",
-        color: "text-gray-400",
-        bgColor: "bg-gray-600",
-        borderColor: "border-gray-500"
-    },
-    "HSQL": {
-        icon: "bi bi-database-fill",
-        color: "text-blue-400",
-        bgColor: "bg-blue-600",
-        borderColor: "border-blue-500"
-    },
-    "Hamcrest": {
-        icon: "bi bi-check2-all",
-        color: "text-green-400",
-        bgColor: "bg-green-600",
-        borderColor: "border-green-500"
-    }
 };
 ---
-<section id="projects-section" class="max-w-7xl mx-auto w-full px-4 py-16 relative">
+
+<section
+    id="projects-section"
+    class="max-w-7xl mx-auto w-full px-4 py-16 relative"
+>
     <div class="absolute inset-0 opacity-30"></div>
-    
+
     <div class="relative z-10">
-        <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16 text-white animate-fade-in-up">PROYECTOS</h2>
-        <div id="contenedor-proyectos" class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto px-4 w-full">
+        <h2
+            class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16 text-white animate-fade-in-up"
+        >
+            PROYECTOS
+        </h2>
+        <div
+            id="contenedor-proyectos"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4 w-full"
+        >
             {
-            PROJECTS.map((project, index) => {
-                const mainTech = TECH_CONFIG[project.mainTecnologia as keyof typeof TECH_CONFIG] || TECH_CONFIG["Javascript"];
-                return (
-                    <article class="bg-gray-800/70 backdrop-blur-sm rounded-2xl border border-gray-700 overflow-hidden hover-lift animate-scale-in group" style={`animation-delay: ${index * 0.1}s`}>
-                        <div class="relative h-48 overflow-hidden">
-                            <img 
-                                src={project.imagen} 
-                                alt={project.titulo}
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                                onerror="this.src='/assets/img/projects/default-project.jpg'"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
-                            <div class={`absolute top-4 left-4 ${mainTech.bgColor} text-white px-3 py-1 rounded-full text-sm font-medium flex items-center gap-2`}>
-                                <i class={mainTech.icon}></i>
-                                {project.mainTecnologia}
-                            </div>
-                        </div>
-                        
-                        <div class="p-6 flex flex-col gap-4">
-                            <div class="flex items-center gap-3">
-                                <div class={`w-12 h-12 ${mainTech.bgColor} rounded-lg flex items-center justify-center`}>
-                                    <i class="bi bi-code-slash text-white text-xl"></i>
+                PROJECTS.map((project, index) => {
+                    const mainTech =
+                        TECH_CONFIG[
+                            project.mainTecnologia as keyof typeof TECH_CONFIG
+                        ] || TECH_CONFIG["Javascript"];
+                    return (
+                        <article
+                            class="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 hover-lift animate-scale-in flex flex-col h-full overflow-hidden group"
+                            style={`animation-delay: ${index * 0.1}s`}
+                        >
+                            <div class="relative h-48 overflow-hidden shrink-0">
+                                <img
+                                    src={project.imagen}
+                                    alt={project.titulo}
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                    onerror="this.src='/assets/img/projects/default-project.jpg'"
+                                />
+                                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
+                                <div
+                                    class={`absolute top-4 left-4 ${mainTech.bgColor} text-white px-3 py-1 rounded-full text-sm font-medium`}
+                                >
+                                    {project.mainTecnologia}
                                 </div>
-                                <h3 class="text-xl font-bold text-white">
-                                    {project.titulo}
-                                </h3>
                             </div>
-                            
-                            <p class="text-gray-300 text-sm leading-relaxed">
-                                {project.descripcion}
-                            </p>
-                            
-                            <div class="flex flex-wrap gap-2">
-                                {project.tecnologias.map((tecnologia) => {
-                                    const tech = TECH_CONFIG[tecnologia as keyof typeof TECH_CONFIG] || TECH_CONFIG["Javascript"];
-                                    return (
-                                        <span class={`${tech.color} bg-gray-800 text-xs px-3 py-2 rounded-lg border ${tech.borderColor} hover:bg-gray-700 transition-all duration-300 flex items-center gap-2`}>
-                                            <i class={tech.icon}></i>
-                                            {tecnologia}
-                                        </span>
-                                    );
-                                })}
-                            </div>
-                            
-                            <div class="mt-auto flex gap-3">
-                                <a href={project.enlace} target="_blank" rel="noopener noreferrer"
-                                   class={`inline-flex items-center gap-2 text-sm font-medium ${mainTech.color} hover:text-white transition-all duration-300 bg-gray-800 px-4 py-2 rounded-lg hover:bg-gray-700 border ${mainTech.borderColor} flex-1 justify-center`}>
-                                    <i class="bi bi-github text-lg"/>Repositorio
-                                </a>
-                                {project.sitio && (
-                                    <a href={project.sitio} target="_blank" rel="noopener noreferrer"
-                                       class={`inline-flex items-center gap-2 text-sm font-medium ${mainTech.color} hover:text-white transition-all duration-300 bg-gray-800 px-4 py-2 rounded-lg hover:bg-gray-700 border ${mainTech.borderColor} flex-1 justify-center`}>
-                                        <i class="bi bi-box-arrow-up-right text-lg"/>Ver Sitio
+
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex items-center gap-4 mb-4">
+                                    <h3 class="text-xl font-bold text-white leading-tight">
+                                        {project.titulo}
+                                    </h3>
+                                </div>
+
+                                <p class="text-gray-300 text-sm leading-relaxed mb-6 flex-grow">
+                                    {project.descripcion}
+                                </p>
+
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    {project.tecnologias.map((tecnologia) => {
+                                        return (
+                                            <span
+                                                class={`text-xs px-3 py-1.5 rounded-lg border border-gray-600 bg-gray-700/50 text-gray-300`}
+                                            >
+                                                {tecnologia}
+                                            </span>
+                                        );
+                                    })}
+                                </div>
+
+                                <div class="mt-auto flex gap-3">
+                                    <a
+                                        href={project.enlace}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-[#0ea5e9] transition-all duration-300 bg-gray-700/50 px-4 py-2.5 rounded-lg hover:bg-gray-700 border border-gray-600 hover:border-[#0ea5e9] flex-1 justify-center group/btn"
+                                    >
+                                        <i class="bi bi-github text-lg group-hover/btn:scale-110 transition-transform" />{" "}
+                                        Repositorio
                                     </a>
-                                )}
+                                    {project.sitio && (
+                                        <a
+                                            href={project.sitio}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-[#0ea5e9] transition-all duration-300 bg-gray-700/50 px-4 py-2.5 rounded-lg hover:bg-gray-700 border border-gray-600 hover:border-[#0ea5e9] flex-1 justify-center group/btn"
+                                        >
+                                            <i class="bi bi-box-arrow-up-right text-lg group-hover/btn:scale-110 transition-transform" />{" "}
+                                            Ver Sitio
+                                        </a>
+                                    )}
+                                </div>
                             </div>
-                        </div>
-                    </article>
-                );
-            })
+                        </article>
+                    );
+                })
             }
         </div>
     </div>
 </section>
+
