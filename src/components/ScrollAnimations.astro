@@ -1,0 +1,33 @@
+<!-- ScrollAnimations — IntersectionObserver trigger for scroll-based reveals -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+
+            // Stagger children if the element has data-stagger
+            const staggerChildren = entry.target.querySelectorAll('[data-stagger]');
+            staggerChildren.forEach((child, index) => {
+              (child as HTMLElement).style.transitionDelay = `${index * 0.1}s`;
+              child.classList.add('visible');
+            });
+
+            // Unobserve after animation (one-time)
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px',
+      }
+    );
+
+    // Observe all scroll-hidden elements
+    document.querySelectorAll('.scroll-hidden').forEach((el) => {
+      observer.observe(el);
+    });
+  });
+</script>

@@ -1,241 +1,63 @@
 ---
 import "../styles/global.css";
 import Header from "../components/Header.astro";
-import Presentation from "../components/Presentation.astro";
-import AboutMe from "../components/AboutMe.astro";
+import Hero from "../components/Hero.astro";
 import Projects from "../components/Projects.astro";
+import AboutMe from "../components/AboutMe.astro";
 import Training from "../components/Training.astro";
+import Languages from "../components/Languages.astro";
 import Contact from "../components/Contact.astro";
 import Footer from "../components/Footer.astro";
+import ConstellationBg from "../components/ConstellationBg.astro";
+import ScrollAnimations from "../components/ScrollAnimations.astro";
 ---
 
 <!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>Diego Molver - Porfolio Personal</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diego Molver — Desarrollador Full Stack</title>
+    <meta
+      name="description"
+      content="Portfolio de Diego Molver. Desarrollador Web Full Stack especializado en Angular, .NET, Node.js y Ciberseguridad."
+    />
+    <meta name="author" content="Diego Molver" />
 
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-        />
-    </head>
-    <body class="bg-gray-900">
-        <main class="pt-20">
-            <Header />
-            <Presentation />
-            <Projects />
-            <AboutMe />
-            <Training />
-            <Contact />
-            <Footer />
-            <slot />
-        </main>
-    </body>
+    <!-- Fuentes — Inter + JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+  </head>
+
+  <body class="bg-[var(--bg-deepest)] text-[var(--text-primary)] overflow-x-hidden">
+    <!-- Constellation background -->
+    <ConstellationBg />
+
+    <!-- Main content -->
+    <main class="relative z-10">
+      <Header />
+      <Hero />
+      <Projects />
+      <AboutMe />
+      <Training />
+      <Languages />
+      <Contact />
+      <Footer />
+    </main>
+
+    <!-- Scroll animation triggers -->
+    <ScrollAnimations />
+
+    <slot />
+  </body>
 </html>
-
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    ::-webkit-scrollbar {
-        width: 5px;
-        background-color: #ffffff;
-    }
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-    section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        width: 100%;
-        max-width: 100vw;
-
-        height: min-content;
-
-        padding: 0 2rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        margin-bottom: 2em;
-        margin-top: 2em;
-    }
-
-    @keyframes fadeInUp {
-        0% {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes slideInLeft {
-        0% {
-            opacity: 0;
-            transform: translateX(-50px);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    @keyframes slideInRight {
-        0% {
-            opacity: 0;
-            transform: translateX(50px);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    @keyframes scaleIn {
-        0% {
-            opacity: 0;
-            transform: scale(0.8);
-        }
-
-        100% {
-            opacity: 1;
-            transform: scale(1);
-        }
-    }
-
-    @keyframes float {
-        0%,
-        100% {
-            transform: translateY(0px);
-        }
-        50% {
-            transform: translateY(-10px);
-        }
-    }
-
-    @keyframes glow {
-        0%,
-        100% {
-            box-shadow: 0 0 5px rgba(202, 20, 68, 0.3);
-        }
-        50% {
-            box-shadow: 0 0 20px rgba(202, 20, 68, 0.6);
-        }
-    }
-
-    .animate-fade-in-up {
-        animation: fadeInUp 0.8s ease-out forwards;
-    }
-
-    .animate-slide-in-left {
-        animation: slideInLeft 0.8s ease-out forwards;
-    }
-
-    .animate-slide-in-right {
-        animation: slideInRight 0.8s ease-out forwards;
-    }
-
-    .animate-scale-in {
-        animation: scaleIn 0.6s ease-out forwards;
-    }
-
-    .animate-float {
-        animation: float 3s ease-in-out infinite;
-    }
-
-    .animate-glow {
-        animation: glow 2s ease-in-out infinite;
-    }
-
-    .delay-100 {
-        animation-delay: 0.2s;
-    }
-
-    .delay-200 {
-        animation-delay: 0.4s;
-    }
-
-    .delay-300 {
-        animation-delay: 0.6s;
-    }
-
-    .delay-400 {
-        animation-delay: 0.8s;
-    }
-
-    /* Efectos hover mejorados */
-    .hover-lift {
-        transition: all 0.3s ease;
-    }
-
-    .hover-lift:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Efectos específicos para botones */
-    .btn-hover {
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .btn-hover::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-            90deg,
-            transparent,
-            rgba(202, 20, 68, 0.2),
-            transparent
-        );
-        transition: left 0.5s;
-    }
-
-    .btn-hover:hover::before {
-        left: 100%;
-    }
-
-    .btn-hover:hover {
-        transform: translateY(-2px) scale(1.05);
-        box-shadow: 0 8px 25px rgba(202, 20, 68, 0.3);
-    }
-
-    /* Scroll suave mejorado */
-    html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 80px;
-    }
-</style>

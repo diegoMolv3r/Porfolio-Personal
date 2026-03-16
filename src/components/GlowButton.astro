@@ -1,0 +1,26 @@
+---
+interface Props {
+  href: string;
+  text: string;
+  icon?: string;
+  target?: string;
+  variant?: 'primary' | 'outline';
+}
+
+const { href, text, icon, target = '_self', variant = 'primary' } = Astro.props;
+---
+
+<a
+  href={href}
+  target={target}
+  rel={target === '_blank' ? 'noopener noreferrer' : undefined}
+  class:list={[
+    "glow-btn btn-glow inline-flex items-center gap-2 font-semibold text-sm md:text-base px-5 md:px-7 py-2.5 md:py-3 rounded-xl transition-all duration-400 border",
+    variant === 'primary'
+      ? "bg-[var(--accent-cyan)] text-[var(--bg-deepest)] border-[var(--accent-cyan)] hover:bg-transparent hover:text-[var(--accent-cyan)]"
+      : "bg-transparent text-[var(--accent-cyan)] border-[var(--border-glow)] hover:bg-[var(--accent-cyan)]/10"
+  ]}
+>
+  {text}
+  {icon && <i class={`${icon} text-lg`} />}
+</a>

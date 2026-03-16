@@ -1,69 +1,82 @@
-﻿<footer
-    class="bg-gray-950 text-white py-12 px-4 md:px-8 lg:px-16 relative overflow-hidden"
->
-    <div class="absolute inset-0 opacity-5">
-        <div
-            class="absolute bottom-20 left-20 w-1 h-1 bg-[#0ea5e9] rounded-full animate-float"
-        >
+<footer class="relative py-14 mt-16 px-4 border-t border-[var(--border-subtle)]">
+  <!-- Glow separator -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-[1px] bg-gradient-to-r from-transparent via-[var(--accent-cyan)] to-transparent opacity-50"></div>
+
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <!-- Left: Logo + Contact -->
+      <div class="flex items-center gap-4">
+        <div class="w-9 h-9 rounded-lg bg-[var(--accent-cyan)] flex items-center justify-center text-[var(--bg-deepest)] font-bold text-xs animate-glow-pulse">
+          DM
         </div>
-        <div
-            class="absolute bottom-40 right-32 w-0.5 h-0.5 bg-[#0ea5e9] rounded-full animate-float"
-            style="animation-delay: 1s;"
-        >
+        <div>
+          <p class="text-sm font-medium text-[var(--text-secondary)]">Diego Molver</p>
+          <a
+            class="text-xs text-[var(--accent-cyan)] hover:text-[var(--text-primary)] transition-colors duration-300"
+            href="mailto:molverdiego@gmail.com"
+          >
+            molverdiego@gmail.com
+          </a>
         </div>
-        <div
-            class="absolute bottom-60 left-32 w-1.5 h-1.5 bg-[#0ea5e9] rounded-full animate-float"
-            style="animation-delay: 2s;"
+      </div>
+
+      <!-- Right: Social icons -->
+      <div class="flex items-center gap-4">
+        <a
+          href="https://www.linkedin.com/in/diego-molver-72b3a727b/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer-social-link"
+          aria-label="LinkedIn"
         >
-        </div>
+          <i class="bi bi-linkedin text-lg"></i>
+        </a>
+        <a
+          href="https://github.com/diegoMolv3r"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer-social-link"
+          aria-label="GitHub"
+        >
+          <i class="bi bi-github text-lg"></i>
+        </a>
+        <a
+          href="mailto:molverdiego@gmail.com"
+          rel="noopener noreferrer"
+          class="footer-social-link"
+          aria-label="Email"
+        >
+          <i class="bi bi-envelope text-lg"></i>
+        </a>
+      </div>
     </div>
 
-    <div class="relative z-10">
-        <div
-            class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 animate-fade-in-up"
-        >
-            <div class="flex items-center gap-4">
-                <div
-                    class="w-12 h-12 bg-[#0ea5e9] rounded-lg flex items-center justify-center animate-glow"
-                >
-                    <i class="bi bi-envelope text-white text-xl"></i>
-                </div>
-                <div>
-                    <p class="font-semibold text-gray-300">Contacto:</p>
-                    <a
-                        class="text-[#0ea5e9] hover:text-white transition-all duration-300 hover-lift inline-flex items-center gap-2"
-                        href="mailto:molverdiego@gmail.com"
-                    >
-                        <i class="bi bi-envelope-fill"></i>
-                        molverdiego@gmail.com
-                    </a>
-                </div>
-            </div>
-
-            <div class="flex items-center gap-6">
-                <a
-                    href="https://www.linkedin.com/in/diego-molver-72b3a727b/"
-                    target="_blank"
-                    class="text-gray-400 hover:text-[#0ea5e9] transition-all duration-300 hover-lift text-2xl"
-                >
-                    <i class="bi bi-linkedin"></i>
-                </a>
-                <a
-                    href="https://github.com/diegoMolv3r"
-                    target="_blank"
-                    class="text-gray-400 hover:text-[#0ea5e9] transition-all duration-300 hover-lift text-2xl"
-                >
-                    <i class="bi bi-github"></i>
-                </a>
-            </div>
-        </div>
-
-        <div
-            class="border-t border-gray-700 mt-8 py-6 text-center animate-fade-in-up delay-100"
-        >
-            <p class="text-gray-500 text-sm">
-                &copy; 2025 Diego Molver. Todos los derechos reservados.
-            </p>
-        </div>
+    <!-- Copyright -->
+    <div class="mt-8 pt-5 border-t border-[var(--border-subtle)] text-center">
+      <p class="text-xs text-[var(--text-muted)] font-mono">
+        &copy; 2025 Diego Molver. Todos los derechos reservados.
+      </p>
     </div>
+  </div>
 </footer>
+
+<style>
+  .footer-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-subtle);
+    color: var(--text-muted);
+    transition: all 0.3s ease;
+  }
+
+  .footer-social-link:hover {
+    color: var(--accent-cyan);
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.2);
+    transform: translateY(-2px);
+  }
+</style>

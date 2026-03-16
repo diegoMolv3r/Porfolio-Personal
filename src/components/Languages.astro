@@ -1,0 +1,44 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+---
+
+<section
+  class="py-28 md:py-36 max-w-3xl mx-auto w-full px-4 relative"
+>
+  <SectionTitle title="IDIOMAS" />
+
+  <div class="scroll-hidden">
+    <article
+      class="glass p-7 md:p-8 border-[var(--accent-indigo)]/20 bg-gradient-to-r from-[var(--accent-indigo)]/5 to-[var(--accent-cyan)]/5"
+      data-stagger
+    >
+      {/* Accent line */}
+      <div class="h-[2px] w-full -mt-7 md:-mt-8 mb-5 rounded-full bg-gradient-to-r from-[var(--accent-indigo)] to-[var(--accent-cyan)]"></div>
+
+      <div class="flex items-start gap-4 mb-4">
+        <div class="w-10 h-10 rounded-lg bg-[var(--accent-indigo)]/15 border border-[var(--accent-indigo)]/20 flex items-center justify-center flex-shrink-0">
+          <i class="bi bi-translate text-[var(--accent-indigo)] text-lg"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-[var(--text-primary)]">
+            Inglés
+            <span class="text-[var(--accent-indigo)] ml-2 text-sm font-mono">CONVERSACIONAL</span>
+          </h3>
+        </div>
+      </div>
+
+      <div class="space-y-2 ml-14">
+        <div class="flex items-center gap-2 text-sm">
+          <i class="bi bi-building text-[var(--accent-indigo)] text-xs"></i>
+          <span class="text-[var(--accent-indigo)] font-medium">Buenos Aires English House</span>
+        </div>
+        <div class="flex items-center gap-2 text-sm">
+          <i class="bi bi-calendar-event text-[var(--text-muted)] text-xs"></i>
+          <span class="text-[var(--text-secondary)]">Marzo 2021 - Junio 2024</span>
+        </div>
+      </div>
+
+
+    </article>
+  </div>
+</section>

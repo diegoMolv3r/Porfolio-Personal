@@ -1,163 +1,192 @@
-﻿---
+---
+import SectionTitle from "./SectionTitle.astro";
+import TechBadge from "./TechBadge.astro";
+
 const PROJECTS = [
-    {
-        titulo: "Billetera virtual Hash Bank",
-        descripcion:
-            "Billetera virtual con foco en la seguridad y el codigo limpio.",
-        imagen: "/assets/img/projects/Isologotipo_HashBank.png",
-        tecnologias: ["Angular", ".NET", "SQL Server"],
-        enlace: "https://github.com/diegoMolv3r/Hash-Bank",
-        sitio: null,
-    },
-    {
-        titulo: "OWASP TOP 10 con .NET Core",
-        descripcion:
-            "Aplicacion de Tickets en la cual se aplican la prácticas mencionadas en el OWASP TOP 10.",
-        imagen: "/assets/img/projects/NetCRUD.png",
-        tecnologias: ["C#", "Entity Framework", "SQL Server"],
-        enlace: "https://github.com/diegoMolv3r/CRUD-en-.NET-con-SQL-SERVER",
-        sitio: null,
-    },
-    {
-        titulo: "E-commerce Libreria",
-        descripcion:
-            "E-commerce de libros con funcionalidades de filtrado y busqueda.",
-        imagen: "/assets/img/projects/libreria.png",
-        tecnologias: ["Angular", "Node.js", "SQL Server"],
-        enlace: "https://github.com/nseehofer/Libreria-ProyectoTallerWebII",
-        sitio: null,
-    },
-    {
-        titulo: "SickDogs Ind",
-        descripcion:
-            "Catálogo web para la marca de ropa SickDogs. Con posbilidad de realizar pedidos por Instagram.",
-        imagen: "/assets/img/projects/sickdogs.png",
-        tecnologias: ["Angular"],
-        enlace: "https://github.com/diegoMolv3r/SickDogsInd",
-        sitio: "https://sickdogs.netlify.app/",
-    },
-    {
-        titulo: "Quiz Code",
-        descripcion:
-            "Juego de preguntas y respuestas con lógica de dificultad adaptativa y puntuacion.",
-        imagen: "/assets/img/projects/quiz-code.jpg",
-        tecnologias: ["PHP", "MySQL", "Bootstrap", "Mustache"],
-        enlace: "https://github.com/Urielito1031/preguntados-app-mvc",
-        sitio: null,
-    },
-    {
-        titulo: "FutCode",
-        descripcion:
-            "Juego de fútbol online en el cual podes formar tu propio equipo y jugar contra otros usuarios.",
-        imagen: "/assets/img/projects/futcode.jpg",
-        tecnologias: ["Java", "Hibernate", "MySQL", "Thymeleaf"],
-        enlace: "https://github.com/Urielito1031/Taller-webi-FutCode",
-        sitio: null,
-    },
-    {
-        titulo: "Pokedex",
-        descripcion:
-            "Aplicación web que simula una Pokédex en la cual se puede buscar y visualizar información de Pokémon con interfaz intuitiva.",
-        imagen: "/assets/img/projects/pokedex.jpg",
-        tecnologias: ["PHP", "MySQL"],
-        enlace: "https://github.com/diegoMolv3r/PHPokedex",
-        sitio: null,
-    },
-    {
-        titulo: "El Mato a un Policía Motorizado",
-        descripcion:
-            "Sitio web tributo a la banda argentina desarrollado con Bootstrap. Diseño moderno y responsivo con información sobre la banda y su música.",
-        imagen: "/assets/img/projects/mato-policia.jpg",
-        tecnologias: ["Bootstrap"],
-        enlace: "https://github.com/diegoMolv3r/el-mato-un-gorra-en-moto",
-        sitio: "https://el-mato-un-gorra-en-moto.netlify.app/",
-    },
+  {
+    titulo: "Billetera virtual Hash Bank",
+    descripcion:
+      "Billetera virtual con foco en la seguridad y el codigo limpio.",
+    imagen: "/assets/img/projects/Isologotipo_HashBank.png",
+    tecnologias: ["Angular", ".NET", "SQL Server"],
+    enlace: "https://github.com/diegoMolv3r/Hash-Bank",
+    sitio: null,
+  },
+  {
+    titulo: "OWASP TOP 10 con .NET Core",
+    descripcion:
+      "Aplicacion de Tickets en la cual se aplican la prácticas mencionadas en el OWASP TOP 10.",
+    imagen: "/assets/img/projects/NetCRUD.png",
+    tecnologias: ["C#", "Entity Framework", "SQL Server"],
+    enlace: "https://github.com/diegoMolv3r/CRUD-en-.NET-con-SQL-SERVER",
+    sitio: null,
+  },
+  {
+    titulo: "E-commerce Libreria",
+    descripcion:
+      "E-commerce de libros con funcionalidades de filtrado y busqueda.",
+    imagen: "/assets/img/projects/libreria.png",
+    tecnologias: ["Angular", "Node.js", "SQL Server"],
+    enlace: "https://github.com/nseehofer/Libreria-ProyectoTallerWebII",
+    sitio: null,
+  },
+  {
+    titulo: "SickDogs Ind",
+    descripcion:
+      "Catálogo web para la marca de ropa SickDogs. Con posbilidad de realizar pedidos por Instagram.",
+    imagen: "/assets/img/projects/sickdogs.png",
+    tecnologias: ["Angular"],
+    enlace: "https://github.com/diegoMolv3r/SickDogsInd",
+    sitio: "https://sickdogs.netlify.app/",
+  },
+  {
+    titulo: "Quiz Code",
+    descripcion:
+      "Juego de preguntas y respuestas con lógica de dificultad adaptativa y puntuacion.",
+    imagen: "/assets/img/projects/quiz-code.jpg",
+    tecnologias: ["PHP", "MySQL", "Bootstrap", "Mustache"],
+    enlace: "https://github.com/Urielito1031/preguntados-app-mvc",
+    sitio: null,
+  },
+  {
+    titulo: "FutCode",
+    descripcion:
+      "Juego de fútbol online en el cual podes formar tu propio equipo y jugar contra otros usuarios.",
+    imagen: "/assets/img/projects/futcode.jpg",
+    tecnologias: ["Java", "Hibernate", "MySQL", "Thymeleaf"],
+    enlace: "https://github.com/Urielito1031/Taller-webi-FutCode",
+    sitio: null,
+  },
+  {
+    titulo: "Pokedex",
+    descripcion:
+      "Aplicación web que simula una Pokédex en la cual se puede buscar y visualizar información de Pokémon con interfaz intuitiva.",
+    imagen: "/assets/img/projects/pokedex.jpg",
+    tecnologias: ["PHP", "MySQL"],
+    enlace: "https://github.com/diegoMolv3r/PHPokedex",
+    sitio: null,
+  },
+  {
+    titulo: "El Mato a un Policía Motorizado",
+    descripcion:
+      "Sitio web tributo a la banda argentina desarrollado con Bootstrap. Diseño moderno y responsivo con información sobre la banda y su música.",
+    imagen: "/assets/img/projects/mato-policia.jpg",
+    tecnologias: ["Bootstrap"],
+    enlace: "https://github.com/diegoMolv3r/el-mato-un-gorra-en-moto",
+    sitio: "https://el-mato-un-gorra-en-moto.netlify.app/",
+  },
 ];
 ---
 
 <section
-    id="projects-section"
-    class="max-w-7xl mx-auto w-full px-4 py-16 relative"
+  id="projects-section"
+  class="py-28 md:py-36 max-w-7xl mx-auto w-full px-4 relative"
 >
-    <div class="absolute inset-0 opacity-30"></div>
+  <SectionTitle title="PROYECTOS" subtitle="Algunos de mis trabajos más recientes" />
 
-    <div class="relative z-10">
-        <h2
-            class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16 text-white animate-fade-in-up"
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 scroll-hidden"
+  >
+    {
+      PROJECTS.map((project, index) => (
+        <article
+          class="project-card glass flex flex-col h-full overflow-hidden group"
+          data-stagger
+          style={`transition-delay: ${index * 0.1}s`}
         >
-            PROYECTOS
-        </h2>
-        <div
-            id="contenedor-proyectos"
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4 w-full"
-        >
-            {
-                PROJECTS.map((project, index) => {
-                    return (
-                        <article
-                            class="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 hover-lift animate-scale-in flex flex-col h-full overflow-hidden group"
-                            style={`animation-delay: ${index * 0.1}s`}
-                        >
-                            <div class="relative h-48 overflow-hidden shrink-0">
-                                <img
-                                    src={project.imagen}
-                                    alt={project.titulo}
-                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                                    onerror="this.src='/assets/img/projects/default-project.jpg'"
-                                />
-                                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
-                            </div>
+          {/* Image */}
+          <div class="relative h-48 overflow-hidden shrink-0">
+            <img
+              src={project.imagen}
+              alt={project.titulo}
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+              loading="lazy"
+              onerror="this.src='/assets/img/projects/default-project.jpg'"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[var(--bg-deepest)] via-transparent to-transparent opacity-80" />
 
-                            <div class="p-6 flex flex-col flex-grow">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <h3 class="text-xl font-bold text-white leading-tight">
-                                        {project.titulo}
-                                    </h3>
-                                </div>
+            {/* Accent top border line */}
+            <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[var(--accent-cyan)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          </div>
 
-                                <p class="text-gray-300 text-sm leading-relaxed mb-6 flex-grow">
-                                    {project.descripcion}
-                                </p>
+          {/* Content */}
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-lg font-bold text-[var(--text-primary)] mb-2 leading-tight group-hover:text-[var(--accent-cyan)] transition-colors duration-300">
+              {project.titulo}
+            </h3>
 
-                                <div class="flex flex-wrap gap-2 mb-6">
-                                    {project.tecnologias.map((tecnologia) => {
-                                        return (
-                                            <span
-                                                class={`text-xs px-3 py-1.5 rounded-lg border border-gray-600 bg-gray-700/50 text-gray-300`}
-                                            >
-                                                {tecnologia}
-                                            </span>
-                                        );
-                                    })}
-                                </div>
+            <p class="text-[var(--text-secondary)] text-sm leading-relaxed mb-5 flex-grow">
+              {project.descripcion}
+            </p>
 
-                                <div class="mt-auto flex gap-3">
-                                    <a
-                                        href={project.enlace}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        class="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-[#0ea5e9] transition-all duration-300 bg-gray-700/50 px-4 py-2.5 rounded-lg hover:bg-gray-700 border border-gray-600 hover:border-[#0ea5e9] flex-1 justify-center group/btn"
-                                    >
-                                        <i class="bi bi-github text-lg group-hover/btn:scale-110 transition-transform" />{" "}
-                                        Repositorio
-                                    </a>
-                                    {project.sitio && (
-                                        <a
-                                            href={project.sitio}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            class="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-[#0ea5e9] transition-all duration-300 bg-gray-700/50 px-4 py-2.5 rounded-lg hover:bg-gray-700 border border-gray-600 hover:border-[#0ea5e9] flex-1 justify-center group/btn"
-                                        >
-                                            <i class="bi bi-box-arrow-up-right text-lg group-hover/btn:scale-110 transition-transform" />{" "}
-                                            Ver Sitio
-                                        </a>
-                                    )}
-                                </div>
-                            </div>
-                        </article>
-                    );
-                })
-            }
-        </div>
-    </div>
+            {/* Tech badges */}
+            <div class="flex flex-wrap gap-2 mb-5">
+              {project.tecnologias.map((tec) => (
+                <TechBadge text={tec} />
+              ))}
+            </div>
+
+            {/* Links */}
+            <div class="mt-auto flex gap-3">
+              <a
+                href={project.enlace}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link flex-1"
+              >
+                <i class="bi bi-github text-base" />
+                <span>Repo</span>
+              </a>
+              {project.sitio && (
+                <a
+                  href={project.sitio}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link flex-1"
+                >
+                  <i class="bi bi-box-arrow-up-right text-base" />
+                  <span>Demo</span>
+                </a>
+              )}
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
 </section>
+
+<style>
+  .project-card {
+    border-radius: 1rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), var(--glow-cyan);
+  }
+
+  .project-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-card);
+    transition: all 0.3s ease;
+  }
+
+  .project-link:hover {
+    color: var(--accent-cyan);
+    border-color: var(--accent-cyan);
+    background: rgba(56, 189, 248, 0.08);
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.15);
+    transform: translateY(-1px);
+  }
+</style>

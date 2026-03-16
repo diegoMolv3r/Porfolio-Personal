@@ -1,0 +1,28 @@
+---
+interface Props {
+  text: string;
+  icon?: string;
+  variant?: 'default' | 'accent';
+}
+
+const { text, icon, variant = 'default' } = Astro.props;
+---
+
+<span class:list={[
+  "tech-badge font-mono text-xs px-3 py-1.5 rounded-lg border inline-flex items-center gap-1.5 transition-all duration-300",
+  variant === 'accent'
+    ? "border-[var(--accent-cyan)]/30 bg-[var(--accent-cyan)]/10 text-[var(--accent-cyan)]"
+    : "border-[var(--border-subtle)] bg-[var(--bg-card)] text-[var(--text-secondary)]"
+]}>
+  {icon && <i class={`${icon} text-sm`} />}
+  {text}
+</span>
+
+<style>
+  .tech-badge:hover {
+    border-color: var(--accent-cyan);
+    color: var(--accent-cyan);
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.2);
+    transform: translateY(-1px);
+  }
+</style>

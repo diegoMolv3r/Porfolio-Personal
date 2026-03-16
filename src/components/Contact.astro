@@ -1,95 +1,151 @@
-﻿<section
+---
+import SectionTitle from "./SectionTitle.astro";
+---
+
+<section
   id="contact-section"
-  class="py-16 max-w-7xl mx-auto w-full px-4 text-white"
+  class="py-28 md:py-36 max-w-3xl mx-auto w-full px-4 relative"
 >
-  <h2
-    class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-10"
-  >
-    CONTACTO
-  </h2>
+  <SectionTitle title="CONTACTO" subtitle="¿Tenés un proyecto en mente? Hablemos" />
 
-  <div class="max-w-2xl mx-auto">
-    <form
-      action="https://formsubmit.co/molverdiego@gmail.com"
-      class="space-y-6"
-      id="contact-form"
-      method="POST"
-    >
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <div class="scroll-hidden">
+    <div class="glass p-10 md:p-12" data-stagger>
+      <form
+        action="https://formsubmit.co/molverdiego@gmail.com"
+        class="space-y-7"
+        id="contact-form"
+        method="POST"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div>
+            <label for="nombre" class="block text-sm font-medium text-[var(--text-secondary)] mb-2.5">Nombre</label>
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              placeholder="Tu nombre completo"
+              required
+              class="contact-input"
+            />
+          </div>
+          <div>
+            <label for="asunto" class="block text-sm font-medium text-[var(--text-secondary)] mb-2.5">Asunto</label>
+            <input
+              type="text"
+              name="asunto"
+              id="asunto"
+              placeholder="Asunto del mensaje"
+              required
+              class="contact-input"
+            />
+          </div>
+        </div>
+
         <div>
+          <label for="email" class="block text-sm font-medium text-[var(--text-secondary)] mb-2.5">Email</label>
           <input
-            type="text"
-            name="nombre"
-            placeholder="Nombre completo"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="tu@email.com"
             required
-            class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-[#0ea5e9] focus:ring-2 focus:ring-[#0ea5e9] transition-all duration-300"
+            class="contact-input"
           />
         </div>
+
         <div>
-          <input
-            type="text"
-            name="asunto"
-            placeholder="Asunto"
+          <label for="mensaje" class="block text-sm font-medium text-[var(--text-secondary)] mb-2.5">Mensaje</label>
+          <textarea
+            name="mensaje"
+            id="mensaje"
+            placeholder="Contame sobre tu proyecto..."
+            rows="4"
             required
-            class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-[#0ea5e9] focus:ring-2 focus:ring-[#0ea5e9] transition-all duration-300"
-          />
+            class="contact-input resize-none"
+          ></textarea>
         </div>
-      </div>
 
-      <div>
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          required
-          class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-[#0ea5e9] focus:ring-2 focus:ring-[#0ea5e9] transition-all duration-300"
-        />
-      </div>
+        <input type="hidden" name="_captcha" value="false" />
 
-      <div>
-        <textarea
-          name="mensaje"
-          placeholder="Escribe tu mensaje aquí"
-          rows="4"
-          required
-          class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-[#0ea5e9] focus:ring-2 focus:ring-[#0ea5e9] transition-all duration-300 resize-none"
-        ></textarea>
-      </div>
-
-      <input type="hidden" name="_captcha" value="false" />
-
-      <div class="text-center">
-        <button
-          type="submit"
-          class="bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#0ea5e9] focus:ring-offset-2 focus:ring-offset-gray-900"
-          onclick="modal.showModal()"
-        >
-          Enviar Mensaje
-        </button>
-      </div>
-    </form>
+        <div class="pt-6">
+          <button
+            type="submit"
+            class="submit-btn btn-glow w-full md:w-auto"
+            onclick="modal.showModal()"
+          >
+            <i class="bi bi-send text-base"></i>
+            <span>Enviar Mensaje</span>
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
 </section>
 
+<!-- Success modal -->
 <dialog
   id="modal"
-  class="backdrop:bg-black/50 backdrop:backdrop-blur-sm p-0 rounded-2xl border-0 shadow-2xl m-auto"
+  class="backdrop:bg-black/60 backdrop:backdrop-blur-sm p-0 rounded-2xl border-0 shadow-2xl m-auto bg-transparent"
 >
-  <div class="bg-gray-900 text-white p-8 rounded-2xl max-w-md mx-auto">
+  <div class="glass-static p-8 rounded-2xl max-w-md mx-auto bg-[var(--bg-deep)] border border-[var(--border-subtle)]">
     <div class="text-center space-y-4">
-      <div
-        class="w-16 h-16 bg-[#0ea5e9] rounded-full flex items-center justify-center mx-auto mb-4"
-      >
-        <i class="bi bi-check-lg text-2xl text-white"></i>
+      <div class="w-14 h-14 rounded-full bg-[var(--accent-cyan)]/15 border border-[var(--accent-cyan)]/30 flex items-center justify-center mx-auto animate-glow-pulse">
+        <i class="bi bi-check-lg text-2xl text-[var(--accent-cyan)]"></i>
       </div>
-      <h2 class="text-2xl font-bold text-white">¡Gracias por tu mensaje!</h2>
-      <p class="text-gray-300 text-lg">Te contactaré lo antes posible</p>
+      <h2 class="text-xl font-bold text-[var(--text-primary)]">¡Gracias por tu mensaje!</h2>
+      <p class="text-[var(--text-secondary)]">Te contactaré lo antes posible</p>
       <button
         onclick="modal.close()"
-        class="mt-6 bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-semibold px-6 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#0ea5e9] focus:ring-offset-2 focus:ring-offset-gray-900"
+        class="mt-4 px-6 py-2 rounded-lg bg-[var(--accent-cyan)] text-[var(--bg-deepest)] font-semibold text-sm hover:bg-[var(--accent-electric)] transition-all duration-300 hover:scale-105"
       >
         Cerrar
       </button>
     </div>
   </div>
 </dialog>
+
+<style>
+  .contact-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: var(--bg-deepest);
+    border: 1px solid var(--border-subtle);
+    border-radius: 0.75rem;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .contact-input::placeholder {
+    color: var(--text-muted);
+  }
+
+  .contact-input:focus {
+    outline: none;
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1), var(--glow-cyan);
+  }
+
+  .submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 2rem;
+    background: var(--accent-cyan);
+    color: var(--bg-deepest);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--accent-cyan);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .submit-btn:hover {
+    background: transparent;
+    color: var(--accent-cyan);
+    box-shadow: var(--glow-cyan);
+    transform: translateY(-2px) scale(1.03);
+  }
+</style>
