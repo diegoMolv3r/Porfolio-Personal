@@ -1,15 +1,5 @@
 ---
 import "../styles/global.css";
-import Header from "../components/Header.astro";
-import Hero from "../components/Hero.astro";
-import Projects from "../components/Projects.astro";
-import AboutMe from "../components/AboutMe.astro";
-import Training from "../components/Training.astro";
-import Languages from "../components/Languages.astro";
-import Contact from "../components/Contact.astro";
-import Footer from "../components/Footer.astro";
-import ConstellationBg from "../components/ConstellationBg.astro";
-import ScrollAnimations from "../components/ScrollAnimations.astro";
 ---
 
 <!doctype html>
@@ -17,47 +7,30 @@ import ScrollAnimations from "../components/ScrollAnimations.astro";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Diego Molver — Desarrollador Full Stack</title>
+    <title>Diego Molver — Retro Portfolio</title>
     <meta
       name="description"
-      content="Portfolio de Diego Molver. Desarrollador Web Full Stack especializado en Angular, .NET, Node.js y Ciberseguridad."
+      content="Portfolio de Diego Molver. Desarrollador Web Full Stack."
     />
     <meta name="author" content="Diego Molver" />
 
-    <!-- Fuentes — Inter + JetBrains Mono -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Bootstrap Icons -->
-    <link
+        <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
   </head>
 
-  <body class="bg-[var(--bg-deepest)] text-[var(--text-primary)] overflow-x-hidden">
-    <!-- Constellation background -->
-    <ConstellationBg />
+  <body>
+        <slot />
 
-    <!-- Main content -->
-    <main class="relative z-10">
-      <Header />
-      <Hero />
-      <Projects />
-      <AboutMe />
-      <Training />
-      <Languages />
-      <Contact />
-      <Footer />
-    </main>
-
-    <!-- Scroll animation triggers -->
-    <ScrollAnimations />
-
-    <slot />
+        <a
+      href="https://wa.me/5491127090638"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="fixed bottom-6 right-6 w-14 h-14 bg-black border-2 border-[var(--border-window)] flex items-center justify-center text-[var(--accent-primary)] text-3xl shadow-[0_0_15px_rgba(0,255,0,0.3)] hover:bg-[var(--accent-primary)] hover:text-black transition-colors z-[100] active:scale-95 hover-glitch rounded-full md:rounded-none md:shadow-[4px_4px_0_0_var(--border-window)] md:hover:shadow-none md:active:translate-x-[4px] md:active:translate-y-[4px]"
+      aria-label="Contactar por WhatsApp"
+    >
+      <i class="bi bi-whatsapp"></i>
+    </a>
   </body>
 </html>

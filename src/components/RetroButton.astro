@@ -1,0 +1,29 @@
+---
+interface Props {
+  href?: string;
+  text: string;
+  icon?: string;
+  target?: string;
+  variant?: 'primary' | 'secondary';
+  download?: boolean;
+}
+
+const { href, text, icon, target = '_self', variant = 'secondary', download = false } = Astro.props;
+
+const baseClasses = "inline-flex items-center gap-2 px-4 py-2 font-bold uppercase tracking-wider border-2 shadow-[2px_2px_0px_0px_var(--border-window)] active:shadow-none active:translate-x-[2px] active:translate-y-[2px] transition-all cursor-pointer hover-glitch";
+const variantClasses = variant === 'primary' 
+  ? 'bg-[var(--accent-primary)] text-black border-[var(--accent-primary)] hover:bg-black hover:text-[var(--accent-primary)] hover:border-[var(--accent-primary)]' 
+  : 'bg-black text-[var(--text-primary)] border-[var(--border-window)] hover:bg-[var(--accent-primary)] hover:text-black';
+
+const El = href ? 'a' : 'button';
+---
+
+<El 
+  href={href}
+  target={target}
+  download={download ? '' : undefined}
+  class={`${baseClasses} ${variantClasses}`}
+>
+  {icon && <i class={icon}></i>}
+  <span>{text}</span>
+</El>

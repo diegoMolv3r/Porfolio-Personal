@@ -1,5 +1,162 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import RetroWindow from "../components/RetroWindow.astro";
+import AboutMe from "../components/AboutMe.astro";
+import TechStack from "../components/TechStack.astro";
+import Projects from "../components/Projects.astro";
+import Training from "../components/Training.astro";
+import Contact from "../components/Contact.astro";
+import Hero from "../components/Hero.astro";
 ---
 
-<Layout />
+<Layout>
+  <div class="scanlines"></div>
+
+  <header
+    class="w-full sticky top-0 z-50 bg-[var(--bg-window)] border-b-2 border-[var(--border-window)] shadow-[0_4px_0_0_rgba(0,255,0,0.2)] px-4 md:px-8 py-3"
+  >
+    <div
+      class="max-w-[1600px] mx-auto flex justify-between items-center relative"
+    >
+      <a
+        href="#"
+        aria-label="Volver arriba"
+        class="text-white hover:text-[var(--accent-primary)] transition-colors no-underline hover-glitch"
+      >
+        <h1 class="text-3xl font-bold m-0 tracking-widest uppercase">
+          root@molver:~$<span class="blink">_</span>
+        </h1>
+      </a>
+
+      <button
+        id="mobile-menu-btn"
+        aria-label="Abrir menú"
+        class="md:hidden text-[var(--accent-primary)] bg-black border-2 border-[var(--border-window)] px-2 py-1 flex items-center justify-center shadow-[2px_2px_0px_0px_var(--border-window)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
+      >
+        <i class="bi bi-list text-2xl font-bold"></i>
+      </button>
+
+      <nav
+        id="desktop-menu"
+        class="hidden md:flex flex-col md:flex-row absolute md:static top-[50px] left-0 w-full md:w-auto bg-[var(--bg-window)] md:bg-transparent border-b-2 md:border-b-0 border-[var(--border-window)] gap-2 md:gap-6 p-4 md:p-0"
+      >
+        <a
+          href="#perfil"
+          class="retro-menu-item text-xl py-2 md:py-0 text-[var(--text-primary)] hover:text-white decoration-none"
+          >cd /perfil</a
+        >
+        <a
+          href="#proyectos"
+          class="retro-menu-item text-xl py-2 md:py-0 text-[var(--text-primary)] hover:text-white decoration-none"
+          >cd /proyectos</a
+        >
+        <a
+          href="#formacion"
+          class="retro-menu-item text-xl py-2 md:py-0 text-[var(--text-primary)] hover:text-white decoration-none"
+          >cd /formación</a
+        >
+        <a
+          href="#sobre-mi"
+          class="retro-menu-item text-xl py-2 md:py-0 text-[var(--text-primary)] hover:text-white decoration-none"
+          >cat sobre_mi.txt</a
+        >
+        <a
+          href="#contacto"
+          class="retro-menu-item text-xl py-2 md:py-0 text-[var(--text-primary)] hover:text-white decoration-none"
+          >ping contacto</a
+        >
+      </nav>
+    </div>
+  </header>
+
+  <main class="w-full max-w-[1600px] mx-auto px-4 md:px-8 flex flex-col">
+    <section
+      id="perfil"
+      class="min-h-[calc(100vh-80px)] flex flex-col justify-center scroll-mt-24 py-8"
+    >
+      <RetroWindow title="PERFIL: diego_molv3r" class="w-full">
+        <Hero />
+      </RetroWindow>
+    </section>
+
+    <section
+      id="proyectos"
+      class="min-h-[calc(100vh-80px)] flex flex-col justify-center scroll-mt-24 py-8"
+    >
+      <RetroWindow title="PROYECTOS: listado" class="w-full">
+        <div class="p-4 md:p-8">
+          <Projects />
+        </div>
+      </RetroWindow>
+    </section>
+
+    <section
+      id="formacion"
+      class="min-h-[calc(100vh-80px)] flex flex-col justify-center scroll-mt-24 py-8"
+    >
+      <RetroWindow title="FORMACIÓN: estudios" class="w-full">
+        <div class="p-4 md:p-8">
+          <Training />
+        </div>
+      </RetroWindow>
+    </section>
+
+    <section
+      id="sobre-mi"
+      class="min-h-[calc(100vh-80px)] flex flex-col justify-center scroll-mt-24 py-8"
+    >
+      <RetroWindow title="INFO: sobre_mi.txt" class="w-full">
+        <div class="p-0 md:p-0">
+          <AboutMe />
+        </div>
+      </RetroWindow>
+
+      <RetroWindow title="SYS: specs_stack.exe" class="w-full mt-8">
+        <div class="p-4 md:p-8">
+          <TechStack />
+        </div>
+      </RetroWindow>
+    </section>
+
+    <section
+      id="contacto"
+      class="min-h-[calc(100vh-80px)] flex flex-col justify-center scroll-mt-24 py-8 mb-16"
+    >
+      <RetroWindow title="RED: contacto" class="w-full">
+        <div class="p-4 md:p-8">
+          <Contact />
+        </div>
+      </RetroWindow>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("mobile-menu-btn");
+    const menu = document.getElementById("desktop-menu");
+
+    if (btn && menu) {
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+        menu.classList.toggle("flex");
+      });
+
+      const links = menu.querySelectorAll("a");
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth < 768) {
+            menu.classList.add("hidden");
+            menu.classList.remove("flex");
+          }
+        });
+      });
+    }
+  });
+</script>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>

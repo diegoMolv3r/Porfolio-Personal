@@ -1,110 +1,46 @@
 ---
-import SectionTitle from "./SectionTitle.astro";
+
 ---
 
-<section
-  id="sobreMi-section"
-  class="py-28 md:py-36 max-w-5xl mx-auto w-full px-4 relative"
->
-  <SectionTitle title="SOBRE MÍ" subtitle="Conocé un poco más sobre mi perfil profesional" />
-
-  <div class="space-y-8 scroll-hidden">
-    <!-- Card 1: Academic -->
-    <div class="glass p-7 md:p-8" data-stagger>
-      <div class="flex items-start gap-4 mb-4">
-        <div class="w-10 h-10 rounded-lg bg-[var(--accent-cyan)]/15 border border-[var(--accent-cyan)]/20 flex items-center justify-center flex-shrink-0">
-          <i class="bi bi-mortarboard text-[var(--accent-cyan)] text-lg"></i>
-        </div>
-        <h3 class="font-semibold text-lg text-[var(--text-primary)]">Formación Académica</h3>
-      </div>
-      <p class="text-base leading-relaxed text-[var(--text-secondary)]">
-        Soy estudiante avanzado de la
-        <span class="font-semibold text-[var(--accent-cyan)]">Tecnicatura en Desarrollo Web</span>
-        en la UNLaM, con planes de continuar la Licenciatura en Gestión de Tecnologías.
-        Paralelamente, me capacito de forma autodidacta en
-        <span class="font-semibold text-[var(--accent-cyan)]">Ciberseguridad</span>
-        aplicada al desarrollo, con el objetivo de formalizar académicamente esta
-        especialización en el futuro.
-      </p>
+<div class="flex flex-col md:flex-row w-full bg-black min-h-[500px]">
+    <div
+    class="w-full md:w-1/2 relative flex justify-center items-end bg-black pt-8 md:pt-0"
+  >
+        <div
+      class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black to-transparent z-20 pointer-events-none"
+    >
+    </div>
+        <div
+      class="hidden md:block absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent z-20 pointer-events-none"
+    >
     </div>
 
-    <!-- Card 2: Tech Stack + Avatar -->
-    <div class="glass p-7 md:p-8 flex flex-col-reverse md:flex-row gap-8 items-center" data-stagger>
-      <div class="flex-1">
-        <div class="flex items-start gap-4 mb-4">
-          <div class="w-10 h-10 rounded-lg bg-[var(--accent-indigo)]/15 border border-[var(--accent-indigo)]/20 flex items-center justify-center flex-shrink-0">
-            <i class="bi bi-code-slash text-[var(--accent-indigo)] text-lg"></i>
-          </div>
-          <h3 class="font-semibold text-lg text-[var(--text-primary)]">Stack Tecnológico</h3>
-        </div>
-        <p class="text-base leading-relaxed text-[var(--text-secondary)]">
-          En el desarrollo
-          <span class="font-semibold text-[var(--accent-cyan)]">Frontend</span> utilizo
-          <span class="font-semibold text-[var(--accent-cyan)]">Bootstrap</span> para el diseño
-          de interfaces y
-          <span class="font-semibold text-[var(--accent-cyan)]">Angular</span> para modularizar
-          la arquitectura.
-          <br />
-          Para el <span class="font-semibold text-[var(--accent-cyan)]">Backend</span> desarrollo
-          con <span class="font-semibold text-[var(--accent-cyan)]">C#</span> en el ecosistema .NET y
-          <span class="font-semibold text-[var(--accent-cyan)]">Node.js</span>, gestionando
-          la persistencia de datos en
-          <span class="font-semibold text-[var(--accent-cyan)]">SQL Server</span>.
-          <br />
-          En cuanto al testing, aplico la metodología
-          <span class="font-semibold text-[var(--accent-cyan)]">TDD</span> escribiendo pruebas
-          automatizadas con
-          <span class="font-semibold text-[var(--accent-cyan)]">Jasmine</span> y
-          <span class="font-semibold text-[var(--accent-cyan)]">xUnit</span>.
-        </p>
-      </div>
-
-      <!-- Avatar -->
-      <div class="relative flex-shrink-0">
-        <div class="absolute inset-0 rounded-full bg-gradient-to-br from-[var(--accent-cyan)] to-[var(--accent-indigo)] opacity-15 blur-lg scale-110"></div>
-        <img
-          src="/assets/img/Avatar-Diego-Molver.png"
-          alt="Diego Molver"
-          class="relative z-10 w-36 h-36 md:w-40 md:h-40 rounded-full border-2 border-[var(--accent-cyan)]/30 object-cover shadow-lg"
-        />
-      </div>
-    </div>
-
-    <!-- Card 3: Tools -->
-    <div class="glass p-7 md:p-8" data-stagger>
-      <div class="flex items-start gap-4 mb-4">
-        <div class="w-10 h-10 rounded-lg bg-[var(--accent-cyan)]/15 border border-[var(--accent-cyan)]/20 flex items-center justify-center flex-shrink-0">
-          <i class="bi bi-tools text-[var(--accent-cyan)] text-lg"></i>
-        </div>
-        <h3 class="font-semibold text-lg text-[var(--text-primary)]">Herramientas</h3>
-      </div>
-      <p class="text-base leading-relaxed text-[var(--text-secondary)]">
-        Complemento el ciclo de desarrollo con
-        <span class="font-semibold text-[var(--accent-cyan)]">Git</span> para control de versiones,
-        <span class="font-semibold text-[var(--accent-cyan)]">NuGet</span> y
-        <span class="font-semibold text-[var(--accent-cyan)]">npm</span> para la gestión de
-        dependencias, y
-        <span class="font-semibold text-[var(--accent-cyan)]">Postman</span> para testing de
-        APIs. Actualmente, profundizo en el uso de
-        <span class="font-semibold text-[var(--accent-cyan)]">Burp Suite</span> para el análisis
-        de tráfico HTTP, enfocándome en la seguridad aplicativa.
-      </p>
-    </div>
-
-    <!-- Card 4: Goal -->
-    <div class="glass p-7 md:p-8 border-[var(--accent-cyan)]/20 bg-gradient-to-r from-[var(--accent-cyan)]/5 to-[var(--accent-indigo)]/5" data-stagger>
-      <div class="flex items-start gap-4 mb-4">
-        <div class="w-10 h-10 rounded-lg bg-[var(--accent-cyan)]/15 border border-[var(--accent-cyan)]/20 flex items-center justify-center flex-shrink-0">
-          <i class="bi bi-rocket-takeoff text-[var(--accent-cyan)] text-lg"></i>
-        </div>
-        <h3 class="font-semibold text-lg text-[var(--text-primary)]">Objetivo</h3>
-      </div>
-      <p class="text-base leading-relaxed text-[var(--text-primary)]">
-        Mi objetivo es seguir creciendo en el
-        <span class="font-semibold text-[var(--accent-cyan)]">Desarrollo Web</span> y la
-        <span class="font-semibold text-[var(--accent-cyan)]">Ciberseguridad</span>,
-        aplicando siempre las mejores prácticas del sector.
-      </p>
-    </div>
+    <img
+      src="/assets/img/Diego2.png"
+      alt="Foto de Diego Molver"
+      class="w-full h-full max-h-[600px] object-cover object-bottom filter grayscale hover:grayscale-0 transition-all duration-700 opacity-90 hover:opacity-100 z-10"
+    />
   </div>
-</section>
+
+    <div class="w-full md:w-1/2 flex flex-col justify-center p-8 md:p-16 z-30">
+    <span
+      class="text-[var(--accent-primary)] font-bold text-sm tracking-widest uppercase mb-4 block"
+    >
+      >_ INFO_PERSONAL
+    </span>
+
+    <div class="w-16 h-1 bg-[var(--accent-primary)] mb-8"></div>
+
+    <p
+      class="text-[var(--text-secondary)] text-lg md:text-xl leading-relaxed m-0 text-justify font-medium"
+    >
+      "Soy Técnico Universitario en Desarrollo Web (UNLaM). Me enfoco en el
+      desarrollo Full-Stack utilizando principalmente Java y Angular, trabajando
+      del lado de los datos con bases de datos relacionales. A la hora de
+      programar, busco aplicar buenas prácticas y escribir código limpio
+      apoyándome en TDD. Además, sigo formándome activamente en Ciberseguridad
+      para entender cómo construir aplicaciones más seguras desde el inicio del
+      desarrollo."
+    </p>
+  </div>
+</div>

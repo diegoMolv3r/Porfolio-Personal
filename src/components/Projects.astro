@@ -1,22 +1,11 @@
 ---
-import SectionTitle from "./SectionTitle.astro";
-import TechBadge from "./TechBadge.astro";
+import RetroButton from "./RetroButton.astro";
 
 const PROJECTS = [
-  {
-    titulo: "Billetera virtual Hash Bank",
-    descripcion:
-      "Billetera virtual con foco en la seguridad y el codigo limpio.",
-    imagen: "/assets/img/projects/Isologotipo_HashBank.png",
-    tecnologias: ["Angular", ".NET", "SQL Server"],
-    enlace: "https://github.com/diegoMolv3r/Hash-Bank",
-    sitio: null,
-  },
   {
     titulo: "OWASP TOP 10 con .NET Core",
     descripcion:
       "Aplicacion de Tickets en la cual se aplican la prácticas mencionadas en el OWASP TOP 10.",
-    imagen: "/assets/img/projects/NetCRUD.png",
     tecnologias: ["C#", "Entity Framework", "SQL Server"],
     enlace: "https://github.com/diegoMolv3r/CRUD-en-.NET-con-SQL-SERVER",
     sitio: null,
@@ -25,7 +14,6 @@ const PROJECTS = [
     titulo: "E-commerce Libreria",
     descripcion:
       "E-commerce de libros con funcionalidades de filtrado y busqueda.",
-    imagen: "/assets/img/projects/libreria.png",
     tecnologias: ["Angular", "Node.js", "SQL Server"],
     enlace: "https://github.com/nseehofer/Libreria-ProyectoTallerWebII",
     sitio: null,
@@ -34,7 +22,6 @@ const PROJECTS = [
     titulo: "SickDogs Ind",
     descripcion:
       "Catálogo web para la marca de ropa SickDogs. Con posbilidad de realizar pedidos por Instagram.",
-    imagen: "/assets/img/projects/sickdogs.png",
     tecnologias: ["Angular"],
     enlace: "https://github.com/diegoMolv3r/SickDogsInd",
     sitio: "https://sickdogs.netlify.app/",
@@ -43,7 +30,6 @@ const PROJECTS = [
     titulo: "Quiz Code",
     descripcion:
       "Juego de preguntas y respuestas con lógica de dificultad adaptativa y puntuacion.",
-    imagen: "/assets/img/projects/quiz-code.jpg",
     tecnologias: ["PHP", "MySQL", "Bootstrap", "Mustache"],
     enlace: "https://github.com/Urielito1031/preguntados-app-mvc",
     sitio: null,
@@ -52,141 +38,85 @@ const PROJECTS = [
     titulo: "FutCode",
     descripcion:
       "Juego de fútbol online en el cual podes formar tu propio equipo y jugar contra otros usuarios.",
-    imagen: "/assets/img/projects/futcode.jpg",
     tecnologias: ["Java", "Hibernate", "MySQL", "Thymeleaf"],
     enlace: "https://github.com/Urielito1031/Taller-webi-FutCode",
     sitio: null,
   },
-  {
-    titulo: "Pokedex",
-    descripcion:
-      "Aplicación web que simula una Pokédex en la cual se puede buscar y visualizar información de Pokémon con interfaz intuitiva.",
-    imagen: "/assets/img/projects/pokedex.jpg",
-    tecnologias: ["PHP", "MySQL"],
-    enlace: "https://github.com/diegoMolv3r/PHPokedex",
-    sitio: null,
-  },
-  {
-    titulo: "El Mato a un Policía Motorizado",
-    descripcion:
-      "Sitio web tributo a la banda argentina desarrollado con Bootstrap. Diseño moderno y responsivo con información sobre la banda y su música.",
-    imagen: "/assets/img/projects/mato-policia.jpg",
-    tecnologias: ["Bootstrap"],
-    enlace: "https://github.com/diegoMolv3r/el-mato-un-gorra-en-moto",
-    sitio: "https://el-mato-un-gorra-en-moto.netlify.app/",
-  },
 ];
 ---
 
-<section
-  id="projects-section"
-  class="py-28 md:py-36 max-w-7xl mx-auto w-full px-4 relative"
->
-  <SectionTitle title="PROYECTOS" subtitle="Algunos de mis trabajos más recientes" />
+<div class="flex flex-col gap-6 w-full">
+  <div class="mb-6 border-b-2 border-[var(--border-window)] pb-2 flex justify-between items-end">
+    <h2 class="text-3xl text-[var(--accent-primary)] m-0 font-bold tracking-widest">>> LST_PROYECTOS</h2>
+    <span class="text-[var(--text-muted)] text-sm">Mostrando {PROJECTS.length} ejecutables</span>
+  </div>
 
-  <div
-    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 scroll-hidden"
-  >
+  <div class="flex flex-col gap-4">
     {
-      PROJECTS.map((project, index) => (
-        <article
-          class="project-card glass flex flex-col h-full overflow-hidden group"
-          data-stagger
-          style={`transition-delay: ${index * 0.1}s`}
-        >
-          {/* Image */}
-          <div class="relative h-48 overflow-hidden shrink-0">
-            <img
-              src={project.imagen}
-              alt={project.titulo}
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-              loading="lazy"
-              onerror="this.src='/assets/img/projects/default-project.jpg'"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-[var(--bg-deepest)] via-transparent to-transparent opacity-80" />
+      PROJECTS.map((project, index) => {
+        const fileId = (index + 1).toString().padStart(2, '0');
+        const fileName = project.titulo.toLowerCase().replace(/ /g, '_').replace(/\./g, '') + '.exe';
+        
+        return (
+          <details class="group bg-black border-2 border-[var(--border-dim)] hover:border-[var(--accent-primary)] transition-colors open:border-[var(--accent-primary)] shadow-[2px_2px_0_0_var(--border-dim)] open:shadow-[4px_4px_0_0_var(--accent-primary)]">
+            <summary class="flex justify-between items-center p-4 cursor-pointer list-none text-white hover:text-[var(--accent-primary)] transition-colors">
+              <div class="flex items-center gap-4">
+                <span class="text-[var(--text-muted)] group-hover:text-[var(--text-primary)]">[{fileId}]</span>
+                <span class="text-xl md:text-2xl font-bold uppercase tracking-wider">{project.titulo}</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <span class="hidden md:inline-block text-[var(--text-muted)] group-hover:text-[var(--text-primary)]">{fileName}</span>
+                <i class="bi bi-chevron-down group-open:rotate-180 transition-transform text-[var(--accent-primary)]"></i>
+              </div>
+            </summary>
+            
+            <div class="p-6 border-t-2 border-dashed border-[var(--border-dim)] bg-[var(--bg-window)] flex flex-col gap-6">
+              <div>
+                <span class="text-[var(--text-muted)] block mb-1">>_ INFO_FILE</span>
+                <p class="text-[var(--text-primary)] text-lg md:text-xl leading-relaxed m-0">
+                  {project.descripcion}
+                </p>
+              </div>
 
-            {/* Accent top border line */}
-            <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[var(--accent-cyan)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-          </div>
+              <div>
+                <span class="text-[var(--text-muted)] block mb-2">>_ REQ_DEPENDENCIES</span>
+                <div class="flex flex-wrap gap-2">
+                  {project.tecnologias.map((tec) => (
+                    <span class="bg-[var(--bg-deepest)] text-[var(--accent-primary)] border border-[var(--accent-primary)] px-2 py-1 text-sm uppercase">
+                      {tec}
+                    </span>
+                  ))}
+                </div>
+              </div>
 
-          {/* Content */}
-          <div class="p-6 flex flex-col flex-grow">
-            <h3 class="text-lg font-bold text-[var(--text-primary)] mb-2 leading-tight group-hover:text-[var(--accent-cyan)] transition-colors duration-300">
-              {project.titulo}
-            </h3>
-
-            <p class="text-[var(--text-secondary)] text-sm leading-relaxed mb-5 flex-grow">
-              {project.descripcion}
-            </p>
-
-            {/* Tech badges */}
-            <div class="flex flex-wrap gap-2 mb-5">
-              {project.tecnologias.map((tec) => (
-                <TechBadge text={tec} />
-              ))}
-            </div>
-
-            {/* Links */}
-            <div class="mt-auto flex gap-3">
-              <a
-                href={project.enlace}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="project-link flex-1"
-              >
-                <i class="bi bi-github text-base" />
-                <span>Repo</span>
-              </a>
-              {project.sitio && (
-                <a
-                  href={project.sitio}
+              <div class="mt-4 flex flex-wrap gap-4">
+                <RetroButton
+                  href={project.enlace}
+                  text="CÓDIGO FUENTE"
+                  icon="bi bi-github"
                   target="_blank"
-                  rel="noopener noreferrer"
-                  class="project-link flex-1"
-                >
-                  <i class="bi bi-box-arrow-up-right text-base" />
-                  <span>Demo</span>
-                </a>
-              )}
+                  variant="primary"
+                />
+                {project.sitio && (
+                  <RetroButton
+                    href={project.sitio}
+                    text="EJECUTAR DEMO"
+                    icon="bi bi-box-arrow-up-right"
+                    target="_blank"
+                    variant="secondary"
+                  />
+                )}
+              </div>
             </div>
-          </div>
-        </article>
-      ))
+          </details>
+        );
+      })
     }
   </div>
-</section>
+</div>
 
 <style>
-  .project-card {
-    border-radius: 1rem;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), var(--glow-cyan);
-  }
-
-  .project-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.4rem;
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--text-secondary);
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    border: 1px solid var(--border-subtle);
-    background: var(--bg-card);
-    transition: all 0.3s ease;
-  }
-
-  .project-link:hover {
-    color: var(--accent-cyan);
-    border-color: var(--accent-cyan);
-    background: rgba(56, 189, 248, 0.08);
-    box-shadow: 0 0 12px rgba(56, 189, 248, 0.15);
-    transform: translateY(-1px);
+    details > summary::-webkit-details-marker {
+    display: none;
   }
 </style>
