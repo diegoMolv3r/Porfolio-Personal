@@ -126,102 +126,13 @@ const CURSOS = [
                 </span>
               </div>
             </div>
-
-            <button 
-              class="curso-modal-btn ml-2 bg-black border border-[var(--accent-primary)] text-[var(--accent-primary)] px-3 py-1 text-sm font-bold uppercase hover:bg-[var(--accent-primary)] hover:text-black transition-colors self-start hover-glitch shadow-[2px_2px_0_0_var(--accent-primary)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
-              data-titulo={curso.titulo}
-              data-institucion={curso.institucion}
-              data-periodo={curso.periodo}
-              data-desc={desc}
-              data-img={img}
-            >
-              + VER DETALLES
-            </button>
           </div>
         );
       })}
     </div>
   </div>
-
-    <div id="curso-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[100] hidden flex-col justify-center items-center p-4">
-    <div class="bg-[var(--bg-window)] border-2 border-[var(--border-window)] w-full max-w-4xl max-h-[90vh] flex flex-col shadow-[0_0_30px_rgba(0,255,0,0.2)] relative overflow-hidden">
-            <div class="bg-[var(--accent-primary)] text-black px-4 py-2 flex justify-between items-center font-bold">
-        <span class="tracking-widest uppercase" id="modal-header-title">VISOR_DE_CERTIFICADOS.EXE</span>
-        <button id="close-modal-btn" class="bg-black text-[var(--accent-primary)] w-8 h-8 flex justify-center items-center hover:bg-white transition-colors border border-black cursor-pointer">
-          X
-        </button>
-      </div>
-
-            <div class="overflow-y-auto p-6 md:p-8 flex flex-col gap-6 custom-scrollbar">
-        
-        <div>
-          <h3 id="modal-titulo" class="text-3xl md:text-4xl text-white font-extrabold uppercase mb-2"></h3>
-          <p id="modal-institucion" class="text-xl text-[var(--text-primary)] mb-1"></p>
-          <p id="modal-periodo" class="text-[var(--text-muted)] text-sm mb-0"></p>
-        </div>
-
-        <div class="border-t-2 border-dashed border-[var(--border-dim)] pt-6">
-          <span class="text-[var(--text-muted)] block mb-4">>_ CAT CERTIFICADO.IMG</span>
-          <img 
-            id="modal-imagen" 
-            src="" 
-            alt="Certificado" 
-            class="w-full h-auto max-h-[50vh] object-contain border-2 border-[var(--border-dim)] shadow-[0_0_15px_rgba(0,255,0,0.1)] p-2 bg-black"
-          />
-        </div>
-
-        <div class="border-t-2 border-dashed border-[var(--border-dim)] pt-6">
-          <span class="text-[var(--text-muted)] block mb-2">>_ CAT DESCRIPCION.TXT</span>
-          <p id="modal-desc" class="text-[var(--text-primary)] text-lg leading-relaxed whitespace-pre-line"></p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
 </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const modal = document.getElementById('curso-modal');
-    const closeBtn = document.getElementById('close-modal-btn');
-    const modalTitulo = document.getElementById('modal-titulo');
-    const modalInstitucion = document.getElementById('modal-institucion');
-    const modalPeriodo = document.getElementById('modal-periodo');
-    const modalDesc = document.getElementById('modal-desc');
-    const modalImagen = document.getElementById('modal-imagen');
-
-    const openButtons = document.querySelectorAll('.curso-modal-btn');
-
-    openButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        modalTitulo.textContent = btn.getAttribute('data-titulo');
-        modalInstitucion.textContent = '@ ' + btn.getAttribute('data-institucion');
-        modalPeriodo.textContent = '> ' + btn.getAttribute('data-periodo');
-        modalDesc.textContent = btn.getAttribute('data-desc');
-        modalImagen.src = btn.getAttribute('data-img');
-
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-        document.body.style.overflow = 'hidden';
-      });
-    });
-
-    closeBtn.addEventListener('click', () => {
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
-      document.body.style.overflow = '';
-    });
-
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
-        document.body.style.overflow = '';
-      }
-    });
-  });
-</script>
 
 <style>
   .custom-scrollbar::-webkit-scrollbar {
