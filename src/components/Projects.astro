@@ -3,6 +3,14 @@ import RetroButton from "./RetroButton.astro";
 
 const PROJECTS = [
   {
+    titulo: "RECRED",
+    descripcion:
+      "Proyecto <span class=\"text-white font-bold\">final de carrera</span>. Desarrollo de un producto completo, abarcando desde la <span class=\"text-white font-bold\">creación de la marca</span>, modelo de negocios y manual de usuario, hasta el <span class=\"text-white font-bold\">desarrollo Full Stack</span>. Arquitectura Frontend con <span class=\"text-white font-bold\">Angular</span> y Backend con <span class=\"text-white font-bold\">Java Spring Boot</span>. Deployado en Netlify y AWS.",
+    tecnologias: ["Angular", "Java", "Spring Boot", "PostgreSQL", "Netlify", "AWS"],
+    enlace: null,
+    sitio: "https://landing-recred.netlify.app/",
+  },
+  {
     titulo: "OWASP TOP 10 con .NET Core",
     descripcion:
       "Aplicacion de Tickets en la cual se aplican la prácticas mencionadas en el OWASP TOP 10.",
@@ -65,9 +73,7 @@ const PROJECTS = [
             <div class="p-6 border-t-2 border-dashed border-[var(--border-dim)] bg-[var(--bg-window)] flex flex-col gap-6">
               <div>
                 <span class="text-[var(--text-muted)] block mb-1">>_ INFO_FILE</span>
-                <p class="text-[var(--text-primary)] text-lg md:text-xl leading-relaxed m-0">
-                  {project.descripcion}
-                </p>
+                <p class="text-[var(--text-primary)] text-lg md:text-xl leading-relaxed m-0" set:html={project.descripcion}></p>
               </div>
 
               <div>
@@ -82,13 +88,15 @@ const PROJECTS = [
               </div>
 
               <div class="mt-4 flex flex-wrap gap-4">
-                <RetroButton
-                  href={project.enlace}
-                  text="CÓDIGO FUENTE"
-                  icon="bi bi-github"
-                  target="_blank"
-                  variant="primary"
-                />
+                {project.enlace && (
+                  <RetroButton
+                    href={project.enlace}
+                    text="CÓDIGO FUENTE"
+                    icon="bi bi-github"
+                    target="_blank"
+                    variant="primary"
+                  />
+                )}
                 {project.sitio && (
                   <RetroButton
                     href={project.sitio}
