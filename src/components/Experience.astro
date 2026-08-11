@@ -1,0 +1,56 @@
+---
+const EXPERIENCIAS = [
+  {
+    puesto: "Desarrollador Backend",
+    empresa: "Lamela Construcciones",
+    periodo: "Nov 2025 — Actualidad",
+    modalidad: "Híbrido",
+    tareas: [
+      "Desarrollo y Mantenimiento de Software a Medida: desarrollo end-to-end de una aplicación interna aplicando Clean Architecture.",
+      "Producto y Negocio: Realicé el relevamiento de requerimientos trabajando directamente con los usuarios finales, traduciendo las necesidades del sector inmobiliario en soluciones tecnológicas que mejoraron la eficiencia del equipo."
+    ]
+  }
+];
+---
+
+<div class="flex flex-col gap-10 w-full relative">
+  <div>
+    <div class="mb-6 border-b-2 border-[var(--border-window)] pb-2">
+      <h2 class="text-3xl text-[var(--accent-primary)] m-0 font-bold tracking-widest uppercase">>>_EXPERIENCIA_LABORAL</h2>
+    </div>
+
+    <div class="flex flex-col gap-8">
+      {EXPERIENCIAS.map((item) => (
+        <div class="bg-black border-2 border-[var(--accent-primary)] shadow-[4px_4px_0_0_var(--accent-primary)] p-6 md:p-8 relative overflow-hidden group hover:border-white transition-colors">
+          <div class="absolute top-0 right-0 bg-[var(--accent-primary)] text-black px-3 py-1 font-bold text-xs uppercase tracking-widest">
+            {item.modalidad}
+          </div>
+          
+          <h3 class="text-2xl md:text-3xl text-white font-bold mb-2 uppercase group-hover:text-[var(--accent-primary)] transition-colors">
+            {item.puesto}
+          </h3>
+          <h4 class="text-xl text-[var(--text-primary)] mb-4 uppercase">
+            @ {item.empresa}
+          </h4>
+          
+          <div class="flex items-start gap-3 text-[var(--text-muted)] mb-6 text-sm">
+            <span class="w-24 flex-shrink-0">> PERÍODO:</span>
+            <span>{item.periodo}</span>
+          </div>
+
+          <div class="border-t-2 border-dashed border-[var(--border-dim)] pt-6">
+            <span class="text-[var(--text-muted)] block mb-4">>_ CAT FUNCIONES.TXT</span>
+            <ul class="flex flex-col gap-4 m-0 p-0 list-none">
+              {item.tareas.map((tarea) => (
+                <li class="flex items-start gap-3 text-[var(--text-primary)] text-lg leading-relaxed">
+                  <span class="text-[var(--accent-primary)] mt-1">></span>
+                  <span>{tarea}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
