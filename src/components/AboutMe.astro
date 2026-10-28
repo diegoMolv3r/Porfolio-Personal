@@ -2,9 +2,9 @@
 
 ---
 
-<div class="flex flex-col md:flex-row w-full bg-black md:min-h-[500px]">
+<div class="flex flex-col md:flex-row w-full bg-black md:min-h-[420px] lg:min-h-[500px]">
     <div
-    class="w-full md:w-1/2 relative flex justify-center items-end bg-black pt-8 md:pt-0"
+    class="w-full md:w-5/12 lg:w-1/2 relative flex justify-center items-end bg-black pt-6 md:pt-0 overflow-hidden"
   >
         <div
       class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black to-transparent z-20 pointer-events-none"
@@ -18,21 +18,23 @@
     <img
       src="/assets/img/Diego2.png"
       alt="Foto de Diego Molver"
-      class="w-full h-full max-h-[380px] md:max-h-[600px] object-cover object-top md:object-bottom filter grayscale hover:grayscale-0 transition-all duration-700 opacity-90 hover:opacity-100 z-10"
+      class="w-full h-full max-w-[420px] md:max-w-none max-h-[320px] sm:max-h-[380px] md:max-h-[600px] object-cover object-top md:object-bottom filter grayscale hover:grayscale-0 transition-all duration-700 opacity-90 hover:opacity-100 z-10"
+      loading="lazy"
+      decoding="async"
     />
   </div>
 
-    <div class="w-full md:w-1/2 flex flex-col justify-center p-5 sm:p-8 md:p-16 z-30">
+    <div class="w-full md:w-7/12 lg:w-1/2 flex flex-col justify-center p-4 sm:p-8 md:p-10 lg:p-14 xl:p-16 z-30">
     <span
       class="text-[var(--accent-primary)] font-bold text-sm tracking-widest uppercase mb-4 block"
     >
       >_ INFO_PERSONAL
     </span>
 
-    <div class="w-16 h-1 bg-[var(--accent-primary)] mb-8"></div>
+    <div class="w-16 h-1 bg-[var(--accent-primary)] mb-5 md:mb-8"></div>
 
     <p
-      class="text-[var(--text-secondary)] text-base sm:text-lg md:text-xl leading-relaxed m-0 text-left md:text-justify font-medium"
+      class="text-[var(--text-secondary)] text-base sm:text-lg md:text-xl leading-relaxed m-0 text-left lg:text-justify font-medium max-w-[65ch] hyphens-auto"
     >
       "Soy Técnico Universitario en Desarrollo Web (UNLaM). Me enfoco en el
       desarrollo Full-Stack utilizando principalmente .NET(C#) y Angular, trabajando

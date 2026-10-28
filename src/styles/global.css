@@ -9,9 +9,15 @@
   
     --text-primary: #33ff33;   --text-bright: #00ff00;
   --text-muted: #008800;
+  --text-secondary: #33ff33;
   
     --section-gap: 2rem;
   --container-max: 1200px;
+  --header-h: 64px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 html, body {
@@ -21,8 +27,23 @@ html, body {
   margin: 0;
   padding: 0;
   font-size: 20px;
-  overflow-x: hidden;
+  /* clip (no hidden) para no crear un scroll container que rompa position: sticky */
+  overflow-x: clip;
   -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+html {
+  scroll-padding-top: var(--header-h);
+}
+
+img, svg, video {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6, p, li {
+  overflow-wrap: break-word;
 }
 
 @media (max-width: 640px) {
@@ -32,17 +53,26 @@ html, body {
   h1, h2, h3, h4, p, span, a, li {
     overflow-wrap: anywhere;
   }
-  input, textarea {
+  input, textarea, select {
     font-size: 16px;
   }
-  .retro-window-header {
-    font-size: 1rem;
+}
+
+@media (max-width: 360px) {
+  html, body {
+    font-size: 17px;
   }
-  .retro-window-title {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    min-width: 0;
+}
+
+/* Botón flotante respetando las zonas seguras (notch / barra de gestos) */
+.safe-fab {
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  right: max(1rem, env(safe-area-inset-right));
+}
+@media (min-width: 768px) {
+  .safe-fab {
+    bottom: max(1.5rem, env(safe-area-inset-bottom));
+    right: max(1.5rem, env(safe-area-inset-right));
   }
 }
 
@@ -68,10 +98,22 @@ h1, h2, h3, h4, h5, h6, p, span, a, li, button, input, textarea, label {
   100% { transform: translate(0) }
 }
 
-.hover-glitch:hover {
-  animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
-  color: #fff;
-  text-shadow: 2px 0 var(--accent-warning), -2px 0 var(--accent-primary);
+/* Sólo en dispositivos con hover real: evita que el efecto quede "pegado" en pantallas táctiles */
+@media (hover: hover) and (pointer: fine) {
+  .hover-glitch:hover {
+    animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+    color: #fff;
+    text-shadow: 2px 0 var(--accent-warning), -2px 0 var(--accent-primary);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  .hover-glitch:hover {
+    animation: none !important;
+  }
 }
 
 .scanlines {
@@ -115,14 +157,18 @@ h1, h2, h3, h4, h5, h6, p, span, a, li, button, input, textarea, label {
 .retro-window-title {
   font-weight: bold;
   letter-spacing: 1px;
+  min-width: 0;
 }
 
 .retro-window-controls {
   display: flex;
   gap: 4px;
+  flex-shrink: 0;
+  margin-left: 8px;
 }
 
 .retro-btn {
+  flex-shrink: 0;
   background-color: black;
   border: 1px solid var(--border-dim);
   width: 24px;
@@ -185,4 +231,35 @@ h1, h2, h3, h4, h5, h6, p, span, a, li, button, input, textarea, label {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent-secondary);
+}
+
+
+@media (max-width: 767px) {
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+}
+
+/* Ajustes de ventana retro en móvil (al final para ganar en el orden de cascada) */
+@media (max-width: 640px) {
+  .retro-window-header {
+    font-size: 1rem;
+    padding: 3px 6px;
+  }
+  .retro-window-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+  }
+  .retro-window-controls .retro-btn {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .retro-window-controls .retro-btn[aria-label="Maximize"] {
+    display: none;
+  }
 }

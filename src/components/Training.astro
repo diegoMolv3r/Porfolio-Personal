@@ -75,12 +75,12 @@ const CURSOS = [
   
     <div>
     <div class="mb-6 border-b-2 border-[var(--border-window)] pb-2">
-      <h2 class="text-2xl md:text-3xl text-[var(--accent-primary)] m-0 font-bold tracking-widest uppercase">>>_FORMACIÓN_ACADÉMICA</h2>
+      <h2 class="text-xl sm:text-2xl md:text-3xl text-[var(--accent-primary)] m-0 font-bold tracking-wider sm:tracking-widest uppercase">>>_FORMACIÓN_ACADÉMICA</h2>
     </div>
 
     <div class="flex flex-col gap-4">
       {ACADEMICO.map((item) => (
-        <div class="bg-black border-2 border-[var(--accent-primary)] shadow-[3px_3px_0_0_var(--accent-primary)] md:shadow-[4px_4px_0_0_var(--accent-primary)] p-4 pt-10 md:p-8 relative overflow-hidden">
+        <div class="bg-black border-2 border-[var(--accent-primary)] shadow-[3px_3px_0_0_var(--accent-primary)] md:shadow-[4px_4px_0_0_var(--accent-primary)] p-4 pt-10 sm:p-6 sm:pt-10 md:p-8 md:pt-10 relative overflow-hidden">
           <div class="absolute top-0 right-0 bg-[var(--accent-primary)] text-black px-3 py-1 font-bold text-xs uppercase tracking-widest">
             En Curso
           </div>
@@ -89,14 +89,14 @@ const CURSOS = [
             {item.titulo}
           </h3>
           
-          <div class="flex flex-col gap-2 text-lg">
-            <div class="flex items-start gap-3 text-[var(--text-primary)]">
-              <span class="text-[var(--text-muted)] w-20 sm:w-24 flex-shrink-0">> INST:</span>
-              <span class="uppercase font-bold">{item.institucion}</span>
+          <div class="flex flex-col gap-2 text-base sm:text-lg">
+            <div class="flex flex-wrap items-baseline gap-x-3 gap-y-0.5 text-[var(--text-primary)]">
+              <span class="text-[var(--text-muted)] sm:w-24 flex-shrink-0">> INST:</span>
+              <span class="uppercase font-bold min-w-0">{item.institucion}</span>
             </div>
-            <div class="flex items-start gap-3 text-[var(--text-primary)]">
-              <span class="text-[var(--text-muted)] w-20 sm:w-24 flex-shrink-0">> ESTADO:</span>
-              <span>{item.periodo}</span>
+            <div class="flex flex-wrap items-baseline gap-x-3 gap-y-0.5 text-[var(--text-primary)]">
+              <span class="text-[var(--text-muted)] sm:w-24 flex-shrink-0">> ESTADO:</span>
+              <span class="min-w-0">{item.periodo}</span>
             </div>
           </div>
         </div>
@@ -105,12 +105,12 @@ const CURSOS = [
   </div>
 
     <div>
-    <div class="mb-6 border-b-2 border-[var(--border-dim)] pb-2 flex flex-wrap justify-between items-end gap-1">
-      <h2 class="text-xl md:text-2xl text-[var(--text-muted)] m-0 font-bold tracking-widest uppercase">>>_CERTIFICACIONES_Y_CURSOS</h2>
+    <div class="mb-4 md:mb-6 border-b-2 border-[var(--border-dim)] pb-2 flex flex-wrap justify-between items-end gap-1">
+      <h2 class="text-lg sm:text-xl md:text-2xl text-[var(--text-muted)] m-0 font-bold tracking-wider sm:tracking-widest uppercase">>>_CERTIFICACIONES_Y_CURSOS</h2>
       <span class="text-[var(--text-muted)] text-sm">TOTAL: {CURSOS.length}</span>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-4">
       {CURSOS.map((curso, i) => {
         const id = (i + 1).toString().padStart(2, '0');
         const desc = curso.descripcion || "Información detallada del curso no disponible. Inserte la descripción en el código.";
@@ -120,9 +120,9 @@ const CURSOS = [
           <div class="border border-[var(--border-dim)] bg-[var(--bg-deepest)] p-4 hover:border-[var(--border-window)] transition-colors group relative overflow-hidden flex flex-col justify-between">
             <div class="absolute left-0 top-0 bottom-0 w-1 bg-[var(--border-dim)] group-hover:bg-[var(--accent-primary)] transition-colors"></div>
             
-            <div class="flex items-start gap-3 ml-2 mb-4">
-              <span class="text-[var(--text-muted)] group-hover:text-[var(--text-primary)] font-bold">[{id}]</span>
-              <div class="flex flex-col">
+            <div class="flex items-start gap-3 ml-2">
+              <span class="shrink-0 text-[var(--text-muted)] group-hover:text-[var(--text-primary)] font-bold">[{id}]</span>
+              <div class="flex flex-col min-w-0">
                 <h4 class="text-lg text-white font-bold mb-1 group-hover:text-[var(--accent-primary)] transition-colors">
                   {curso.titulo}
                 </h4>

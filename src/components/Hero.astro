@@ -4,11 +4,11 @@ import RetroButton from "./RetroButton.astro";
 
 <div class="flex flex-col md:flex-row h-full w-full">
   <div
-    class="p-6 md:p-8 flex flex-col justify-center md:w-1/2 bg-[var(--bg-deepest)] border-b-4 md:border-b-0 md:border-r-4 border-[var(--border-window)]"
+    class="p-4 sm:p-6 lg:p-8 xl:p-10 flex flex-col justify-center md:w-1/2 lg:w-[55%] bg-[var(--bg-deepest)] border-b-4 md:border-b-0 md:border-r-4 border-[var(--border-window)] min-w-0"
   >
-    <div class="mb-6 md:mb-8">
+    <div class="mb-5 md:mb-8">
       <h1
-        class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight text-[var(--text-primary)] mb-2 font-extrabold tracking-tight min-h-[84px] sm:min-h-[96px] md:min-h-[144px]"
+        class="text-[clamp(2rem,9vw,2.75rem)] md:text-[clamp(2.5rem,5.2vw,3.25rem)] lg:text-[clamp(3.25rem,4.8vw,4.5rem)] leading-[1.1] text-[var(--text-primary)] mb-2 font-extrabold tracking-tight min-h-[2.2em]"
         id="hero-title"
       >
         <span id="type-part-1"></span><br /><span
@@ -17,43 +17,49 @@ import RetroButton from "./RetroButton.astro";
           class="blink">_</span
         >
       </h1>
-      <h2 class="text-xl md:text-2xl text-[var(--text-muted)] mb-4">
+      <h2 class="text-xl md:text-2xl text-[var(--text-muted)] mb-3 md:mb-4">
         Desarrollador Web/Sec
       </h2>
       <p
-        class="text-lg md:text-xl text-[var(--text-primary)] max-w-lg mb-6 leading-relaxed"
+        class="text-lg md:text-xl text-[var(--text-primary)] max-w-lg mb-5 md:mb-6 leading-relaxed"
       >
         Actualmente formandome en el area de la
         <span class="text-white font-bold blink">Ciberseguridad</span>
         y el desarrollo de software.
       </p>
 
-      <div class="flex flex-wrap gap-3 mb-6">
+      <div class="flex flex-wrap gap-3 mb-2 md:mb-6">
         <a
           href="https://www.linkedin.com/in/diego-molver-72b3a727b/"
           target="_blank"
-          class="w-12 h-12 flex items-center justify-center bg-black border-2 border-[var(--border-window)] shadow-[2px_2px_0px_0px_var(--border-window)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none text-[var(--accent-primary)] hover:bg-[var(--accent-primary)] hover:text-black transition-colors"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          class="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-black border-2 border-[var(--border-window)] shadow-[2px_2px_0px_0px_var(--border-window)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none text-[var(--accent-primary)] hover:bg-[var(--accent-primary)] hover:text-black transition-colors"
         >
-          <i class="bi bi-linkedin text-2xl"></i>
+          <i class="bi bi-linkedin text-xl sm:text-2xl"></i>
         </a>
         <a
           href="https://github.com/diegoMolv3r"
           target="_blank"
-          class="w-12 h-12 flex items-center justify-center bg-black border-2 border-[var(--border-window)] shadow-[2px_2px_0px_0px_var(--border-window)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none text-[var(--accent-primary)] hover:bg-[var(--accent-primary)] hover:text-black transition-colors"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          class="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-black border-2 border-[var(--border-window)] shadow-[2px_2px_0px_0px_var(--border-window)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none text-[var(--accent-primary)] hover:bg-[var(--accent-primary)] hover:text-black transition-colors"
         >
-          <i class="bi bi-github text-2xl"></i>
+          <i class="bi bi-github text-xl sm:text-2xl"></i>
         </a>
         <a
           href="mailto:molverdiego@gmail.com"
           target="_blank"
-          class="w-12 h-12 flex items-center justify-center bg-black border-2 border-[var(--border-window)] shadow-[2px_2px_0px_0px_var(--border-window)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none text-[var(--accent-primary)] hover:bg-[var(--accent-primary)] hover:text-black transition-colors"
+          rel="noopener noreferrer"
+          aria-label="Email"
+          class="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-black border-2 border-[var(--border-window)] shadow-[2px_2px_0px_0px_var(--border-window)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none text-[var(--accent-primary)] hover:bg-[var(--accent-primary)] hover:text-black transition-colors"
         >
-          <i class="bi bi-envelope text-2xl"></i>
+          <i class="bi bi-envelope text-xl sm:text-2xl"></i>
         </a>
       </div>
     </div>
 
-    <div class="flex flex-wrap gap-3 sm:gap-4 mt-2 md:mt-auto">
+    <div class="grid grid-cols-1 min-[400px]:grid-cols-2 sm:flex sm:flex-wrap gap-3 sm:gap-4 mt-2 md:mt-auto">
       <RetroButton
         href="/assets/Molver Diego Cv.pdf"
         text="Descargar CV"
@@ -73,7 +79,7 @@ import RetroButton from "./RetroButton.astro";
   </div>
 
   <div
-    class="bg-[var(--bg-window)] flex flex-col justify-center items-center md:w-1/2 relative overflow-hidden flex-grow min-h-[240px] md:min-h-[300px]"
+    class="bg-[var(--bg-window)] flex flex-col justify-center items-center md:w-1/2 lg:w-[45%] relative overflow-hidden flex-grow min-h-[220px] sm:min-h-[280px] md:min-h-[300px]"
   >
     <div
       class="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CjxwYXRoIGQ9Ik0wIDBoNDB2NDBIMHoiIGZpbGw9Im5vbmUiLz4KPHBhdGggZD0iTTAgMGwxMCAxME00MCAwbC0xMCAxME0wIDQwbDEwLTEwTTQwIDQwbC0xMC0xMCIgc3Ryb2tlPSIjMDBmZjAwIiBzdHJva2Utd2lkdGg9IjEiLz4KPC9zdmc+')] pointer-events-none"
@@ -90,7 +96,9 @@ import RetroButton from "./RetroButton.astro";
       <img
         src="/assets/img/Diego.png"
         alt="Foto de Diego Molver"
-        class="w-full h-full object-contain max-h-[50vh] md:max-h-[80vh] filter drop-shadow-[0_0_15px_rgba(0,255,0,0.5)]"
+        class="w-full h-full object-contain max-h-[45svh] sm:max-h-[50svh] md:max-h-[70svh] lg:max-h-[75svh] filter drop-shadow-[0_0_15px_rgba(0,255,0,0.5)]"
+        loading="eager"
+        decoding="async"
       />
     </div>
 
