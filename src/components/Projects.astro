@@ -10,8 +10,17 @@ const PROJECTS = [
     enlace: null,
     sitio: "https://landing-recred.netlify.app/",
   },
+  
   {
-    titulo: "OWASP TOP 10 con .NET Core",
+    titulo: "0ffside Ind",
+    descripcion:
+      "Tienda Online para emprendimiento de ropa deportiva. Con la posibilidad de realizar pedidos por whatsapp.",
+    tecnologias: ["Angular", "Sprinboot", "PostgreSQL"],
+    enlace: null,
+    sitio: "https://0ffside.netlify.app/",
+  },
+  {
+    titulo: "OWASP TOP10 .NET",
     descripcion:
       "Aplicacion de Tickets en la cual se aplican la prácticas mencionadas en el OWASP TOP 10.",
     tecnologias: ["C#", "Entity Framework", "SQL Server"],
@@ -22,32 +31,16 @@ const PROJECTS = [
     titulo: "SickDogs Ind",
     descripcion:
       "Catálogo web para la marca de ropa SickDogs. Con posbilidad de realizar pedidos por Instagram.",
-    tecnologias: ["Angular"],
-    enlace: "https://github.com/diegoMolv3r/SickDogsInd",
+    tecnologias: ["Angular", "Sprinboot", "PostgreSQL"],
+    enlace: null,
     sitio: "https://sickdogs.netlify.app/",
-  },
-  {
-    titulo: "Quiz Code",
-    descripcion:
-      "Juego de preguntas y respuestas con lógica de dificultad adaptativa y puntuacion.",
-    tecnologias: ["PHP", "MySQL", "Bootstrap", "Mustache"],
-    enlace: "https://github.com/Urielito1031/preguntados-app-mvc",
-    sitio: null,
-  },
-  {
-    titulo: "FutCode",
-    descripcion:
-      "Juego de fútbol online en el cual podes formar tu propio equipo y jugar contra otros usuarios.",
-    tecnologias: ["Java", "Hibernate", "MySQL", "Spring MVC"],
-    enlace: "https://github.com/Urielito1031/Taller-webi-FutCode",
-    sitio: null,
-  },
+  }
 ];
 ---
 
 <div class="flex flex-col gap-6 w-full">
-  <div class="mb-6 border-b-2 border-[var(--border-window)] pb-2 flex justify-between items-end">
-    <h2 class="text-3xl text-[var(--accent-primary)] m-0 font-bold tracking-widest">>> LST_PROYECTOS</h2>
+  <div class="mb-2 md:mb-6 border-b-2 border-[var(--border-window)] pb-2 flex flex-wrap justify-between items-end gap-1">
+    <h2 class="text-2xl md:text-3xl text-[var(--accent-primary)] m-0 font-bold tracking-widest">>> LST_PROYECTOS</h2>
     <span class="text-[var(--text-muted)] text-sm">Mostrando {PROJECTS.length} ejecutables</span>
   </div>
 
@@ -59,21 +52,21 @@ const PROJECTS = [
         
         return (
           <details class="group bg-black border-2 border-[var(--border-dim)] hover:border-[var(--accent-primary)] transition-colors open:border-[var(--accent-primary)] shadow-[2px_2px_0_0_var(--border-dim)] open:shadow-[4px_4px_0_0_var(--accent-primary)]">
-            <summary class="flex justify-between items-center p-4 cursor-pointer list-none text-white hover:text-[var(--accent-primary)] transition-colors">
-              <div class="flex items-center gap-4">
+            <summary class="flex justify-between items-center p-3 md:p-4 cursor-pointer list-none text-white hover:text-[var(--accent-primary)] transition-colors">
+              <div class="flex items-start md:items-center gap-2 md:gap-4 min-w-0">
                 <span class="text-[var(--text-muted)] group-hover:text-[var(--text-primary)]">[{fileId}]</span>
-                <span class="text-xl md:text-2xl font-bold uppercase tracking-wider">{project.titulo}</span>
+                <span class="text-lg md:text-2xl font-bold uppercase tracking-wide md:tracking-wider">{project.titulo}</span>
               </div>
-              <div class="flex items-center gap-4">
+              <div class="flex items-center gap-4 shrink-0 ml-2">
                 <span class="hidden md:inline-block text-[var(--text-muted)] group-hover:text-[var(--text-primary)]">{fileName}</span>
                 <i class="bi bi-chevron-down group-open:rotate-180 transition-transform text-[var(--accent-primary)]"></i>
               </div>
             </summary>
             
-            <div class="p-6 border-t-2 border-dashed border-[var(--border-dim)] bg-[var(--bg-window)] flex flex-col gap-6">
+            <div class="p-4 md:p-6 border-t-2 border-dashed border-[var(--border-dim)] bg-[var(--bg-window)] flex flex-col gap-5 md:gap-6">
               <div>
                 <span class="text-[var(--text-muted)] block mb-1">>_ INFO_FILE</span>
-                <p class="text-[var(--text-primary)] text-lg md:text-xl leading-relaxed m-0" set:html={project.descripcion}></p>
+                <p class="text-[var(--text-primary)] text-base md:text-xl leading-relaxed m-0" set:html={project.descripcion}></p>
               </div>
 
               <div>
@@ -87,7 +80,7 @@ const PROJECTS = [
                 </div>
               </div>
 
-              <div class="mt-4 flex flex-wrap gap-4">
+              <div class="mt-2 md:mt-4 flex flex-wrap gap-3 md:gap-4">
                 {project.enlace && (
                   <RetroButton
                     href={project.enlace}

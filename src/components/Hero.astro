@@ -8,7 +8,7 @@ import RetroButton from "./RetroButton.astro";
   >
     <div class="mb-6 md:mb-8">
       <h1
-        class="text-4xl md:text-5xl lg:text-7xl leading-tight text-[var(--text-primary)] mb-2 font-extrabold tracking-tight min-h-[96px] md:min-h-[144px]"
+        class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight text-[var(--text-primary)] mb-2 font-extrabold tracking-tight min-h-[84px] sm:min-h-[96px] md:min-h-[144px]"
         id="hero-title"
       >
         <span id="type-part-1"></span><br /><span
@@ -53,7 +53,7 @@ import RetroButton from "./RetroButton.astro";
       </div>
     </div>
 
-    <div class="flex flex-wrap gap-4 mt-auto">
+    <div class="flex flex-wrap gap-3 sm:gap-4 mt-2 md:mt-auto">
       <RetroButton
         href="/assets/Molver Diego Cv.pdf"
         text="Descargar CV"
@@ -73,7 +73,7 @@ import RetroButton from "./RetroButton.astro";
   </div>
 
   <div
-    class="bg-[var(--bg-window)] flex flex-col justify-center items-center md:w-1/2 relative overflow-hidden flex-grow min-h-[300px]"
+    class="bg-[var(--bg-window)] flex flex-col justify-center items-center md:w-1/2 relative overflow-hidden flex-grow min-h-[240px] md:min-h-[300px]"
   >
     <div
       class="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CjxwYXRoIGQ9Ik0wIDBoNDB2NDBIMHoiIGZpbGw9Im5vbmUiLz4KPHBhdGggZD0iTTAgMGwxMCAxME00MCAwbC0xMCAxME0wIDQwbDEwLTEwTTQwIDQwbC0xMC0xMCIgc3Ryb2tlPSIjMDBmZjAwIiBzdHJva2Utd2lkdGg9IjEiLz4KPC9zdmc+')] pointer-events-none"
@@ -90,12 +90,12 @@ import RetroButton from "./RetroButton.astro";
       <img
         src="/assets/img/Diego.png"
         alt="Foto de Diego Molver"
-        class="w-full h-full object-contain max-h-[70vh] md:max-h-[80vh] filter drop-shadow-[0_0_15px_rgba(0,255,0,0.5)]"
+        class="w-full h-full object-contain max-h-[50vh] md:max-h-[80vh] filter drop-shadow-[0_0_15px_rgba(0,255,0,0.5)]"
       />
     </div>
 
     <div
-      class="absolute bottom-4 right-4 bg-black text-[var(--accent-primary)] border border-[var(--border-dim)] px-3 py-1 font-bold text-sm tracking-widest uppercase flex items-center gap-2 shadow-[0_0_8px_var(--accent-primary)] z-30"
+      class="absolute bottom-2 right-2 md:bottom-4 md:right-4 bg-black text-[var(--accent-primary)] border border-[var(--border-dim)] px-2 md:px-3 py-1 font-bold text-xs md:text-sm tracking-widest uppercase flex items-center gap-2 shadow-[0_0_8px_var(--accent-primary)] z-30"
     >
       <span class="w-2 h-2 bg-[var(--accent-primary)] blink inline-block"
       ></span>
